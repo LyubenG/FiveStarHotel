@@ -58,9 +58,10 @@ namespace FiveStarHotel1
         {
             switch (clickedButton.Text)
             {
-                case "Add Room": addRoom1.BringToFront(); break;
-                case "Home": homePage1.BringToFront(); break;
-                case "Reserve Room": reserveRoom1.BringToFront(); break;
+                case "Add Room": addRoom1.BringToFront(); homePage1.Visible = false; break;
+                case "Home": homePage1.BringToFront(); homePage1.Visible = true; break;
+                case "Reserve Room": reserveRoom1.BringToFront(); homePage1.Visible = false; break;
+                case "Check Out": checkOut1.BringToFront(); break;
             }
         }
 

@@ -32,13 +32,13 @@
             this.tbNationality = new System.Windows.Forms.TextBox();
             this.tbPhoneNo = new System.Windows.Forms.TextBox();
             this.dpCheckIn = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCheckInDate = new System.Windows.Forms.Label();
             this.dpDOB = new System.Windows.Forms.DateTimePicker();
             this.lblDOB = new System.Windows.Forms.Label();
             this.cbRoomAvailable = new System.Windows.Forms.ComboBox();
             this.lblGender = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNationality = new System.Windows.Forms.Label();
             this.lblEnterPhone = new System.Windows.Forms.Label();
             this.lblEnterName = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -63,13 +63,13 @@
             this.pnlBackground.Controls.Add(this.tbNationality);
             this.pnlBackground.Controls.Add(this.tbPhoneNo);
             this.pnlBackground.Controls.Add(this.dpCheckIn);
-            this.pnlBackground.Controls.Add(this.label2);
+            this.pnlBackground.Controls.Add(this.lblCheckInDate);
             this.pnlBackground.Controls.Add(this.dpDOB);
             this.pnlBackground.Controls.Add(this.lblDOB);
             this.pnlBackground.Controls.Add(this.cbRoomAvailable);
             this.pnlBackground.Controls.Add(this.lblGender);
             this.pnlBackground.Controls.Add(this.cbGender);
-            this.pnlBackground.Controls.Add(this.label1);
+            this.pnlBackground.Controls.Add(this.lblNationality);
             this.pnlBackground.Controls.Add(this.lblEnterPhone);
             this.pnlBackground.Controls.Add(this.lblEnterName);
             this.pnlBackground.Controls.Add(this.tbName);
@@ -112,6 +112,7 @@
             // 
             // dpCheckIn
             // 
+            this.dpCheckIn.Checked = false;
             this.dpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dpCheckIn.Location = new System.Drawing.Point(387, 109);
             this.dpCheckIn.MaxDate = new System.DateTime(2021, 12, 31, 0, 0, 0, 0);
@@ -119,18 +120,17 @@
             this.dpCheckIn.Name = "dpCheckIn";
             this.dpCheckIn.Size = new System.Drawing.Size(128, 20);
             this.dpCheckIn.TabIndex = 24;
-            this.dpCheckIn.Value = new System.DateTime(2021, 2, 17, 20, 55, 58, 0);
             // 
-            // label2
+            // lblCheckInDate
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(387, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 22);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Check-in Date:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCheckInDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblCheckInDate.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblCheckInDate.Location = new System.Drawing.Point(387, 84);
+            this.lblCheckInDate.Name = "lblCheckInDate";
+            this.lblCheckInDate.Size = new System.Drawing.Size(128, 22);
+            this.lblCheckInDate.TabIndex = 23;
+            this.lblCheckInDate.Text = "Check-in Date:";
+            this.lblCheckInDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dpDOB
             // 
@@ -168,6 +168,7 @@
             this.cbRoomAvailable.Name = "cbRoomAvailable";
             this.cbRoomAvailable.Size = new System.Drawing.Size(128, 21);
             this.cbRoomAvailable.TabIndex = 20;
+            this.cbRoomAvailable.SelectedIndexChanged += new System.EventHandler(this.cbRoomAvailable_SelectedIndexChanged);
             // 
             // lblGender
             // 
@@ -195,16 +196,16 @@
             this.cbGender.Size = new System.Drawing.Size(128, 21);
             this.cbGender.TabIndex = 18;
             // 
-            // label1
+            // lblNationality
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(129, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 22);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Nationality: ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNationality.BackColor = System.Drawing.Color.Transparent;
+            this.lblNationality.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblNationality.Location = new System.Drawing.Point(129, 200);
+            this.lblNationality.Name = "lblNationality";
+            this.lblNationality.Size = new System.Drawing.Size(128, 22);
+            this.lblNationality.TabIndex = 17;
+            this.lblNationality.Text = "Nationality: ";
+            this.lblNationality.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEnterPhone
             // 
@@ -308,6 +309,7 @@
             this.btnReserveRoom.TabIndex = 6;
             this.btnReserveRoom.Text = "Reserve Room!";
             this.btnReserveRoom.UseVisualStyleBackColor = false;
+            this.btnReserveRoom.Click += new System.EventHandler(this.btnReserveRoom_Click);
             // 
             // cbBedType
             // 
@@ -324,6 +326,7 @@
             this.cbBedType.Name = "cbBedType";
             this.cbBedType.Size = new System.Drawing.Size(128, 21);
             this.cbBedType.TabIndex = 5;
+            this.cbBedType.SelectedIndexChanged += new System.EventHandler(this.cbBedType_SelectedIndexChanged);
             // 
             // cbRoomType
             // 
@@ -340,6 +343,7 @@
             this.cbRoomType.Name = "cbRoomType";
             this.cbRoomType.Size = new System.Drawing.Size(128, 21);
             this.cbRoomType.TabIndex = 4;
+            this.cbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbRoomType_SelectedIndexChanged);
             // 
             // tbPrice
             // 
@@ -393,12 +397,12 @@
         private System.Windows.Forms.ComboBox cbRoomAvailable;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.ComboBox cbGender;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNationality;
         private System.Windows.Forms.Label lblEnterPhone;
         private System.Windows.Forms.Label lblEnterName;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.DateTimePicker dpCheckIn;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCheckInDate;
         private System.Windows.Forms.DateTimePicker dpDOB;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.TextBox tbNationality;

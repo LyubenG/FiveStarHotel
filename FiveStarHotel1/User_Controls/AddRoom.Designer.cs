@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBackground = new System.Windows.Forms.Panel();
             this.pbTable = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.lblBedType = new System.Windows.Forms.Label();
             this.lblRoomType = new System.Windows.Forms.Label();
             this.lblRoomNo = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.pnlBackground.BackgroundImage = global::FiveStarHotel1.Properties.Resources.ContentHolder2;
             this.pnlBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlBackground.Controls.Add(this.pbTable);
-            this.pnlBackground.Controls.Add(this.label1);
+            this.pnlBackground.Controls.Add(this.lblPrice);
             this.pnlBackground.Controls.Add(this.lblBedType);
             this.pnlBackground.Controls.Add(this.lblRoomType);
             this.pnlBackground.Controls.Add(this.lblRoomNo);
@@ -80,16 +80,16 @@
             this.pbTable.TabIndex = 11;
             this.pbTable.TabStop = false;
             // 
-            // label1
+            // lblPrice
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(477, 294);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 22);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Enter Price:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrice.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblPrice.Location = new System.Drawing.Point(477, 294);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(114, 22);
+            this.lblPrice.TabIndex = 10;
+            this.lblPrice.Text = "Enter Price:";
+            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBedType
             // 
@@ -182,6 +182,7 @@
             // 
             // dataRooms
             // 
+            this.dataRooms.AllowUserToAddRows = false;
             this.dataRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataRooms.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
             this.dataRooms.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -252,7 +253,7 @@
         private System.Windows.Forms.TextBox tbRoomNo;
         private System.Windows.Forms.Label lblRoomNo;
         private System.Windows.Forms.PictureBox pbTable;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblBedType;
         private System.Windows.Forms.Label lblRoomType;
     }
