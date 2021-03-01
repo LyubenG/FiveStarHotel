@@ -215,7 +215,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataRooms.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataRooms.Location = new System.Drawing.Point(67, 113);
+            this.dataRooms.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataRooms.Location = new System.Drawing.Point(57, 113);
             this.dataRooms.Margin = new System.Windows.Forms.Padding(4);
             this.dataRooms.MultiSelect = false;
             this.dataRooms.Name = "dataRooms";
@@ -223,7 +224,7 @@
             this.dataRooms.RowHeadersWidth = 5;
             this.dataRooms.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataRooms.Size = new System.Drawing.Size(550, 401);
+            this.dataRooms.Size = new System.Drawing.Size(560, 401);
             this.dataRooms.TabIndex = 1;
             // 
             // lblAddRooms
