@@ -14,8 +14,11 @@ namespace FiveStarHotel1
         protected SqlConnection GetConnection()
         {
             SqlConnection con = new SqlConnection();
-            //con.ConnectionString = "data source = DESKTOP-G2GHH45; database = fiveStarHotel;integrated security = True";
+
+            con.ConnectionString = "Data Source=(LocalDb)\v15.0; Database=fiveStarHotel;Trusted_Connection=True";
+            //con.ConnectionString = "data source = DESKTOP-G2GHH45; Database = fiveStarHotel;integrated security = True";
             con.ConnectionString = "Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00";
+            
             return con;
         }
             

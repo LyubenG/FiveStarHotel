@@ -30,7 +30,7 @@ namespace FiveStarHotel1
             //Removing default top menu.
             FormBorderStyle = FormBorderStyle.None;
             homePage1.BringToFront();
-
+            checkOut1.Visible = false;
         }
         private void btnNav_Clicked(object sender, EventArgs e)
         {
@@ -58,10 +58,29 @@ namespace FiveStarHotel1
         {
             switch (clickedButton.Text)
             {
-                case "Add Room": addRoom1.BringToFront(); homePage1.Visible = false; break;
-                case "Home": homePage1.BringToFront(); homePage1.Visible = true; break;
-                case "Reserve Room": reserveRoom1.BringToFront(); homePage1.Visible = false; break;
-                case "Check Out": checkOut1.BringToFront(); break;
+                case "Add Room":
+                    addRoom1.BringToFront();
+                    addRoom1.Visible = true;
+                    checkOut1.Visible = false; 
+                    homePage1.Visible = false; 
+                    
+                    break;
+                case "Home": 
+                    homePage1.BringToFront();
+                    homePage1.Visible = true;
+                    checkOut1.Visible = false;
+                    addRoom1.Visible = false;
+                    break;
+                case "Reserve Room":
+                    reserveRoom1.BringToFront();
+                    checkOut1.Visible = false; 
+                    homePage1.Visible = false;
+                    break;
+                case "Check Out": 
+                    checkOut1.BringToFront(); 
+                    checkOut1.Visible = true;                  
+                    addRoom1.Visible = false;
+                    break;
             }
         }
 
@@ -80,5 +99,7 @@ namespace FiveStarHotel1
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
         }
+
+       
     }
 }

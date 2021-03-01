@@ -13,26 +13,30 @@ namespace FiveStarHotel1.User_Controls
 {
     public partial class ReserveRoom : UserControl
     {
-        Functions fn = new Functions();
+        Functions functions = new Functions();
         string query;
+        
         public ReserveRoom()
         {
             InitializeComponent();
         }
 
-        private void setComboBox(String query, ComboBox combo)
+        private void setComboBox(String query, ComboBox combobox)
         {
-            combo.Items.Clear();
-            SqlDataReader sdr = fn.getForCombo(query);
-            while (sdr.Read())
+            combobox.Items.Clear();
+            SqlDataReader reader = functions.getForCombo(query);
+           
+            while (reader.Read())
             {
-                for (int i = 0; i < sdr.FieldCount; i++)
+                for (int i = 0; i < reader.FieldCount; i++)
                 {
-                    if(!combo.Items.Contains(sdr.GetString(i)))
-                    combo.Items.Add(sdr.GetString(i));
+                    if (!combobox.Items.Contains(reader.GetString(i)))
+                    { 
+                        combobox.Items.Add(reader.GetString(i));
+                    }
                 }
             }
-            sdr.Close();
+            reader.Close();
         }
 
         private void cbBedType_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,34 +55,46 @@ namespace FiveStarHotel1.User_Controls
         private void cbRoomAvailable_SelectedIndexChanged(object sender, EventArgs e)
         {
             query = "Select price, roomid from rooms where roomNo = '" + cbRoomAvailable.Text + "'";
-            DataSet ds = fn.getData(query);
-            tbPrice.Text = ds.Tables[0].Rows[0][0] + "$";
-            roomId = int.Parse(ds.Tables[0].Rows[0][1].ToString());
+            DataSet dataset = functions.getData(query);
+            
+            tbPrice.Text = dataset.Tables[0].Rows[0][0] + "$";
+            roomId = int.Parse(dataset.Tables[0].Rows[0][1].ToString());
         }
 
         private void btnReserveRoom_Click(object sender, EventArgs e)
         {
-            if (validateInput())
+            if (ValidateInput())
             {
-                string name = tbName.Text;
-                int mobilePhone = int.Parse(tbPhoneNo.Text);
-                string nationality = tbNationality.Text;
-                string gender = cbGender.Text;
-                string dateOfBirth = dpDOB.Text;
-                string checkInDate = dpCheckIn.Text;
+                try
+                {
+                    string name = tbName.Text;
+                    int mobilePhone = int.Parse(tbPhoneNo.Text);
+                    string nationality = tbNationality.Text;
+                    string gender = cbGender.Text;
+                    string dateOfBirth = dpDOB.Text;
+                    string checkInDate = dpCheckIn.Text;
 
-                query = String.Format("insert into customer (cname, mobile, nationality, gender, dob, checkin, roomid) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') update rooms set booked = 'Yes' where roomNo = '{7}'",
-                    name, mobilePhone, nationality, gender, dateOfBirth, checkInDate, roomId, cbRoomAvailable.Text);
-                fn.setData(query, String.Format("Room Number {0} Has Been Succesfully Reserved By {1}!", cbRoomAvailable.Text, name));
+                    query = String.Format("insert into customer (cname, mobile, nationality, gender, dob, checkin, roomid)" +
+                        " values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') update rooms set booked = 'Yes' where roomNo = '{7}'",
+                        name, mobilePhone, nationality, gender, dateOfBirth, checkInDate, roomId, cbRoomAvailable.Text);
 
-                clearSelectedData();
-            } else
+                    functions.setData(query, String.Format("Room Number {0} Has Been Succesfully Reserved By {1}!", cbRoomAvailable.Text, name));
+
+                    ClearSelectedData();
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("Enter valid number, please!");
+                }
+            }
+
+            else
             {
-                MessageBox.Show("You must fill in all data correctly!");
+                MessageBox.Show("Please fill in all the fields!");
             }
         }
-
-        private bool validateInput()
+           
+        private bool ValidateInput()
         {
             if (tbName.Text == "" || tbNationality.Text == "" || tbPhoneNo.Text == "" || cbGender.Text == "" || cbRoomAvailable.Text == "" || cbBedType.Text == "" || cbRoomType.Text == "")
             {
@@ -87,7 +103,7 @@ namespace FiveStarHotel1.User_Controls
             return true;
         }
 
-        private void clearSelectedData()
+        private void ClearSelectedData()
         {
             tbName.Clear();
             tbNationality.Clear();

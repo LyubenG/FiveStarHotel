@@ -14,53 +14,67 @@ namespace FiveStarHotel1.User_Controls
     {
         Functions fn = new Functions();
         string query;
+
         public AddRoom()
         {
             InitializeComponent();
         }
 
+        private void pnlBackground_VisibleChanged(object sender, EventArgs e)
+        {
+            UpdateRoomData();
+        }
+        private void AddRoom_Load(object sender, EventArgs e)
+        {
+            UpdateRoomData();
+        }
+
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
-            if (validateInput())
+            if (ValidateInput())
             {
-                string roomNo = tbRoomNo.Text;
-                string roomType = cbRoomType.Text;
-                string bed = cbBedType.Text;
-                int price = int.Parse(tbPrice.Text);
-                query = String.Format("insert into rooms (roomNo, roomType, bed, price) values ('{0}', '{1}', '{2}', '{3}')", roomNo, roomType, bed, price);
-                fn.setData(query, String.Format("Room Number {0} Has Been Added!", roomNo));
+                try
+                {
+                    string roomNo = tbRoomNo.Text;
+                    string roomType = cbRoomType.Text;
+                    string bed = cbBedType.Text;
+                    int price = int.Parse(tbPrice.Text);
+                    
+                    query = String.Format("insert into rooms (roomNo, roomType, bed, price) values ('{0}', '{1}', '{2}', '{3}')",
+                        roomNo, roomType, bed, price);
+                   
+                    fn.setData(query, String.Format("Room Number {0} Has Been Added!", roomNo));
+
+                    UpdateRoomData();
+                }
+                catch (System.FormatException)
+                {
+                    MessageBox.Show("Enter valid price, please!");
+                }
             }
             else
             {
-                MessageBox.Show("You must fill in all data!");
+                MessageBox.Show("Please fill in all the fields!");
             }
 
-            updateRoomData();
         }
-
-        private void AddRoom_Load(object sender, EventArgs e)
+        private bool ValidateInput()
         {
-            updateRoomData();
-        }
-
-        private bool validateInput()
-        {
-            if (tbRoomNo.Text == "" && tbPrice.Text == "" && cbBedType.Text == "" && cbRoomType.Text == "")
+            if (tbRoomNo.Text == "" || cbRoomType.Text == "" || cbBedType.Text == "" || tbPrice.Text == "")
             {
                 return false;
             }
-            return true;
+            else
+            {
+                return true;
+            }
         }
-
-        private void updateRoomData()
+        private void UpdateRoomData()
         {
             query = "Select * from rooms";
             DataSet ds = fn.getData(query);
             dataRooms.DataSource = ds.Tables[0];
             dataRooms.Columns[0].Visible = false;
         }
-
-
- 
     }
 }

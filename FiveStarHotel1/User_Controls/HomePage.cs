@@ -30,15 +30,15 @@ namespace FiveStarHotel1.User_Controls
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            loadData();
+            LoadData();
         }
 
         private void HomePage_VisibleChanged(object sender, EventArgs e)
         {
-            loadData();
+            LoadData();
         }
 
-        private void loadData()
+        private void LoadData()
         {
             int freerooms = fn.countData("No");
             lblCountRooms.Text = freerooms.ToString();
