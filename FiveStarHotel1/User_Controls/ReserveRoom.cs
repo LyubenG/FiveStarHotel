@@ -69,7 +69,7 @@ namespace FiveStarHotel1.User_Controls
             if (ValidateInput())
             {
                 string name = tbName.Text;
-                int mobilePhone = int.Parse(tbPhoneNo.Text);
+                Int64 mobilePhone = Int64.Parse(tbPhoneNo.Text);
                 string nationality = tbNationality.Text;
                 string gender = cbGender.Text;
                 string dateOfBirth = dpDOB.Text;

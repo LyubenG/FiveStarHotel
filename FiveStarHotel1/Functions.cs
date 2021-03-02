@@ -52,11 +52,17 @@ namespace FiveStarHotel1
 
         }
 
+        bool connectionOpened = false;
         public SqlDataReader getForCombo(String query)
         {
+            if (connectionOpened)
+            {
+                con.Close();
+            }
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
+            connectionOpened = true;
             cmd = new SqlCommand(query, con);
             SqlDataReader sdr = cmd.ExecuteReader();
             return sdr;
