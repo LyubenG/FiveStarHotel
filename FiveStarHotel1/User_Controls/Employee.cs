@@ -33,45 +33,27 @@ namespace FiveStarHotel1.User_Controls
         {
             if (ValidateInput())
             {
-
                 string username = tbUsername.Text;
                 string password = tbPassword.Text;
                 string employeeType = cbEmployeeType.Text;
+                if (!checkIfEmployeeIsAlreadyAdded(username))
+                {
+                    string query = $"insert into employees (username, password, employeeType) values ('{username}', '{password}', '{employeeType}')";
+                    functions.setData(query, $"User {username} Has Been Added!");
 
+                    UpdateEmployeeData();
+                    clearAllData();
+                } else
+                {
+                    MessageBox.Show("This employee has already been added!");
 
-                string query = $"insert into employees (username, password, employeeType) values ('{username}', '{password}', '{employeeType}')";
-
-
-                functions.setData(query, $"User {username} Has Been Added!");
-
-                UpdateEmployeeData();
-                clearAllData();
-
+                }
             }
 
             else
             {
                 MessageBox.Show("Please fill in all the fields!");
             }
-        }
-
-        private bool ValidateInput()
-        {
-            if (tbUsername.Text == "" || tbPassword.Text == "" || cbEmployeeType.Text == "")
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        private void UpdateEmployeeData()
-        {
-            string query = "Select * from employees";
-            DataSet ds = functions.getData(query);
-            dataEmployees.DataSource = ds.Tables[0];
         }
 
         string usernameToDelete = "";
@@ -96,6 +78,23 @@ namespace FiveStarHotel1.User_Controls
 
         }
 
+        private bool checkIfEmployeeIsAlreadyAdded(string username)
+        {
+            string currentUsername;
+            
+            for (int i = 0; i < dataEmployees.RowCount; i++)
+            {
+                DataGridViewRow row = dataEmployees.Rows[i];
+                currentUsername = row.Cells[i].Value.ToString();
+                if (username == currentUsername)
+                {
+                    return true;
+                }
+            }
+            return false;
+
+        }
+
         private void dataEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -113,6 +112,36 @@ namespace FiveStarHotel1.User_Controls
             tbPassword.Clear();
             tbUsername.Clear();
             cbEmployeeType.SelectedIndex = -1;
+        }
+
+        private bool ValidateInput()
+        {
+            if (tbUsername.Text == "" || tbPassword.Text == "" || cbEmployeeType.Text == "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void UpdateEmployeeData()
+        {
+            string query = "Select * from employees";
+            DataSet ds = functions.getData(query);
+            dataEmployees.DataSource = ds.Tables[0];
+        }
+
+        private void pbEye_MouseHover(object sender, EventArgs e)
+        {
+            tbPassword.UseSystemPasswordChar = false;
+        }
+
+        private void pbEye_MouseLeave(object sender, EventArgs e)
+        {
+            tbPassword.UseSystemPasswordChar = true;
+
         }
     }
 }

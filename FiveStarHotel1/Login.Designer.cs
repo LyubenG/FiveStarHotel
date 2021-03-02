@@ -30,6 +30,8 @@
         {
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.pbUser = new System.Windows.Forms.PictureBox();
+            this.pbEye = new System.Windows.Forms.PictureBox();
             this.lblWrongInfo = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.tbPassword = new System.Windows.Forms.Label();
@@ -38,8 +40,12 @@
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pbPass = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPass)).BeginInit();
             this.SuspendLayout();
             // 
             // pbLogo
@@ -58,6 +64,9 @@
             this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
             this.pnlLogin.BackgroundImage = global::FiveStarHotel1.Properties.Resources.LoginBG1;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlLogin.Controls.Add(this.pbPass);
+            this.pnlLogin.Controls.Add(this.pbUser);
+            this.pnlLogin.Controls.Add(this.pbEye);
             this.pnlLogin.Controls.Add(this.lblWrongInfo);
             this.pnlLogin.Controls.Add(this.btnLogin);
             this.pnlLogin.Controls.Add(this.tbPassword);
@@ -70,6 +79,29 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(476, 240);
             this.pnlLogin.TabIndex = 1;
+            // 
+            // pbUser
+            // 
+            this.pbUser.BackgroundImage = global::FiveStarHotel1.Properties.Resources.loginUser;
+            this.pbUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbUser.Location = new System.Drawing.Point(226, 82);
+            this.pbUser.Name = "pbUser";
+            this.pbUser.Size = new System.Drawing.Size(25, 20);
+            this.pbUser.TabIndex = 16;
+            this.pbUser.TabStop = false;
+            // 
+            // pbEye
+            // 
+            this.pbEye.BackColor = System.Drawing.Color.Transparent;
+            this.pbEye.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Eye;
+            this.pbEye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbEye.Location = new System.Drawing.Point(430, 135);
+            this.pbEye.Name = "pbEye";
+            this.pbEye.Size = new System.Drawing.Size(30, 20);
+            this.pbEye.TabIndex = 15;
+            this.pbEye.TabStop = false;
+            this.pbEye.MouseLeave += new System.EventHandler(this.pbEye_MouseLeave);
+            this.pbEye.MouseHover += new System.EventHandler(this.pbEye_MouseHover);
             // 
             // lblWrongInfo
             // 
@@ -162,6 +194,16 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // pbPass
+            // 
+            this.pbPass.BackgroundImage = global::FiveStarHotel1.Properties.Resources.loginPass;
+            this.pbPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbPass.Location = new System.Drawing.Point(226, 135);
+            this.pbPass.Name = "pbPass";
+            this.pbPass.Size = new System.Drawing.Size(25, 20);
+            this.pbPass.TabIndex = 17;
+            this.pbPass.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +220,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,6 +239,9 @@
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox pbEye;
+        private System.Windows.Forms.PictureBox pbUser;
+        private System.Windows.Forms.PictureBox pbPass;
     }
 }
 

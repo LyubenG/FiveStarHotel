@@ -50,37 +50,49 @@ namespace FiveStarHotel1
         }
         private bool CheckLoginInfo()
         {
-           
-                string query = $"select username from employees where username = '{username}' and password= '{password}'";
-                SqlDataReader reader = functions.getForCombo(query);
 
-                while (reader.Read())
+            string query = $"select username from employees where username = '{username}' and password= '{password}'";
+            SqlDataReader reader = functions.getForCombo(query);
+
+            if (username.Trim() == "Admin" && password.Trim() == "Admin")
+            {
+                return true;
+            }
+
+            while (reader.Read())
+            {
+                for (int i = 0; i < reader.FieldCount; i++)
                 {
-                    for (int i = 0; i < reader.FieldCount; i++)
+                    if (username == reader.GetString(i))
                     {
-                        if (username == reader.GetString(i))
-                        {
-                            reader.Close();
-                            return true;
-                        } else
-                        {
-                            lblWrongInfo.Visible = true;
-                            return false;
-                        }
+                        reader.Close();
+                        return true;
+                    }
+                    else
+                    {
+                        lblWrongInfo.Visible = true;
+                        return false;
                     }
                 }
-                reader.Close();
-
-                if (username.Trim() == "Admin" && password.Trim() == "Admin")
-                {
-                    return true;
-                }
+            }
+            reader.Close();
             return false;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pbEye_MouseHover(object sender, EventArgs e)
+        {
+            tbPass.UseSystemPasswordChar = false;
+        }
+
+        private void pbEye_MouseLeave(object sender, EventArgs e)
+        {
+            tbPass.UseSystemPasswordChar = true;
+
         }
     }
 }

@@ -225,5 +225,14 @@
   <ItemGroup>
     <None Include="Resources\ContentHolder21.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginPass.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
