@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlBackground = new System.Windows.Forms.Panel();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlDate = new System.Windows.Forms.Panel();
             this.lblCurrentDate = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.pbSeprator2 = new System.Windows.Forms.PictureBox();
             this.lblCountGuests = new System.Windows.Forms.Label();
             this.lblCountRooms = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlBackground.SuspendLayout();
             this.pnlDate.SuspendLayout();
             this.pnlStatistics.SuspendLayout();
@@ -63,6 +63,17 @@
             this.pnlBackground.Name = "pnlBackground";
             this.pnlBackground.Size = new System.Drawing.Size(628, 434);
             this.pnlBackground.TabIndex = 0;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Location = new System.Drawing.Point(82, 45);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(175, 20);
+            this.lblWelcome.TabIndex = 2;
+            this.lblWelcome.Text = "Welcome!";
             // 
             // pnlDate
             // 
@@ -127,7 +138,7 @@
             this.pbSeparator.TabIndex = 2;
             this.pbSeparator.TabStop = false;
             // 
-            // btnReserve
+            // btnReserve2
             // 
             this.btnReserve.BackgroundImage = global::FiveStarHotel1.Properties.Resources.ReserveButton;
             this.btnReserve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -138,11 +149,12 @@
             this.btnReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnReserve.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnReserve.Location = new System.Drawing.Point(431, 0);
-            this.btnReserve.Name = "btnReserve";
+            this.btnReserve.Name = "btnReserve2";
             this.btnReserve.Size = new System.Drawing.Size(119, 80);
             this.btnReserve.TabIndex = 7;
             this.btnReserve.Text = "RESERVE ROOM";
             this.btnReserve.UseVisualStyleBackColor = true;
+            this.btnReserve.Click += new System.EventHandler(this.btnReserve_Click);
             this.btnReserve.MouseLeave += new System.EventHandler(this.btnReserve_MouseLeave);
             this.btnReserve.MouseHover += new System.EventHandler(this.btnReserve_MouseHover);
             // 
@@ -219,17 +231,6 @@
             this.lblCountRooms.TabIndex = 0;
             this.lblCountRooms.Text = "0";
             this.lblCountRooms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
-            this.lblWelcome.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.Transparent;
-            this.lblWelcome.Location = new System.Drawing.Point(82, 45);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(175, 20);
-            this.lblWelcome.TabIndex = 2;
-            this.lblWelcome.Text = "Welcome!";
             // 
             // HomePage
             // 

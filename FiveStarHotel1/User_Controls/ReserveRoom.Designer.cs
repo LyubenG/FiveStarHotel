@@ -105,6 +105,7 @@
             this.tbPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPhoneNo.ForeColor = System.Drawing.SystemColors.Window;
             this.tbPhoneNo.Location = new System.Drawing.Point(129, 168);
+            this.tbPhoneNo.MaxLength = 10;
             this.tbPhoneNo.Name = "tbPhoneNo";
             this.tbPhoneNo.Size = new System.Drawing.Size(128, 20);
             this.tbPhoneNo.TabIndex = 25;

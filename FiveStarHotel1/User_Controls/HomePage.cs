@@ -47,5 +47,9 @@ namespace FiveStarHotel1.User_Controls
             lblCountGuests.Text = takenrooms.ToString();
             lblCurrentDate.Text = DateTime.Today.ToLongDateString();
         }
+
+        private void btnReserve_Click(object sender, EventArgs e)
+        {        
+        }
     }
 }
