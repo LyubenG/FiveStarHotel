@@ -72,9 +72,8 @@ namespace FiveStarHotel1.User_Controls
                 {
                     string checkOutDate = dpCheckOutDate.Text;
 
-                    query = String.Format("update customer set checkout = 'Yes' where cid = '{1}' update rooms set booked = 'No' where roomNo = '{2}'", checkOutDate, id, tbRoomNo.Text);
+                    query = String.Format("update customer set checkout = 'Yes' where cid = '{1}' update rooms set booked = 'No' where roomNo = '{2}' delete from customer where cname = '{3}'", checkOutDate, id, tbRoomNo.Text, tbName.Text);
                     functions.setData(query, String.Format("Customer {0} Has Successfuly Checked Out!", tbName.Text));
-
                     CheckOutLoad();
                 }
             }
