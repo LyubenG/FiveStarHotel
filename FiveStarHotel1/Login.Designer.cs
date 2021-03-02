@@ -37,7 +37,7 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
@@ -148,19 +148,19 @@
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "Login";
             // 
-            // button1
+            // btnExit
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::FiveStarHotel1.Properties.Resources.LoginExit;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(593, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 31);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BackgroundImage = global::FiveStarHotel1.Properties.Resources.LoginExit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(593, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(33, 31);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Login
             // 
@@ -168,7 +168,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FiveStarHotel1.Properties.Resources.BlurredBG;
             this.ClientSize = new System.Drawing.Size(638, 435);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Login";
@@ -193,7 +193,7 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

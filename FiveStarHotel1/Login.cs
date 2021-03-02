@@ -16,7 +16,6 @@ namespace FiveStarHotel1
         Functions functions = new Functions();
         string username;
         string password;
-        bool loginfound = false;
         public Login()
         {
             InitializeComponent();
@@ -32,19 +31,17 @@ namespace FiveStarHotel1
 
             username = tbUsername.Text;
             password = tbPass.Text;
-            
-            if (username == "" || password == "")
+            if (username.Trim() == "" && password.Trim() == "")
             {
                 MessageBox.Show("You must enter both username and password!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
-            if (!loginfound)
+
+            if (!CheckLoginInfo())
             {
                 lblWrongInfo.Visible = true;
             }
-           
-            if (CheckLoginInfo())
+            else
             {
                 MainForm mf = new MainForm();
                 this.Hide();
@@ -53,11 +50,10 @@ namespace FiveStarHotel1
         }
         private bool CheckLoginInfo()
         {
-            if (username != "" || password != "")
-            {
+           
                 string query = $"select username from employees where username = '{username}' and password= '{password}'";
                 SqlDataReader reader = functions.getForCombo(query);
-                          
+
                 while (reader.Read())
                 {
                     for (int i = 0; i < reader.FieldCount; i++)
@@ -66,29 +62,23 @@ namespace FiveStarHotel1
                         {
                             reader.Close();
                             return true;
-
+                        } else
+                        {
+                            lblWrongInfo.Visible = true;
+                            return false;
                         }
                     }
                 }
                 reader.Close();
 
-                if (username.Trim() == "Admin" || password.Trim() == "Admin")
+                if (username.Trim() == "Admin" && password.Trim() == "Admin")
                 {
-
                     return true;
                 }
-                
-                
-                
-                return false;
-            }
-           
-            else
-            {
-                return false;
-            }
+            return false;
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
