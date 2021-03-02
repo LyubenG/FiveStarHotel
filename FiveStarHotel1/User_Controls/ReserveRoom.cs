@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace FiveStarHotel1.User_Controls
 {
@@ -15,7 +16,7 @@ namespace FiveStarHotel1.User_Controls
     {
         Functions functions = new Functions();
         string query;
-        
+
         public ReserveRoom()
         {
             InitializeComponent();
@@ -23,16 +24,16 @@ namespace FiveStarHotel1.User_Controls
 
         private void setComboBox(String query, ComboBox combobox)
         {
-            combobox.Items.Clear();
+            combobox.Items.Clear(); // Clearing if there are any items from previous uses.
             SqlDataReader reader = functions.getForCombo(query);
-           
+
             while (reader.Read())
             {
                 for (int i = 0; i < reader.FieldCount; i++)
                 {
                     if (!combobox.Items.Contains(reader.GetString(i)))
-                    { 
-                        combobox.Items.Add(reader.GetString(i));
+                    {
+                        combobox.Items.Add(reader.GetString(i)); // Adding rooms that match the search.
                     }
                 }
             }
@@ -56,7 +57,7 @@ namespace FiveStarHotel1.User_Controls
         {
             query = "Select price, roomid from rooms where roomNo = '" + cbRoomAvailable.Text + "'";
             DataSet dataset = functions.getData(query);
-            
+
             tbPrice.Text = dataset.Tables[0].Rows[0][0] + "$";
             roomId = int.Parse(dataset.Tables[0].Rows[0][1].ToString());
         }
@@ -65,38 +66,34 @@ namespace FiveStarHotel1.User_Controls
         {
             if (ValidateInput())
             {
-                try
-                {
-                    string name = tbName.Text;
-                    int mobilePhone = int.Parse(tbPhoneNo.Text);
-                    string nationality = tbNationality.Text;
-                    string gender = cbGender.Text;
-                    string dateOfBirth = dpDOB.Text;
-                    string checkInDate = dpCheckIn.Text;
+                string name = tbName.Text;
+                int mobilePhone = int.Parse(tbPhoneNo.Text);
+                string nationality = tbNationality.Text;
+                string gender = cbGender.Text;
+                string dateOfBirth = dpDOB.Text;
+                string checkInDate = dpCheckIn.Text;
 
-                    query = String.Format("insert into customer (cname, mobile, nationality, gender, dob, checkin, roomid)" +
-                        " values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') update rooms set booked = 'Yes' where roomNo = '{7}'",
-                        name, mobilePhone, nationality, gender, dateOfBirth, checkInDate, roomId, cbRoomAvailable.Text);
+                query = String.Format("insert into customer (cname, mobile, nationality, gender, dob, checkin, roomid)" +
+                    " values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') update rooms set booked = 'Yes' where roomNo = '{7}'",
+                    name, mobilePhone, nationality, gender, dateOfBirth, checkInDate, roomId, cbRoomAvailable.Text);
 
-                    functions.setData(query, String.Format("Room Number {0} Has Been Succesfully Reserved By {1}!", cbRoomAvailable.Text, name));
-
-                    ClearSelectedData();
-                }
-                catch (System.FormatException)
-                {
-                    MessageBox.Show("Enter valid number, please!");
-                }
+                functions.setData(query, String.Format("Room Number {0} Has Been Succesfully Reserved By {1}!", cbRoomAvailable.Text, name));
+                ClearSelectedData();
             }
-
             else
             {
-                MessageBox.Show("Please fill in all the fields!");
+                MessageBox.Show("Please fill in all the fields with correct data!", "Invalid input!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-           
+
         private bool ValidateInput()
         {
-            if (tbName.Text == "" || tbNationality.Text == "" || tbPhoneNo.Text == "" || cbGender.Text == "" || cbRoomAvailable.Text == "" || cbBedType.Text == "" || cbRoomType.Text == "")
+            Regex reg = new Regex(@"[^0-9]"); //Regex that detects only numbers from 0 - 9.
+            if (tbName.Text == "" || tbNationality.Text == "" || tbPhoneNo.Text == ""
+                || cbGender.Text == "" || cbRoomAvailable.Text == ""
+                || cbBedType.Text == "" || cbRoomType.Text == "" 
+                || reg.IsMatch(tbPhoneNo.Text)) // Checking if any of the textfields are empty or if the phone number is invalid.
             {
                 return false;
             }
@@ -105,6 +102,7 @@ namespace FiveStarHotel1.User_Controls
 
         private void ClearSelectedData()
         {
+            //Clearing all the data once a room is reserved.
             tbName.Clear();
             tbNationality.Clear();
             tbPhoneNo.Clear();

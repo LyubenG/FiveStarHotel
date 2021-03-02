@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace FiveStarHotel1.User_Controls
 {
     public partial class AddRoom : UserControl
     {
-        Functions fn = new Functions();
+        Functions functions = new Functions();
         string query;
 
         public AddRoom()
@@ -20,61 +21,50 @@ namespace FiveStarHotel1.User_Controls
             InitializeComponent();
         }
 
-        private void pnlBackground_VisibleChanged(object sender, EventArgs e)
-        {
-            UpdateRoomData();
-        }
-        private void AddRoom_Load(object sender, EventArgs e)
-        {
-            UpdateRoomData();
-        }
-
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
             if (ValidateInput())
             {
-                try
-                {
-                    string roomNo = tbRoomNo.Text;
-                    string roomType = cbRoomType.Text;
-                    string bed = cbBedType.Text;
-                    int price = int.Parse(tbPrice.Text);
-                    
-                    query = String.Format("insert into rooms (roomNo, roomType, bed, price) values ('{0}', '{1}', '{2}', '{3}')",
-                        roomNo, roomType, bed, price);
-                   
-                    fn.setData(query, String.Format("Room Number {0} Has Been Added!", roomNo));
+                string roomNo = tbRoomNo.Text;
+                string roomType = cbRoomType.Text;
+                string bed = cbBedType.Text;
+                int price = int.Parse(tbPrice.Text);
 
-                    UpdateRoomData();
-                }
-                catch (System.FormatException)
-                {
-                    MessageBox.Show("Enter valid price, please!");
-                }
+                query = String.Format("insert into rooms (roomNo, roomType, bed, price) values ('{0}', '{1}', '{2}', '{3}')",
+                    roomNo, roomType, bed, price);
+
+                functions.setData(query, String.Format("Room Number {0} Has Been Added!", roomNo));
+
+                UpdateRoomData();
             }
             else
             {
-                MessageBox.Show("Please fill in all the fields!");
+                MessageBox.Show("Please fill in all the fields with correct data!", "Invalid input!",
+                      MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
         private bool ValidateInput()
         {
-            if (tbRoomNo.Text == "" || cbRoomType.Text == "" || cbBedType.Text == "" || tbPrice.Text == "")
+            Regex reg = new Regex(@"[^0-9]"); //Regex that detects only numbers from 0 - 9.
+            if (tbRoomNo.Text == "" || cbRoomType.Text == "" || cbBedType.Text == "" || tbPrice.Text == "" || reg.IsMatch(tbPrice.Text))
             {
                 return false;
             }
-            else
-            {
-                return true;
-            }
+            return true;
         }
+
         private void UpdateRoomData()
         {
             query = "Select * from rooms";
-            DataSet ds = fn.getData(query);
+            DataSet ds = functions.getData(query);
             dataRooms.DataSource = ds.Tables[0];
             dataRooms.Columns[0].Visible = false;
+        }
+
+        private void AddRoom_VisibleChanged(object sender, EventArgs e)
+        {
+            UpdateRoomData();
         }
     }
 }

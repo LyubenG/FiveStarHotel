@@ -12,7 +12,7 @@ namespace FiveStarHotel1.User_Controls
 {
     public partial class HomePage : UserControl
     {
-        Functions fn = new Functions();
+        Functions functions = new Functions();
         public HomePage()
         {
             InitializeComponent();
@@ -40,9 +40,9 @@ namespace FiveStarHotel1.User_Controls
 
         private void LoadData()
         {
-            int freerooms = fn.countData("No");
+            int freerooms = functions.countData("No");
             lblCountRooms.Text = freerooms.ToString();
-            int takenrooms = fn.countData("Yes");
+            int takenrooms = functions.countData("Yes");
             lblCountGuests.Text = takenrooms.ToString();
             lblCurrentDate.Text = DateTime.Today.ToLongDateString();
         }

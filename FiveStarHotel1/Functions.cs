@@ -14,16 +14,13 @@ namespace FiveStarHotel1
         protected SqlConnection GetConnection()
         {
             SqlConnection con = new SqlConnection();
-
-            con.ConnectionString = "Data Source=(LocalDb)\v15.0; Database=fiveStarHotel;Trusted_Connection=True";
-            //con.ConnectionString = "data source = DESKTOP-G2GHH45; Database = fiveStarHotel;integrated security = True";
             con.ConnectionString = "Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00";
-            
             return con;
         }
             
         public DataSet getData(String query)
         {
+            //Method used for getting data from DB.
             SqlConnection con = GetConnection();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -36,6 +33,7 @@ namespace FiveStarHotel1
 
         public void setData(String query, String message)
         {
+            //Method used for setting data in the DB.
             SqlConnection con = GetConnection();
             con.Open();
             SqlCommand cmd = new SqlCommand();
@@ -49,6 +47,7 @@ namespace FiveStarHotel1
 
         public int countData(String dataInfo)
         {
+            //Method used for getting amount of taken rooms & free rooms.
             SqlConnection con = GetConnection();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;

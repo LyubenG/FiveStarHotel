@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBackground = new System.Windows.Forms.Panel();
             this.pbTable = new System.Windows.Forms.PictureBox();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -65,21 +65,18 @@
             this.pnlBackground.Controls.Add(this.dataRooms);
             this.pnlBackground.Controls.Add(this.lblAddRooms);
             this.pnlBackground.Location = new System.Drawing.Point(0, 0);
-            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(837, 534);
+            this.pnlBackground.Size = new System.Drawing.Size(629, 434);
             this.pnlBackground.TabIndex = 1;
-            this.pnlBackground.VisibleChanged += new System.EventHandler(this.pnlBackground_VisibleChanged);
             // 
             // pbTable
             // 
             this.pbTable.BackColor = System.Drawing.Color.Transparent;
             this.pbTable.BackgroundImage = global::FiveStarHotel1.Properties.Resources.AddRoomPic;
             this.pbTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbTable.Location = new System.Drawing.Point(67, 55);
-            this.pbTable.Margin = new System.Windows.Forms.Padding(4);
+            this.pbTable.Location = new System.Drawing.Point(50, 45);
             this.pbTable.Name = "pbTable";
-            this.pbTable.Size = new System.Drawing.Size(35, 25);
+            this.pbTable.Size = new System.Drawing.Size(26, 20);
             this.pbTable.TabIndex = 11;
             this.pbTable.TabStop = false;
             // 
@@ -87,10 +84,9 @@
             // 
             this.lblPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblPrice.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblPrice.Location = new System.Drawing.Point(636, 362);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrice.Location = new System.Drawing.Point(477, 294);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(152, 27);
+            this.lblPrice.Size = new System.Drawing.Size(114, 22);
             this.lblPrice.TabIndex = 10;
             this.lblPrice.Text = "Enter Price:";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,10 +95,9 @@
             // 
             this.lblBedType.BackColor = System.Drawing.Color.Transparent;
             this.lblBedType.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblBedType.Location = new System.Drawing.Point(640, 290);
-            this.lblBedType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBedType.Location = new System.Drawing.Point(480, 236);
             this.lblBedType.Name = "lblBedType";
-            this.lblBedType.Size = new System.Drawing.Size(148, 27);
+            this.lblBedType.Size = new System.Drawing.Size(111, 22);
             this.lblBedType.TabIndex = 9;
             this.lblBedType.Text = "Enter Bed Type:";
             this.lblBedType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,10 +106,9 @@
             // 
             this.lblRoomType.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomType.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblRoomType.Location = new System.Drawing.Point(640, 220);
-            this.lblRoomType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRoomType.Location = new System.Drawing.Point(480, 179);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(148, 27);
+            this.lblRoomType.Size = new System.Drawing.Size(111, 22);
             this.lblRoomType.TabIndex = 8;
             this.lblRoomType.Text = "Enter Room Type:";
             this.lblRoomType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,10 +117,9 @@
             // 
             this.lblRoomNo.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomNo.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblRoomNo.Location = new System.Drawing.Point(640, 148);
-            this.lblRoomNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRoomNo.Location = new System.Drawing.Point(480, 120);
             this.lblRoomNo.Name = "lblRoomNo";
-            this.lblRoomNo.Size = new System.Drawing.Size(148, 27);
+            this.lblRoomNo.Size = new System.Drawing.Size(111, 22);
             this.lblRoomNo.TabIndex = 7;
             this.lblRoomNo.Text = "Enter Room Number:";
             this.lblRoomNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,10 +132,9 @@
             this.btnAddRoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
             this.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRoom.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAddRoom.Location = new System.Drawing.Point(636, 441);
-            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddRoom.Location = new System.Drawing.Point(477, 358);
             this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(155, 38);
+            this.btnAddRoom.Size = new System.Drawing.Size(116, 31);
             this.btnAddRoom.TabIndex = 6;
             this.btnAddRoom.Text = "Add Room!";
             this.btnAddRoom.UseVisualStyleBackColor = false;
@@ -156,10 +148,9 @@
             "Single",
             "Double",
             "Twin Beds"});
-            this.cbBedType.Location = new System.Drawing.Point(640, 321);
-            this.cbBedType.Margin = new System.Windows.Forms.Padding(4);
+            this.cbBedType.Location = new System.Drawing.Point(480, 261);
             this.cbBedType.Name = "cbBedType";
-            this.cbBedType.Size = new System.Drawing.Size(147, 24);
+            this.cbBedType.Size = new System.Drawing.Size(111, 21);
             this.cbBedType.TabIndex = 5;
             // 
             // cbRoomType
@@ -170,26 +161,23 @@
             "Single",
             "Double",
             "Apartament"});
-            this.cbRoomType.Location = new System.Drawing.Point(640, 251);
-            this.cbRoomType.Margin = new System.Windows.Forms.Padding(4);
+            this.cbRoomType.Location = new System.Drawing.Point(480, 204);
             this.cbRoomType.Name = "cbRoomType";
-            this.cbRoomType.Size = new System.Drawing.Size(147, 24);
+            this.cbRoomType.Size = new System.Drawing.Size(111, 21);
             this.cbRoomType.TabIndex = 4;
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(636, 393);
-            this.tbPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPrice.Location = new System.Drawing.Point(477, 319);
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(151, 22);
+            this.tbPrice.Size = new System.Drawing.Size(114, 20);
             this.tbPrice.TabIndex = 3;
             // 
             // tbRoomNo
             // 
-            this.tbRoomNo.Location = new System.Drawing.Point(640, 178);
-            this.tbRoomNo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbRoomNo.Location = new System.Drawing.Point(480, 145);
             this.tbRoomNo.Name = "tbRoomNo";
-            this.tbRoomNo.Size = new System.Drawing.Size(147, 22);
+            this.tbRoomNo.Size = new System.Drawing.Size(111, 20);
             this.tbRoomNo.TabIndex = 2;
             // 
             // dataRooms
@@ -198,33 +186,32 @@
             this.dataRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataRooms.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
             this.dataRooms.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataRooms.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataRooms.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataRooms.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataRooms.Location = new System.Drawing.Point(57, 113);
-            this.dataRooms.Margin = new System.Windows.Forms.Padding(4);
+            this.dataRooms.Location = new System.Drawing.Point(43, 92);
             this.dataRooms.MultiSelect = false;
             this.dataRooms.Name = "dataRooms";
             this.dataRooms.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataRooms.RowHeadersWidth = 5;
             this.dataRooms.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataRooms.Size = new System.Drawing.Size(560, 401);
+            this.dataRooms.Size = new System.Drawing.Size(420, 326);
             this.dataRooms.TabIndex = 1;
             // 
             // lblAddRooms
@@ -232,23 +219,21 @@
             this.lblAddRooms.BackColor = System.Drawing.Color.Transparent;
             this.lblAddRooms.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblAddRooms.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblAddRooms.Location = new System.Drawing.Point(109, 55);
-            this.lblAddRooms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddRooms.Location = new System.Drawing.Point(82, 45);
             this.lblAddRooms.Name = "lblAddRooms";
-            this.lblAddRooms.Size = new System.Drawing.Size(124, 25);
+            this.lblAddRooms.Size = new System.Drawing.Size(93, 20);
             this.lblAddRooms.TabIndex = 0;
             this.lblAddRooms.Text = "Add Rooms";
             // 
             // AddRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
             this.Controls.Add(this.pnlBackground);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddRoom";
-            this.Size = new System.Drawing.Size(839, 534);
-            this.Load += new System.EventHandler(this.AddRoom_Load);
+            this.Size = new System.Drawing.Size(629, 434);
+            this.VisibleChanged += new System.EventHandler(this.AddRoom_VisibleChanged);
             this.pnlBackground.ResumeLayout(false);
             this.pnlBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTable)).EndInit();
