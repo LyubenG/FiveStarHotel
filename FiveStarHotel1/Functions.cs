@@ -13,14 +13,6 @@ namespace FiveStarHotel1
     {
         SqlConnection con = new SqlConnection("Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00");
 
-        protected SqlConnection GetConnection()
-        {
-            // SqlConnection con = new SqlConnection("Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00");
-            //  con.ConnectionString = "Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00";
-            //  return con;
-            return null;
-        }
-            
         public DataSet getData(String query)
         {
             //Method used for getting data from DB.

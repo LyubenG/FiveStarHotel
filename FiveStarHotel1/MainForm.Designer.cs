@@ -42,13 +42,13 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.pbArrow = new System.Windows.Forms.PictureBox();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.employee1 = new FiveStarHotel1.User_Controls.Employee();
             this.checkOut1 = new FiveStarHotel1.User_Controls.CheckOut();
             this.reserveRoom1 = new FiveStarHotel1.User_Controls.ReserveRoom();
             this.addRoom1 = new FiveStarHotel1.User_Controls.AddRoom();
             this.homePage1 = new FiveStarHotel1.User_Controls.HomePage();
-            this.employee1 = new FiveStarHotel1.User_Controls.Employee();
+            this.pbArrow = new System.Windows.Forms.PictureBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panelSideNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlTopNav.SuspendLayout();
@@ -67,9 +67,8 @@
             this.panelSideNav.Controls.Add(this.btnHome);
             this.panelSideNav.Controls.Add(this.pbLogo);
             this.panelSideNav.Location = new System.Drawing.Point(0, 0);
-            this.panelSideNav.Margin = new System.Windows.Forms.Padding(4);
             this.panelSideNav.Name = "panelSideNav";
-            this.panelSideNav.Size = new System.Drawing.Size(215, 624);
+            this.panelSideNav.Size = new System.Drawing.Size(161, 507);
             this.panelSideNav.TabIndex = 0;
             // 
             // btnEmployees
@@ -80,11 +79,10 @@
             this.btnEmployees.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEmployees.Image = global::FiveStarHotel1.Properties.Resources.EmployeesIcon;
             this.btnEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEmployees.Location = new System.Drawing.Point(0, 459);
-            this.btnEmployees.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmployees.Location = new System.Drawing.Point(0, 373);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnEmployees.Size = new System.Drawing.Size(215, 59);
+            this.btnEmployees.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnEmployees.Size = new System.Drawing.Size(161, 48);
             this.btnEmployees.TabIndex = 7;
             this.btnEmployees.Text = "Employee";
             this.btnEmployees.UseVisualStyleBackColor = true;
@@ -98,11 +96,10 @@
             this.btnCheckOut.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCheckOut.Image = global::FiveStarHotel1.Properties.Resources.CheckOut;
             this.btnCheckOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCheckOut.Location = new System.Drawing.Point(0, 393);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCheckOut.Location = new System.Drawing.Point(0, 319);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnCheckOut.Size = new System.Drawing.Size(215, 59);
+            this.btnCheckOut.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnCheckOut.Size = new System.Drawing.Size(161, 48);
             this.btnCheckOut.TabIndex = 6;
             this.btnCheckOut.Text = "Check Out";
             this.btnCheckOut.UseVisualStyleBackColor = true;
@@ -116,11 +113,10 @@
             this.btnCustomerInfo.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCustomerInfo.Image = global::FiveStarHotel1.Properties.Resources.CustomerInfo;
             this.btnCustomerInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCustomerInfo.Location = new System.Drawing.Point(0, 326);
-            this.btnCustomerInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCustomerInfo.Location = new System.Drawing.Point(0, 265);
             this.btnCustomerInfo.Name = "btnCustomerInfo";
-            this.btnCustomerInfo.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnCustomerInfo.Size = new System.Drawing.Size(215, 59);
+            this.btnCustomerInfo.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.btnCustomerInfo.Size = new System.Drawing.Size(161, 48);
             this.btnCustomerInfo.TabIndex = 5;
             this.btnCustomerInfo.Text = "Customers Info";
             this.btnCustomerInfo.UseVisualStyleBackColor = true;
@@ -134,11 +130,10 @@
             this.btnReserve.ForeColor = System.Drawing.SystemColors.Control;
             this.btnReserve.Image = global::FiveStarHotel1.Properties.Resources.RingIcon2;
             this.btnReserve.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReserve.Location = new System.Drawing.Point(0, 260);
-            this.btnReserve.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReserve.Location = new System.Drawing.Point(0, 211);
             this.btnReserve.Name = "btnReserve";
-            this.btnReserve.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnReserve.Size = new System.Drawing.Size(215, 59);
+            this.btnReserve.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnReserve.Size = new System.Drawing.Size(161, 48);
             this.btnReserve.TabIndex = 4;
             this.btnReserve.Text = "Reserve Room";
             this.btnReserve.UseVisualStyleBackColor = true;
@@ -152,11 +147,10 @@
             this.btnAddRoom.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddRoom.Image = global::FiveStarHotel1.Properties.Resources.ReserveIcon;
             this.btnAddRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddRoom.Location = new System.Drawing.Point(0, 183);
-            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddRoom.Location = new System.Drawing.Point(0, 149);
             this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnAddRoom.Size = new System.Drawing.Size(215, 59);
+            this.btnAddRoom.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnAddRoom.Size = new System.Drawing.Size(161, 48);
             this.btnAddRoom.TabIndex = 3;
             this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.UseVisualStyleBackColor = true;
@@ -170,11 +164,10 @@
             this.btnHome.ForeColor = System.Drawing.SystemColors.Control;
             this.btnHome.Image = global::FiveStarHotel1.Properties.Resources.HomeIcon2;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHome.Location = new System.Drawing.Point(0, 117);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Location = new System.Drawing.Point(0, 95);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.btnHome.Size = new System.Drawing.Size(215, 59);
+            this.btnHome.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
+            this.btnHome.Size = new System.Drawing.Size(161, 48);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -185,10 +178,9 @@
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Logo;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbLogo.Location = new System.Drawing.Point(47, 31);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo.Location = new System.Drawing.Point(35, 25);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(120, 79);
+            this.pbLogo.Size = new System.Drawing.Size(90, 64);
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
@@ -200,9 +192,8 @@
             this.pnlTopNav.Controls.Add(this.btnExit);
             this.pnlTopNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTopNav.Location = new System.Drawing.Point(0, 0);
-            this.pnlTopNav.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTopNav.Name = "pnlTopNav";
-            this.pnlTopNav.Size = new System.Drawing.Size(1163, 31);
+            this.pnlTopNav.Size = new System.Drawing.Size(872, 25);
             this.pnlTopNav.TabIndex = 1;
             this.pnlTopNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblNameOfProgram_MouseDown_1);
             // 
@@ -210,10 +201,9 @@
             // 
             this.lblNameOfProgram.AutoSize = true;
             this.lblNameOfProgram.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNameOfProgram.Location = new System.Drawing.Point(553, 7);
-            this.lblNameOfProgram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNameOfProgram.Location = new System.Drawing.Point(415, 6);
             this.lblNameOfProgram.Name = "lblNameOfProgram";
-            this.lblNameOfProgram.Size = new System.Drawing.Size(100, 17);
+            this.lblNameOfProgram.Size = new System.Drawing.Size(76, 13);
             this.lblNameOfProgram.TabIndex = 2;
             this.lblNameOfProgram.Text = "FiveStarsHotel";
             this.lblNameOfProgram.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblNameOfProgram_MouseDown_1);
@@ -228,10 +218,9 @@
             this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = global::FiveStarHotel1.Properties.Resources.MinimizeButton1;
-            this.btnMinimize.Location = new System.Drawing.Point(1083, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimize.Location = new System.Drawing.Point(812, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(40, 31);
+            this.btnMinimize.Size = new System.Drawing.Size(30, 25);
             this.btnMinimize.TabIndex = 1;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -246,10 +235,9 @@
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = global::FiveStarHotel1.Properties.Resources.exitButton;
-            this.btnExit.Location = new System.Drawing.Point(1123, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(842, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(40, 31);
+            this.btnExit.Size = new System.Drawing.Size(30, 25);
             this.btnExit.TabIndex = 0;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -261,21 +249,65 @@
             this.pnlContent.Controls.Add(this.reserveRoom1);
             this.pnlContent.Controls.Add(this.addRoom1);
             this.pnlContent.Controls.Add(this.homePage1);
-            this.pnlContent.Location = new System.Drawing.Point(256, 53);
-            this.pnlContent.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlContent.Location = new System.Drawing.Point(192, 43);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(859, 545);
+            this.pnlContent.Size = new System.Drawing.Size(644, 443);
             this.pnlContent.TabIndex = 3;
+            // 
+            // employee1
+            // 
+            this.employee1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
+            this.employee1.Location = new System.Drawing.Point(3, 6);
+            this.employee1.Name = "employee1";
+            this.employee1.Size = new System.Drawing.Size(644, 443);
+            this.employee1.TabIndex = 4;
+            // 
+            // checkOut1
+            // 
+            this.checkOut1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
+            this.checkOut1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.checkOut1.Location = new System.Drawing.Point(3, 6);
+            this.checkOut1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkOut1.Name = "checkOut1";
+            this.checkOut1.Size = new System.Drawing.Size(629, 434);
+            this.checkOut1.TabIndex = 3;
+            this.checkOut1.Load += new System.EventHandler(this.checkOut1_Load);
+            // 
+            // reserveRoom1
+            // 
+            this.reserveRoom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
+            this.reserveRoom1.Location = new System.Drawing.Point(3, 6);
+            this.reserveRoom1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reserveRoom1.Name = "reserveRoom1";
+            this.reserveRoom1.Size = new System.Drawing.Size(629, 434);
+            this.reserveRoom1.TabIndex = 2;
+            // 
+            // addRoom1
+            // 
+            this.addRoom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
+            this.addRoom1.Location = new System.Drawing.Point(3, 6);
+            this.addRoom1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addRoom1.Name = "addRoom1";
+            this.addRoom1.Size = new System.Drawing.Size(629, 434);
+            this.addRoom1.TabIndex = 1;
+            // 
+            // homePage1
+            // 
+            this.homePage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
+            this.homePage1.Location = new System.Drawing.Point(3, 6);
+            this.homePage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homePage1.Name = "homePage1";
+            this.homePage1.Size = new System.Drawing.Size(629, 434);
+            this.homePage1.TabIndex = 0;
             // 
             // pbArrow
             // 
             this.pbArrow.BackColor = System.Drawing.Color.Transparent;
             this.pbArrow.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Arrow;
             this.pbArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbArrow.Location = new System.Drawing.Point(215, 117);
-            this.pbArrow.Margin = new System.Windows.Forms.Padding(4);
+            this.pbArrow.Location = new System.Drawing.Point(161, 95);
             this.pbArrow.Name = "pbArrow";
-            this.pbArrow.Size = new System.Drawing.Size(33, 59);
+            this.pbArrow.Size = new System.Drawing.Size(25, 48);
             this.pbArrow.TabIndex = 2;
             this.pbArrow.TabStop = false;
             // 
@@ -284,64 +316,16 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // checkOut1
-            // 
-            this.checkOut1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
-            this.checkOut1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.checkOut1.Location = new System.Drawing.Point(4, 7);
-            this.checkOut1.Margin = new System.Windows.Forms.Padding(5);
-            this.checkOut1.Name = "checkOut1";
-            this.checkOut1.Size = new System.Drawing.Size(839, 534);
-            this.checkOut1.TabIndex = 3;
-            this.checkOut1.Load += new System.EventHandler(this.checkOut1_Load);
-            // 
-            // reserveRoom1
-            // 
-            this.reserveRoom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
-            this.reserveRoom1.Location = new System.Drawing.Point(4, 7);
-            this.reserveRoom1.Margin = new System.Windows.Forms.Padding(5);
-            this.reserveRoom1.Name = "reserveRoom1";
-            this.reserveRoom1.Size = new System.Drawing.Size(839, 534);
-            this.reserveRoom1.TabIndex = 2;
-            // 
-            // addRoom1
-            // 
-            this.addRoom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
-            this.addRoom1.Location = new System.Drawing.Point(4, 7);
-            this.addRoom1.Margin = new System.Windows.Forms.Padding(5);
-            this.addRoom1.Name = "addRoom1";
-            this.addRoom1.Size = new System.Drawing.Size(839, 534);
-            this.addRoom1.TabIndex = 1;
-            // 
-            // homePage1
-            // 
-            this.homePage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
-            this.homePage1.Location = new System.Drawing.Point(4, 7);
-            this.homePage1.Margin = new System.Windows.Forms.Padding(5);
-            this.homePage1.Name = "homePage1";
-            this.homePage1.Size = new System.Drawing.Size(839, 534);
-            this.homePage1.TabIndex = 0;
-            // 
-            // employee1
-            // 
-            this.employee1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
-            this.employee1.Location = new System.Drawing.Point(0, 0);
-            this.employee1.Margin = new System.Windows.Forms.Padding(4);
-            this.employee1.Name = "employee1";
-            this.employee1.Size = new System.Drawing.Size(859, 545);
-            this.employee1.TabIndex = 4;
-            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(1163, 624);
+            this.ClientSize = new System.Drawing.Size(872, 507);
             this.Controls.Add(this.pnlTopNav);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pbArrow);
             this.Controls.Add(this.panelSideNav);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FiveStarHotel";
