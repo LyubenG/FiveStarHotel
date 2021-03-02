@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,10 @@ namespace FiveStarHotel1
 {
     public partial class Login : Form
     {
+        Functions functions = new Functions();
+        string username;
+        string password;
+        bool loginfound = false;
         public Login()
         {
             InitializeComponent();
@@ -24,26 +29,65 @@ namespace FiveStarHotel1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = tbUsername.Text;
-            string password = tbPass.Text;
-            if (username.Trim() == "" || password.Trim() == "")
+
+            username = tbUsername.Text;
+            password = tbPass.Text;
+            
+            if (username == "" || password == "")
             {
                 MessageBox.Show("You must enter both username and password!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            if (username != "Admin" || password != "Pass")
+            
+            if (!loginfound)
             {
                 lblWrongInfo.Visible = true;
             }
-            else
+           
+            if (CheckLoginInfo())
             {
                 MainForm mf = new MainForm();
                 this.Hide();
                 mf.Show();
             }
         }
+        private bool CheckLoginInfo()
+        {
+            if (username != "" || password != "")
+            {
+                string query = $"select username from employees where username = '{username}' and password= '{password}'";
+                SqlDataReader reader = functions.getForCombo(query);
+                          
+                while (reader.Read())
+                {
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        if (username == reader.GetString(i))
+                        {
+                            reader.Close();
+                            return true;
 
+                        }
+                    }
+                }
+                reader.Close();
+
+                if (username.Trim() == "Admin" || password.Trim() == "Admin")
+                {
+
+                    return true;
+                }
+                
+                
+                
+                return false;
+            }
+           
+            else
+            {
+                return false;
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();

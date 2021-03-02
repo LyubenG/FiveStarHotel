@@ -179,6 +179,7 @@
             this.tbRoomNo.Name = "tbRoomNo";
             this.tbRoomNo.Size = new System.Drawing.Size(111, 20);
             this.tbRoomNo.TabIndex = 2;
+            this.tbRoomNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dataRooms
             // 

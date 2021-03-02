@@ -16,6 +16,8 @@ namespace FiveStarHotel1.User_Controls
     {
         Functions functions = new Functions();
         string query;
+        int roomId;
+
 
         public ReserveRoom()
         {
@@ -52,7 +54,7 @@ namespace FiveStarHotel1.User_Controls
             cbBedType.SelectedIndex = -1;
         }
 
-        int roomId;
+        
         private void cbRoomAvailable_SelectedIndexChanged(object sender, EventArgs e)
         {
             query = "Select price, roomid from rooms where roomNo = '" + cbRoomAvailable.Text + "'";

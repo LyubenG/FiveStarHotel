@@ -35,8 +35,8 @@ namespace FiveStarHotel1
         private void btnNav_Clicked(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender; //Checking which button was clicked.
-            moveArrow(clickedButton); //Moving arrow showing which page is shown.
-            switchScene(clickedButton); //Switching scene.
+            MoveArrow(clickedButton); //Moving arrow showing which page is shown.
+            SwitchScene(clickedButton); //Switching scene.
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -51,10 +51,10 @@ namespace FiveStarHotel1
 
         private void lblNameOfProgram_MouseDown_1(object sender, MouseEventArgs e)
         {
-            moveProgram(e);
+            MoveProgram(e);
         }
 
-        private void switchScene(Button clickedButton)
+        private void SwitchScene(Button clickedButton)
         {
             switch (clickedButton.Text)
             {
@@ -81,16 +81,24 @@ namespace FiveStarHotel1
                     checkOut1.Visible = true;                  
                     addRoom1.Visible = false;
                     break;
+                case "Employee":
+                    employee1.BringToFront();
+                    employee1.Visible = true;
+                    checkOut1.Visible = false;
+                    homePage1.Visible = false;
+                    addRoom1.Visible = false;
+                    break;
+
             }
         }
 
-        private void moveArrow(Button button)
+        private void MoveArrow(Button button)
         {
             Point btnLocation = button.Location;
             pbArrow.Location = new Point(161, btnLocation.Y);
         }
 
-        private void moveProgram(MouseEventArgs e)
+        private void MoveProgram(MouseEventArgs e)
         {
             //Addition to the moving function
             if (e.Button == MouseButtons.Left)
@@ -100,6 +108,9 @@ namespace FiveStarHotel1
             }
         }
 
-       
+        private void checkOut1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
