@@ -30,6 +30,7 @@
         {
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.pbPass = new System.Windows.Forms.PictureBox();
             this.pbUser = new System.Windows.Forms.PictureBox();
             this.pbEye = new System.Windows.Forms.PictureBox();
             this.lblWrongInfo = new System.Windows.Forms.Label();
@@ -40,12 +41,11 @@
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.pbPass = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEye)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPass)).BeginInit();
             this.SuspendLayout();
             // 
             // pbLogo
@@ -79,6 +79,16 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(476, 240);
             this.pnlLogin.TabIndex = 1;
+            // 
+            // pbPass
+            // 
+            this.pbPass.BackgroundImage = global::FiveStarHotel1.Properties.Resources.loginPass;
+            this.pbPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbPass.Location = new System.Drawing.Point(226, 135);
+            this.pbPass.Name = "pbPass";
+            this.pbPass.Size = new System.Drawing.Size(25, 20);
+            this.pbPass.TabIndex = 17;
+            this.pbPass.TabStop = false;
             // 
             // pbUser
             // 
@@ -145,7 +155,6 @@
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(167, 20);
             this.tbPass.TabIndex = 4;
-            this.tbPass.Text = "Pass";
             this.tbPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbPass.UseSystemPasswordChar = true;
             // 
@@ -166,7 +175,6 @@
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(167, 20);
             this.tbUsername.TabIndex = 2;
-            this.tbUsername.Text = "Admin";
             this.tbUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblLogin
@@ -194,16 +202,6 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // pbPass
-            // 
-            this.pbPass.BackgroundImage = global::FiveStarHotel1.Properties.Resources.loginPass;
-            this.pbPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbPass.Location = new System.Drawing.Point(226, 135);
-            this.pbPass.Name = "pbPass";
-            this.pbPass.Size = new System.Drawing.Size(25, 20);
-            this.pbPass.TabIndex = 17;
-            this.pbPass.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,14 +213,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEye)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,12 +234,12 @@
         private System.Windows.Forms.Label tbPassword;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pbEye;
         private System.Windows.Forms.PictureBox pbUser;
         private System.Windows.Forms.PictureBox pbPass;
+        public System.Windows.Forms.TextBox tbUsername;
     }
 }
 

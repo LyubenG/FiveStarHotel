@@ -11,17 +11,19 @@ namespace FiveStarHotel1
 {
     class Functions
     {
+        SqlConnection con = new SqlConnection("Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00");
+
         protected SqlConnection GetConnection()
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00";
-            return con;
+            // SqlConnection con = new SqlConnection("Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00");
+            //  con.ConnectionString = "Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00";
+            //  return con;
+            return null;
         }
             
         public DataSet getData(String query)
         {
             //Method used for getting data from DB.
-            SqlConnection con = GetConnection();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandText = query;
@@ -34,7 +36,6 @@ namespace FiveStarHotel1
         public void setData(String query, String message)
         {
             //Method used for setting data in the DB.
-            SqlConnection con = GetConnection();
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -48,19 +49,18 @@ namespace FiveStarHotel1
         public int countData(String dataInfo)
         {
             //Method used for getting amount of taken rooms & free rooms.
-            SqlConnection con = GetConnection();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
             cmd.CommandText = String.Format("select COUNT(*) from rooms where booked = '{0}'", dataInfo);
             int count = (int)cmd.ExecuteScalar();
+            con.Close();
             return count;
 
         }
 
         public SqlDataReader getForCombo(String query)
         {
-            SqlConnection con = GetConnection();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();

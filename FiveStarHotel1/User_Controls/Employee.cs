@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FiveStarHotel1.User_Controls
@@ -46,7 +40,8 @@ namespace FiveStarHotel1.User_Controls
 
                     UpdateEmployeeData(); // Updating the Table.
                     clearAllData(); // Clearing textboxes.
-                } else
+                }
+                else
                 {
                     MessageBox.Show("This employee has already been added!");
                     clearAllData();
@@ -64,7 +59,7 @@ namespace FiveStarHotel1.User_Controls
 
             if (usernameToDelete.Trim() != "" && usernameToDelete != null) //Checking if the user has selected a row.
             {
-                DialogResult result = MessageBox.Show($"Are you sure you want to delete user {usernameToDelete}?", "Delete user?", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete user \"{usernameToDelete}\"?", "Delete user?", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     string query = $"delete from dbo.employees where username = '{usernameToDelete}'";
@@ -83,7 +78,6 @@ namespace FiveStarHotel1.User_Controls
         private bool checkIfEmployeeIsAlreadyAdded(string username)
         {
             string currentUsername;
-            
             for (int i = 0; i < dataEmployees.RowCount; i++)
             {
                 DataGridViewRow row = dataEmployees.Rows[i]; //Going through all the rows.

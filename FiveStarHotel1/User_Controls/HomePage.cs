@@ -28,6 +28,7 @@ namespace FiveStarHotel1.User_Controls
             btnReserve.BackgroundImage = Properties.Resources.ReserveButton;
         }
 
+
         private void HomePage_Load(object sender, EventArgs e)
         {
             LoadData();

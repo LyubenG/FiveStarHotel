@@ -66,5 +66,37 @@ namespace FiveStarHotel1.User_Controls
         {
             UpdateRoomData();
         }
+
+        string roomToDelete;
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (roomToDelete.Trim() != "" && roomToDelete != null) //Checking if the user has selected a row.
+            {
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete room {roomToDelete}?", "Delete user?", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    string query = $"delete from dbo.rooms where roomNo = '{roomToDelete}'";
+                    functions.setData(query, $"Room {roomToDelete} has succesfully been removed!");
+                    roomToDelete = "";
+                    UpdateRoomData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("You must select a room to be removed!"); // If user hasn't selected a row.
+            }
+        }
+
+        private void dataRooms_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (dataRooms.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    DataGridViewRow row = dataRooms.Rows[e.RowIndex];
+                    roomToDelete = row.Cells[1].Value.ToString();
+                }
+            }
+        }
     }
 }

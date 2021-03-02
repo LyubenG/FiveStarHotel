@@ -33,28 +33,30 @@
             this.lblCurrentDate = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.pnlStatistics = new System.Windows.Forms.Panel();
+            this.pbSeparator = new System.Windows.Forms.PictureBox();
             this.btnReserve = new System.Windows.Forms.Button();
             this.pbGuests = new System.Windows.Forms.PictureBox();
             this.pbBed = new System.Windows.Forms.PictureBox();
             this.lblGuests = new System.Windows.Forms.Label();
             this.lblFreeRooms = new System.Windows.Forms.Label();
             this.pbSeprator2 = new System.Windows.Forms.PictureBox();
-            this.pbSeparator = new System.Windows.Forms.PictureBox();
             this.lblCountGuests = new System.Windows.Forms.Label();
             this.lblCountRooms = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlBackground.SuspendLayout();
             this.pnlDate.SuspendLayout();
             this.pnlStatistics.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeparator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSeprator2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSeparator)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBackground
             // 
             this.pnlBackground.BackgroundImage = global::FiveStarHotel1.Properties.Resources.ContentHolder21;
             this.pnlBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlBackground.Controls.Add(this.lblWelcome);
             this.pnlBackground.Controls.Add(this.pnlDate);
             this.pnlBackground.Controls.Add(this.pnlStatistics);
             this.pnlBackground.Location = new System.Drawing.Point(0, 0);
@@ -114,6 +116,16 @@
             this.pnlStatistics.Name = "pnlStatistics";
             this.pnlStatistics.Size = new System.Drawing.Size(580, 80);
             this.pnlStatistics.TabIndex = 1;
+            // 
+            // pbSeparator
+            // 
+            this.pbSeparator.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Separator;
+            this.pbSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbSeparator.Location = new System.Drawing.Point(177, 0);
+            this.pbSeparator.Name = "pbSeparator";
+            this.pbSeparator.Size = new System.Drawing.Size(27, 80);
+            this.pbSeparator.TabIndex = 2;
+            this.pbSeparator.TabStop = false;
             // 
             // btnReserve
             // 
@@ -186,16 +198,6 @@
             this.pbSeprator2.TabIndex = 3;
             this.pbSeprator2.TabStop = false;
             // 
-            // pbSeparator
-            // 
-            this.pbSeparator.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Separator;
-            this.pbSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbSeparator.Location = new System.Drawing.Point(177, 0);
-            this.pbSeparator.Name = "pbSeparator";
-            this.pbSeparator.Size = new System.Drawing.Size(27, 80);
-            this.pbSeparator.TabIndex = 2;
-            this.pbSeparator.TabStop = false;
-            // 
             // lblCountGuests
             // 
             this.lblCountGuests.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -218,6 +220,17 @@
             this.lblCountRooms.Text = "0";
             this.lblCountRooms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblWelcome
+            // 
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Location = new System.Drawing.Point(82, 45);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(175, 20);
+            this.lblWelcome.TabIndex = 2;
+            this.lblWelcome.Text = "Welcome!";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,10 +244,10 @@
             this.pnlBackground.ResumeLayout(false);
             this.pnlDate.ResumeLayout(false);
             this.pnlStatistics.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeparator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSeprator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSeparator)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,5 +268,6 @@
         private System.Windows.Forms.Label lblCurrentDate;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnReserve;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }
