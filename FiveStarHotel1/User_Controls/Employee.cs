@@ -70,7 +70,7 @@ namespace FiveStarHotel1.User_Controls
             string query = "Select * from employees";
             DataSet ds = functions.getData(query);
             dataEmployees.DataSource = ds.Tables[0];
-            dataEmployees.Columns[0].Visible = false;
+            
 
 
         }
