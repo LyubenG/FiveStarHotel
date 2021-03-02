@@ -33,26 +33,28 @@ namespace FiveStarHotel1.User_Controls
         {
             if (ValidateInput())
             {
+                //Getting username, password and type.
                 string username = tbUsername.Text;
                 string password = tbPassword.Text;
                 string employeeType = cbEmployeeType.Text;
-                if (!checkIfEmployeeIsAlreadyAdded(username))
+
+                if (!checkIfEmployeeIsAlreadyAdded(username)) // Checking if the employee has already been added.
                 {
-                    string query = $"insert into employees (username, password, employeeType) values ('{username}', '{password}', '{employeeType}')";
+                    string query = $"insert into employees (username, password, employeeType) " +
+                        $"values ('{username}', '{password}', '{employeeType}')"; // Sending query to the SQL DB.
                     functions.setData(query, $"User {username} Has Been Added!");
 
-                    UpdateEmployeeData();
-                    clearAllData();
+                    UpdateEmployeeData(); // Updating the Table.
+                    clearAllData(); // Clearing textboxes.
                 } else
                 {
                     MessageBox.Show("This employee has already been added!");
-
+                    clearAllData();
                 }
             }
-
             else
             {
-                MessageBox.Show("Please fill in all the fields!");
+                MessageBox.Show("Please fill in all the fields!"); // If the textboxes are empty.
             }
         }
 
@@ -60,7 +62,7 @@ namespace FiveStarHotel1.User_Controls
         private void btnRemove_Click(object sender, EventArgs e)
         {
 
-            if (usernameToDelete.Trim() != "" && usernameToDelete != null)
+            if (usernameToDelete.Trim() != "" && usernameToDelete != null) //Checking if the user has selected a row.
             {
                 DialogResult result = MessageBox.Show($"Are you sure you want to delete user {usernameToDelete}?", "Delete user?", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -73,7 +75,7 @@ namespace FiveStarHotel1.User_Controls
             }
             else
             {
-                MessageBox.Show("You must select a employee to be removed!");
+                MessageBox.Show("You must select a employee to be removed!"); // If user hasn't selected a row.
             }
 
         }
@@ -84,8 +86,8 @@ namespace FiveStarHotel1.User_Controls
             
             for (int i = 0; i < dataEmployees.RowCount; i++)
             {
-                DataGridViewRow row = dataEmployees.Rows[i];
-                currentUsername = row.Cells[i].Value.ToString();
+                DataGridViewRow row = dataEmployees.Rows[i]; //Going through all the rows.
+                currentUsername = row.Cells[i].Value.ToString(); //Getting username of current row.
                 if (username == currentUsername)
                 {
                     return true;

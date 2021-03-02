@@ -29,8 +29,8 @@ namespace FiveStarHotel1.User_Controls
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBackground = new System.Windows.Forms.Panel();
             this.pbEye = new System.Windows.Forms.PictureBox();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -76,9 +76,9 @@ namespace FiveStarHotel1.User_Controls
             this.pbEye.BackColor = System.Drawing.Color.Transparent;
             this.pbEye.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Eye;
             this.pbEye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbEye.Location = new System.Drawing.Point(577, 208);
+            this.pbEye.Location = new System.Drawing.Point(520, 220);
             this.pbEye.Name = "pbEye";
-            this.pbEye.Size = new System.Drawing.Size(30, 20);
+            this.pbEye.Size = new System.Drawing.Size(28, 18);
             this.pbEye.TabIndex = 14;
             this.pbEye.TabStop = false;
             this.pbEye.MouseLeave += new System.EventHandler(this.pbEye_MouseLeave);
@@ -92,9 +92,9 @@ namespace FiveStarHotel1.User_Controls
             this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.ForeColor = System.Drawing.Color.Red;
-            this.btnRemove.Location = new System.Drawing.Point(469, 361);
+            this.btnRemove.Location = new System.Drawing.Point(466, 371);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(111, 31);
+            this.btnRemove.Size = new System.Drawing.Size(136, 31);
             this.btnRemove.TabIndex = 13;
             this.btnRemove.Text = "Remove Employee";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -102,9 +102,9 @@ namespace FiveStarHotel1.User_Controls
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(469, 208);
+            this.tbPassword.Location = new System.Drawing.Point(468, 194);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(111, 20);
+            this.tbPassword.Size = new System.Drawing.Size(135, 20);
             this.tbPassword.TabIndex = 12;
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbPassword.UseSystemPasswordChar = true;
@@ -124,9 +124,9 @@ namespace FiveStarHotel1.User_Controls
             // 
             this.lblEnterEType.BackColor = System.Drawing.Color.Transparent;
             this.lblEnterEType.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEnterEType.Location = new System.Drawing.Point(469, 240);
+            this.lblEnterEType.Location = new System.Drawing.Point(468, 243);
             this.lblEnterEType.Name = "lblEnterEType";
-            this.lblEnterEType.Size = new System.Drawing.Size(125, 22);
+            this.lblEnterEType.Size = new System.Drawing.Size(135, 22);
             this.lblEnterEType.TabIndex = 9;
             this.lblEnterEType.Text = "Enter Employee Type";
             this.lblEnterEType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,9 +136,9 @@ namespace FiveStarHotel1.User_Controls
             this.lblEnterPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblEnterPassword.ForeColor = System.Drawing.SystemColors.Window;
             this.lblEnterPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblEnterPassword.Location = new System.Drawing.Point(468, 183);
+            this.lblEnterPassword.Location = new System.Drawing.Point(468, 169);
             this.lblEnterPassword.Name = "lblEnterPassword";
-            this.lblEnterPassword.Size = new System.Drawing.Size(126, 22);
+            this.lblEnterPassword.Size = new System.Drawing.Size(135, 22);
             this.lblEnterPassword.TabIndex = 8;
             this.lblEnterPassword.Text = "Enter New Password";
             this.lblEnterPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,9 +147,9 @@ namespace FiveStarHotel1.User_Controls
             // 
             this.lblEnterUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblEnterUsername.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEnterUsername.Location = new System.Drawing.Point(469, 124);
+            this.lblEnterUsername.Location = new System.Drawing.Point(469, 108);
             this.lblEnterUsername.Name = "lblEnterUsername";
-            this.lblEnterUsername.Size = new System.Drawing.Size(125, 22);
+            this.lblEnterUsername.Size = new System.Drawing.Size(134, 22);
             this.lblEnterUsername.TabIndex = 7;
             this.lblEnterUsername.Text = "Enter New Username";
             this.lblEnterUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -162,9 +162,9 @@ namespace FiveStarHotel1.User_Controls
             this.btnAddEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
             this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmployee.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAddEmployee.Location = new System.Drawing.Point(468, 312);
+            this.btnAddEmployee.Location = new System.Drawing.Point(466, 319);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(111, 31);
+            this.btnAddEmployee.Size = new System.Drawing.Size(136, 31);
             this.btnAddEmployee.TabIndex = 6;
             this.btnAddEmployee.Text = "Add Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
@@ -177,16 +177,16 @@ namespace FiveStarHotel1.User_Controls
             this.cbEmployeeType.Items.AddRange(new object[] {
             "Admin",
             "User"});
-            this.cbEmployeeType.Location = new System.Drawing.Point(469, 265);
+            this.cbEmployeeType.Location = new System.Drawing.Point(468, 268);
             this.cbEmployeeType.Name = "cbEmployeeType";
-            this.cbEmployeeType.Size = new System.Drawing.Size(125, 21);
+            this.cbEmployeeType.Size = new System.Drawing.Size(135, 21);
             this.cbEmployeeType.TabIndex = 5;
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(469, 149);
+            this.tbUsername.Location = new System.Drawing.Point(468, 133);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(125, 20);
+            this.tbUsername.Size = new System.Drawing.Size(135, 20);
             this.tbUsername.TabIndex = 2;
             this.tbUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -196,23 +196,23 @@ namespace FiveStarHotel1.User_Controls
             this.dataEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataEmployees.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
             this.dataEmployees.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataEmployees.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataEmployees.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataEmployees.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataEmployees.Location = new System.Drawing.Point(43, 92);
             this.dataEmployees.MultiSelect = false;
