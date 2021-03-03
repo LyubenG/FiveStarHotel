@@ -237,5 +237,50 @@
   <ItemGroup>
     <None Include="Resources\checkoutIconBig.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightmode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swtichDarkMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchLightMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoLightMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switchLightMode2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkCheckOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkCustomer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkEmployee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkReserve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeIcon21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkRing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkCheckOut2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -67,9 +67,8 @@ namespace FiveStarHotel1.User_Controls
             this.pnlBackground.Controls.Add(this.dataEmployees);
             this.pnlBackground.Controls.Add(this.lblAddEmployees);
             this.pnlBackground.Location = new System.Drawing.Point(0, 0);
-            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(839, 534);
+            this.pnlBackground.Size = new System.Drawing.Size(629, 434);
             this.pnlBackground.TabIndex = 2;
             // 
             // pbEye
@@ -77,10 +76,9 @@ namespace FiveStarHotel1.User_Controls
             this.pbEye.BackColor = System.Drawing.Color.Transparent;
             this.pbEye.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Eye;
             this.pbEye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbEye.Location = new System.Drawing.Point(693, 271);
-            this.pbEye.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbEye.Location = new System.Drawing.Point(520, 220);
             this.pbEye.Name = "pbEye";
-            this.pbEye.Size = new System.Drawing.Size(37, 22);
+            this.pbEye.Size = new System.Drawing.Size(28, 18);
             this.pbEye.TabIndex = 14;
             this.pbEye.TabStop = false;
             this.pbEye.MouseLeave += new System.EventHandler(this.pbEye_MouseLeave);
@@ -94,10 +92,9 @@ namespace FiveStarHotel1.User_Controls
             this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.ForeColor = System.Drawing.Color.Red;
-            this.btnRemove.Location = new System.Drawing.Point(621, 457);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemove.Location = new System.Drawing.Point(466, 371);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(181, 38);
+            this.btnRemove.Size = new System.Drawing.Size(136, 31);
             this.btnRemove.TabIndex = 5;
             this.btnRemove.Text = "Remove Employee";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -105,10 +102,9 @@ namespace FiveStarHotel1.User_Controls
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(624, 239);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPassword.Location = new System.Drawing.Point(468, 194);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(179, 22);
+            this.tbPassword.Size = new System.Drawing.Size(135, 20);
             this.tbPassword.TabIndex = 2;
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbPassword.UseSystemPasswordChar = true;
@@ -118,10 +114,9 @@ namespace FiveStarHotel1.User_Controls
             this.pbEmployee.BackColor = System.Drawing.Color.Transparent;
             this.pbEmployee.BackgroundImage = global::FiveStarHotel1.Properties.Resources.EmployeesIcon;
             this.pbEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbEmployee.Location = new System.Drawing.Point(67, 55);
-            this.pbEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbEmployee.Location = new System.Drawing.Point(50, 45);
             this.pbEmployee.Name = "pbEmployee";
-            this.pbEmployee.Size = new System.Drawing.Size(35, 25);
+            this.pbEmployee.Size = new System.Drawing.Size(26, 20);
             this.pbEmployee.TabIndex = 11;
             this.pbEmployee.TabStop = false;
             // 
@@ -129,10 +124,9 @@ namespace FiveStarHotel1.User_Controls
             // 
             this.lblEnterEType.BackColor = System.Drawing.Color.Transparent;
             this.lblEnterEType.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEnterEType.Location = new System.Drawing.Point(624, 299);
-            this.lblEnterEType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEnterEType.Location = new System.Drawing.Point(468, 243);
             this.lblEnterEType.Name = "lblEnterEType";
-            this.lblEnterEType.Size = new System.Drawing.Size(180, 27);
+            this.lblEnterEType.Size = new System.Drawing.Size(135, 22);
             this.lblEnterEType.TabIndex = 9;
             this.lblEnterEType.Text = "Enter Employee Type";
             this.lblEnterEType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,10 +136,9 @@ namespace FiveStarHotel1.User_Controls
             this.lblEnterPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblEnterPassword.ForeColor = System.Drawing.SystemColors.Window;
             this.lblEnterPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblEnterPassword.Location = new System.Drawing.Point(624, 208);
-            this.lblEnterPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEnterPassword.Location = new System.Drawing.Point(468, 169);
             this.lblEnterPassword.Name = "lblEnterPassword";
-            this.lblEnterPassword.Size = new System.Drawing.Size(180, 27);
+            this.lblEnterPassword.Size = new System.Drawing.Size(135, 22);
             this.lblEnterPassword.TabIndex = 8;
             this.lblEnterPassword.Text = "Enter New Password";
             this.lblEnterPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,10 +147,9 @@ namespace FiveStarHotel1.User_Controls
             // 
             this.lblEnterUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblEnterUsername.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEnterUsername.Location = new System.Drawing.Point(625, 133);
-            this.lblEnterUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEnterUsername.Location = new System.Drawing.Point(469, 108);
             this.lblEnterUsername.Name = "lblEnterUsername";
-            this.lblEnterUsername.Size = new System.Drawing.Size(179, 27);
+            this.lblEnterUsername.Size = new System.Drawing.Size(134, 22);
             this.lblEnterUsername.TabIndex = 7;
             this.lblEnterUsername.Text = "Enter New Username";
             this.lblEnterUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -170,10 +162,9 @@ namespace FiveStarHotel1.User_Controls
             this.btnAddEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
             this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmployee.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAddEmployee.Location = new System.Drawing.Point(621, 393);
-            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddEmployee.Location = new System.Drawing.Point(466, 319);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(181, 38);
+            this.btnAddEmployee.Size = new System.Drawing.Size(136, 31);
             this.btnAddEmployee.TabIndex = 4;
             this.btnAddEmployee.Text = "Add Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
@@ -186,18 +177,16 @@ namespace FiveStarHotel1.User_Controls
             this.cbEmployeeType.Items.AddRange(new object[] {
             "Admin",
             "User"});
-            this.cbEmployeeType.Location = new System.Drawing.Point(624, 330);
-            this.cbEmployeeType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEmployeeType.Location = new System.Drawing.Point(468, 268);
             this.cbEmployeeType.Name = "cbEmployeeType";
-            this.cbEmployeeType.Size = new System.Drawing.Size(179, 24);
+            this.cbEmployeeType.Size = new System.Drawing.Size(135, 21);
             this.cbEmployeeType.TabIndex = 3;
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(624, 164);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUsername.Location = new System.Drawing.Point(468, 133);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(179, 22);
+            this.tbUsername.Size = new System.Drawing.Size(135, 20);
             this.tbUsername.TabIndex = 1;
             this.tbUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -225,15 +214,14 @@ namespace FiveStarHotel1.User_Controls
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataEmployees.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataEmployees.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataEmployees.Location = new System.Drawing.Point(57, 113);
-            this.dataEmployees.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataEmployees.Location = new System.Drawing.Point(43, 92);
             this.dataEmployees.MultiSelect = false;
             this.dataEmployees.Name = "dataEmployees";
             this.dataEmployees.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataEmployees.RowHeadersWidth = 5;
             this.dataEmployees.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataEmployees.Size = new System.Drawing.Size(560, 401);
+            this.dataEmployees.Size = new System.Drawing.Size(420, 326);
             this.dataEmployees.TabIndex = 6;
             this.dataEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEmployees_CellClick);
             // 
@@ -242,22 +230,20 @@ namespace FiveStarHotel1.User_Controls
             this.lblAddEmployees.BackColor = System.Drawing.Color.Transparent;
             this.lblAddEmployees.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblAddEmployees.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblAddEmployees.Location = new System.Drawing.Point(109, 55);
-            this.lblAddEmployees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddEmployees.Location = new System.Drawing.Point(82, 45);
             this.lblAddEmployees.Name = "lblAddEmployees";
-            this.lblAddEmployees.Size = new System.Drawing.Size(169, 25);
+            this.lblAddEmployees.Size = new System.Drawing.Size(127, 20);
             this.lblAddEmployees.TabIndex = 0;
             this.lblAddEmployees.Text = "Add Employees";
             // 
             // Employee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlBackground);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Employee";
-            this.Size = new System.Drawing.Size(839, 534);
+            this.Size = new System.Drawing.Size(629, 434);
             this.Load += new System.EventHandler(this.Employee_Load);
             this.VisibleChanged += new System.EventHandler(this.Employee_VisibleChanged);
             this.pnlBackground.ResumeLayout(false);
