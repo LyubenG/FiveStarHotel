@@ -53,10 +53,9 @@
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.BackgroundImage = global::FiveStarHotel1.Properties.Resources.LoginLogo;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbLogo.Location = new System.Drawing.Point(32, 31);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogo.Location = new System.Drawing.Point(24, 25);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(228, 222);
+            this.pbLogo.Size = new System.Drawing.Size(171, 180);
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
@@ -76,20 +75,18 @@
             this.pnlLogin.Controls.Add(this.tbUsername);
             this.pnlLogin.Controls.Add(this.lblLogin);
             this.pnlLogin.Controls.Add(this.pbLogo);
-            this.pnlLogin.Location = new System.Drawing.Point(107, 121);
-            this.pnlLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlLogin.Location = new System.Drawing.Point(80, 98);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(635, 295);
+            this.pnlLogin.Size = new System.Drawing.Size(476, 240);
             this.pnlLogin.TabIndex = 1;
             // 
             // pbPass
             // 
             this.pbPass.BackgroundImage = global::FiveStarHotel1.Properties.Resources.loginPass;
             this.pbPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbPass.Location = new System.Drawing.Point(301, 166);
-            this.pbPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbPass.Location = new System.Drawing.Point(226, 135);
             this.pbPass.Name = "pbPass";
-            this.pbPass.Size = new System.Drawing.Size(33, 25);
+            this.pbPass.Size = new System.Drawing.Size(25, 20);
             this.pbPass.TabIndex = 17;
             this.pbPass.TabStop = false;
             // 
@@ -97,10 +94,9 @@
             // 
             this.pbUser.BackgroundImage = global::FiveStarHotel1.Properties.Resources.loginUser;
             this.pbUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbUser.Location = new System.Drawing.Point(301, 101);
-            this.pbUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbUser.Location = new System.Drawing.Point(226, 82);
             this.pbUser.Name = "pbUser";
-            this.pbUser.Size = new System.Drawing.Size(33, 25);
+            this.pbUser.Size = new System.Drawing.Size(25, 20);
             this.pbUser.TabIndex = 16;
             this.pbUser.TabStop = false;
             // 
@@ -109,10 +105,9 @@
             this.pbEye.BackColor = System.Drawing.Color.Transparent;
             this.pbEye.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Eye;
             this.pbEye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbEye.Location = new System.Drawing.Point(573, 166);
-            this.pbEye.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbEye.Location = new System.Drawing.Point(430, 135);
             this.pbEye.Name = "pbEye";
-            this.pbEye.Size = new System.Drawing.Size(40, 25);
+            this.pbEye.Size = new System.Drawing.Size(30, 20);
             this.pbEye.TabIndex = 15;
             this.pbEye.TabStop = false;
             this.pbEye.MouseLeave += new System.EventHandler(this.pbEye_MouseLeave);
@@ -122,10 +117,9 @@
             // 
             this.lblWrongInfo.AutoSize = true;
             this.lblWrongInfo.ForeColor = System.Drawing.Color.Red;
-            this.lblWrongInfo.Location = new System.Drawing.Point(360, 256);
-            this.lblWrongInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWrongInfo.Location = new System.Drawing.Point(270, 208);
             this.lblWrongInfo.Name = "lblWrongInfo";
-            this.lblWrongInfo.Size = new System.Drawing.Size(187, 17);
+            this.lblWrongInfo.Size = new System.Drawing.Size(144, 13);
             this.lblWrongInfo.TabIndex = 7;
             this.lblWrongInfo.Text = "Wrong Username/Password!";
             this.lblWrongInfo.Visible = false;
@@ -136,10 +130,9 @@
             this.btnLogin.FlatAppearance.BorderSize = 2;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(376, 215);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Location = new System.Drawing.Point(282, 175);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(157, 37);
+            this.btnLogin.Size = new System.Drawing.Size(118, 30);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -149,54 +142,51 @@
             // 
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbPassword.ForeColor = System.Drawing.Color.White;
-            this.tbPassword.Location = new System.Drawing.Point(360, 138);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tbPassword.Location = new System.Drawing.Point(270, 112);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(192, 25);
+            this.tbPassword.Size = new System.Drawing.Size(144, 20);
             this.tbPassword.TabIndex = 5;
             this.tbPassword.Text = "Enter Password: ";
             this.tbPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(343, 166);
-            this.tbPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPass.Location = new System.Drawing.Point(257, 135);
             this.tbPass.Name = "tbPass";
-            this.tbPass.Size = new System.Drawing.Size(221, 22);
+            this.tbPass.Size = new System.Drawing.Size(167, 20);
             this.tbPass.TabIndex = 2;
             this.tbPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbPass.UseSystemPasswordChar = true;
+            this.tbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPass_KeyPress);
             // 
             // lblUsername
             // 
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(360, 73);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsername.Location = new System.Drawing.Point(270, 59);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(192, 25);
+            this.lblUsername.Size = new System.Drawing.Size(144, 20);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Enter Username: ";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(343, 101);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUsername.Location = new System.Drawing.Point(257, 82);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(221, 22);
+            this.tbUsername.Size = new System.Drawing.Size(167, 20);
             this.tbUsername.TabIndex = 1;
             this.tbUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPass_KeyPress);
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(425, 31);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLogin.Location = new System.Drawing.Point(319, 25);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(63, 25);
+            this.lblLogin.Size = new System.Drawing.Size(48, 20);
             this.lblLogin.TabIndex = 1;
             this.lblLogin.Text = "Login";
             // 
@@ -207,24 +197,22 @@
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(791, 15);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Location = new System.Drawing.Point(593, 12);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(44, 38);
+            this.btnExit.Size = new System.Drawing.Size(33, 31);
             this.btnExit.TabIndex = 2;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FiveStarHotel1.Properties.Resources.BlurredBG;
-            this.ClientSize = new System.Drawing.Size(851, 535);
+            this.ClientSize = new System.Drawing.Size(638, 435);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

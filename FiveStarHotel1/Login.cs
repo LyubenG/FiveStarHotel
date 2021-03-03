@@ -31,7 +31,7 @@ namespace FiveStarHotel1
 
             username = tbUsername.Text;
             password = tbPass.Text;
-            if (username.Trim() == "" && password.Trim() == "")
+            if (username.Trim() == "" || password.Trim() == "")
             {
                 MessageBox.Show("You must enter both username and password!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -99,6 +99,14 @@ namespace FiveStarHotel1
         {
             tbPass.UseSystemPasswordChar = true;
 
+        }
+
+        private void tbPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
         }
     }
 }
