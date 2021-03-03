@@ -51,6 +51,7 @@ namespace FiveStarHotel1
         private bool CheckLoginInfo()
         {
 
+
             string query = $"select username from employees where username = '{username}' and password= '{password}'";
             SqlDataReader reader = functions.getForCombo(query);
 
@@ -59,20 +60,23 @@ namespace FiveStarHotel1
                 return true;
             }
 
-            
+
             while (reader.Read())
             {
-                for (int i = 0; i < reader.FieldCount; i++)
+                if (username != "" && password != "")
                 {
-                    if (username == reader.GetString(i))
+                    for (int i = 0; i < reader.FieldCount; i++)
                     {
-                        reader.Close();
-                        return true;
-                    }
-                    else
-                    {
-                        lblWrongInfo.Visible = true;
-                        return false;
+                        if (username == reader.GetString(i))
+                        {
+                            reader.Close();
+                            return true;
+                        }
+                        else
+                        {
+                            lblWrongInfo.Visible = true;
+                            return false;
+                        }
                     }
                 }
             }

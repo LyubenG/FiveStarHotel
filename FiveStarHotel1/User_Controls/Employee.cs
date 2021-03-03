@@ -32,10 +32,11 @@ namespace FiveStarHotel1.User_Controls
                 string password = tbPassword.Text;
                 string employeeType = cbEmployeeType.Text;
 
-                if (!checkIfEmployeeIsAlreadyAdded(username)) // Checking if the employee has already been added.
+                if (!CheckIfEmployeeIsAlreadyAdded(username)) // Checking if the employee has already been added.
                 {
                     string query = $"insert into employees (username, password, employeeType) " +
                         $"values ('{username}', '{password}', '{employeeType}')"; // Sending query to the SQL DB.
+                   
                     functions.setData(query, $"User {username} Has Been Added!");
 
                     UpdateEmployeeData(); // Updating the Table.
@@ -60,6 +61,7 @@ namespace FiveStarHotel1.User_Controls
             if (usernameToDelete.Trim() != "" && usernameToDelete != null) //Checking if the user has selected a row.
             {
                 DialogResult result = MessageBox.Show($"Are you sure you want to delete user \"{usernameToDelete}\"?", "Delete user?", MessageBoxButtons.YesNo);
+                
                 if (result == DialogResult.Yes)
                 {
                     string query = $"delete from dbo.employees where username = '{usernameToDelete}'";
@@ -75,13 +77,13 @@ namespace FiveStarHotel1.User_Controls
 
         }
 
-        private bool checkIfEmployeeIsAlreadyAdded(string username)
+        private bool CheckIfEmployeeIsAlreadyAdded(string username)
         {
             string currentUsername;
             for (int i = 0; i < dataEmployees.RowCount; i++)
             {
                 DataGridViewRow row = dataEmployees.Rows[i]; //Going through all the rows.
-                currentUsername = row.Cells[i].Value.ToString(); //Getting username of current row.
+                currentUsername = row.Cells[1].Value.ToString(); //Getting username of current row.
                 if (username == currentUsername)
                 {
                     return true;

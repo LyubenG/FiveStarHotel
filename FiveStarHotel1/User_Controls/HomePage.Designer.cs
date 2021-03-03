@@ -60,8 +60,9 @@
             this.pnlBackground.Controls.Add(this.pnlDate);
             this.pnlBackground.Controls.Add(this.pnlStatistics);
             this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(628, 434);
+            this.pnlBackground.Size = new System.Drawing.Size(837, 534);
             this.pnlBackground.TabIndex = 0;
             // 
             // lblWelcome
@@ -69,9 +70,10 @@
             this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
             this.lblWelcome.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblWelcome.ForeColor = System.Drawing.Color.Transparent;
-            this.lblWelcome.Location = new System.Drawing.Point(82, 45);
+            this.lblWelcome.Location = new System.Drawing.Point(109, 55);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(175, 20);
+            this.lblWelcome.Size = new System.Drawing.Size(233, 25);
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome!";
             // 
@@ -82,18 +84,20 @@
             this.pnlDate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlDate.Controls.Add(this.lblCurrentDate);
             this.pnlDate.Controls.Add(this.lblDate);
-            this.pnlDate.Location = new System.Drawing.Point(26, 235);
+            this.pnlDate.Location = new System.Drawing.Point(35, 289);
+            this.pnlDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlDate.Name = "pnlDate";
-            this.pnlDate.Size = new System.Drawing.Size(580, 80);
+            this.pnlDate.Size = new System.Drawing.Size(773, 98);
             this.pnlDate.TabIndex = 7;
             // 
             // lblCurrentDate
             // 
             this.lblCurrentDate.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblCurrentDate.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCurrentDate.Location = new System.Drawing.Point(0, 39);
+            this.lblCurrentDate.Location = new System.Drawing.Point(0, 48);
+            this.lblCurrentDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCurrentDate.Name = "lblCurrentDate";
-            this.lblCurrentDate.Size = new System.Drawing.Size(580, 26);
+            this.lblCurrentDate.Size = new System.Drawing.Size(773, 32);
             this.lblCurrentDate.TabIndex = 8;
             this.lblCurrentDate.Text = "1/4/2021";
             this.lblCurrentDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,9 +106,10 @@
             // 
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblDate.Location = new System.Drawing.Point(0, 9);
+            this.lblDate.Location = new System.Drawing.Point(0, 11);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(580, 21);
+            this.lblDate.Size = new System.Drawing.Size(773, 26);
             this.lblDate.TabIndex = 7;
             this.lblDate.Text = "Current Date: ";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,22 +128,24 @@
             this.pnlStatistics.Controls.Add(this.pbSeprator2);
             this.pnlStatistics.Controls.Add(this.lblCountGuests);
             this.pnlStatistics.Controls.Add(this.lblCountRooms);
-            this.pnlStatistics.Location = new System.Drawing.Point(26, 107);
+            this.pnlStatistics.Location = new System.Drawing.Point(35, 132);
+            this.pnlStatistics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlStatistics.Name = "pnlStatistics";
-            this.pnlStatistics.Size = new System.Drawing.Size(580, 80);
+            this.pnlStatistics.Size = new System.Drawing.Size(773, 98);
             this.pnlStatistics.TabIndex = 1;
             // 
             // pbSeparator
             // 
             this.pbSeparator.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Separator;
             this.pbSeparator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbSeparator.Location = new System.Drawing.Point(177, 0);
+            this.pbSeparator.Location = new System.Drawing.Point(236, 0);
+            this.pbSeparator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbSeparator.Name = "pbSeparator";
-            this.pbSeparator.Size = new System.Drawing.Size(27, 80);
+            this.pbSeparator.Size = new System.Drawing.Size(36, 98);
             this.pbSeparator.TabIndex = 2;
             this.pbSeparator.TabStop = false;
             // 
-            // btnReserve2
+            // btnReserve
             // 
             this.btnReserve.BackgroundImage = global::FiveStarHotel1.Properties.Resources.ReserveButton;
             this.btnReserve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -148,10 +155,11 @@
             this.btnReserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnReserve.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnReserve.Location = new System.Drawing.Point(431, 0);
-            this.btnReserve.Name = "btnReserve2";
-            this.btnReserve.Size = new System.Drawing.Size(119, 80);
-            this.btnReserve.TabIndex = 7;
+            this.btnReserve.Location = new System.Drawing.Point(575, 0);
+            this.btnReserve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReserve.Name = "btnReserve";
+            this.btnReserve.Size = new System.Drawing.Size(159, 98);
+            this.btnReserve.TabIndex = 1;
             this.btnReserve.Text = "RESERVE ROOM";
             this.btnReserve.UseVisualStyleBackColor = true;
             this.btnReserve.Click += new System.EventHandler(this.btnReserve_Click);
@@ -162,9 +170,10 @@
             // 
             this.pbGuests.BackgroundImage = global::FiveStarHotel1.Properties.Resources.CurrentGuestsIcon2;
             this.pbGuests.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbGuests.Location = new System.Drawing.Point(195, 53);
+            this.pbGuests.Location = new System.Drawing.Point(260, 65);
+            this.pbGuests.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbGuests.Name = "pbGuests";
-            this.pbGuests.Size = new System.Drawing.Size(204, 24);
+            this.pbGuests.Size = new System.Drawing.Size(272, 30);
             this.pbGuests.TabIndex = 6;
             this.pbGuests.TabStop = false;
             // 
@@ -172,9 +181,10 @@
             // 
             this.pbBed.BackgroundImage = global::FiveStarHotel1.Properties.Resources.CurrentGuestsIcon;
             this.pbBed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pbBed.Location = new System.Drawing.Point(0, 53);
+            this.pbBed.Location = new System.Drawing.Point(0, 65);
+            this.pbBed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbBed.Name = "pbBed";
-            this.pbBed.Size = new System.Drawing.Size(189, 24);
+            this.pbBed.Size = new System.Drawing.Size(252, 30);
             this.pbBed.TabIndex = 2;
             this.pbBed.TabStop = false;
             // 
@@ -182,9 +192,10 @@
             // 
             this.lblGuests.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGuests.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblGuests.Location = new System.Drawing.Point(195, 33);
+            this.lblGuests.Location = new System.Drawing.Point(260, 41);
+            this.lblGuests.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGuests.Name = "lblGuests";
-            this.lblGuests.Size = new System.Drawing.Size(204, 17);
+            this.lblGuests.Size = new System.Drawing.Size(272, 21);
             this.lblGuests.TabIndex = 5;
             this.lblGuests.Text = "Current Guests";
             this.lblGuests.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -193,9 +204,10 @@
             // 
             this.lblFreeRooms.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFreeRooms.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblFreeRooms.Location = new System.Drawing.Point(0, 33);
+            this.lblFreeRooms.Location = new System.Drawing.Point(0, 41);
+            this.lblFreeRooms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFreeRooms.Name = "lblFreeRooms";
-            this.lblFreeRooms.Size = new System.Drawing.Size(189, 17);
+            this.lblFreeRooms.Size = new System.Drawing.Size(252, 21);
             this.lblFreeRooms.TabIndex = 4;
             this.lblFreeRooms.Text = "Free rooms";
             this.lblFreeRooms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,9 +216,10 @@
             // 
             this.pbSeprator2.BackgroundImage = global::FiveStarHotel1.Properties.Resources.Separator;
             this.pbSeprator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbSeprator2.Location = new System.Drawing.Point(394, 0);
+            this.pbSeprator2.Location = new System.Drawing.Point(525, 0);
+            this.pbSeprator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbSeprator2.Name = "pbSeprator2";
-            this.pbSeprator2.Size = new System.Drawing.Size(15, 80);
+            this.pbSeprator2.Size = new System.Drawing.Size(20, 98);
             this.pbSeprator2.TabIndex = 3;
             this.pbSeprator2.TabStop = false;
             // 
@@ -214,9 +227,10 @@
             // 
             this.lblCountGuests.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblCountGuests.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCountGuests.Location = new System.Drawing.Point(195, 9);
+            this.lblCountGuests.Location = new System.Drawing.Point(260, 11);
+            this.lblCountGuests.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCountGuests.Name = "lblCountGuests";
-            this.lblCountGuests.Size = new System.Drawing.Size(204, 24);
+            this.lblCountGuests.Size = new System.Drawing.Size(272, 30);
             this.lblCountGuests.TabIndex = 1;
             this.lblCountGuests.Text = "0";
             this.lblCountGuests.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,21 +239,23 @@
             // 
             this.lblCountRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblCountRooms.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCountRooms.Location = new System.Drawing.Point(0, 9);
+            this.lblCountRooms.Location = new System.Drawing.Point(0, 11);
+            this.lblCountRooms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCountRooms.Name = "lblCountRooms";
-            this.lblCountRooms.Size = new System.Drawing.Size(189, 24);
+            this.lblCountRooms.Size = new System.Drawing.Size(252, 30);
             this.lblCountRooms.TabIndex = 0;
             this.lblCountRooms.Text = "0";
             this.lblCountRooms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(46)))), ((int)(((byte)(55)))));
             this.Controls.Add(this.pnlBackground);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomePage";
-            this.Size = new System.Drawing.Size(629, 434);
+            this.Size = new System.Drawing.Size(839, 534);
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.VisibleChanged += new System.EventHandler(this.HomePage_VisibleChanged);
             this.pnlBackground.ResumeLayout(false);
