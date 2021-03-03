@@ -61,6 +61,7 @@ namespace FiveStarHotel1
 
         private void SwitchScene(Button clickedButton)
         {
+            //Switching which user control is shown.
             switch (clickedButton.Text)
             {
                 case "Add Room":
@@ -116,12 +117,12 @@ namespace FiveStarHotel1
 
         private void cbDarkMode_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbDarkMode.Checked == true)
+            if (cbDarkMode.Checked == true) // Checking if light mode is enabled
             {
                 cbDarkMode.BackgroundImage = Properties.Resources.switchLightMode2;
                 darkMode = false;
                 activateMode();
-                
+
             }
             else
             {
@@ -135,23 +136,18 @@ namespace FiveStarHotel1
         {
             if (darkMode)
             {
+                changeColours(Color.White); // Method used for changing all the label's colours.
+                //Changing colours and icons.
                 this.BackColor = Color.FromArgb(42, 46, 55);
                 panelSideNav.BackColor = Color.FromArgb(26, 26, 26);
                 pnlTopNav.BackColor = Color.FromArgb(26, 26, 26);
                 pbLogo.BackgroundImage = Properties.Resources.Logo;
                 lblNameOfProgram.ForeColor = Color.White;
-                btnHome.ForeColor = Color.White;
                 btnHome.Image = Properties.Resources.HomeIcon21;
-                btnAddRoom.ForeColor = Color.White;
                 btnAddRoom.Image = Properties.Resources.ReserveIcon1;
-
-                btnCheckOut.ForeColor = Color.White;
                 btnCheckOut.Image = Properties.Resources.CheckOut;
-                btnCustomerInfo.ForeColor = Color.White;
                 btnCustomerInfo.Image = Properties.Resources.CustomerInfo;
-                btnReserve.ForeColor = Color.White;
                 btnReserve.Image = Properties.Resources.RingIcon2;
-                btnEmployees.ForeColor = Color.White;
                 btnEmployees.Image = Properties.Resources.EmployeesIcon;
                 pbArrow.BackgroundImage = Properties.Resources.Arrow;
                 cbDarkMode.BackColor = Color.FromArgb(26, 26, 26);
@@ -159,39 +155,34 @@ namespace FiveStarHotel1
             }
             else
             {
-                this.BackColor = Color.FromArgb(214, 214, 214);
+                changeColours(Color.Black);// Method used for changing all the label's colours.
+                //Changing colours and icons.
+                BackColor = Color.FromArgb(214, 214, 214);
                 panelSideNav.BackColor = Color.White;
                 pnlTopNav.BackColor = Color.White;
                 pbLogo.BackgroundImage = Properties.Resources.LogoLightMode;
                 lblNameOfProgram.ForeColor = Color.Black;
 
-                btnHome.ForeColor = Color.Black;
                 btnHome.Image = Properties.Resources.DarkHome;
-                btnAddRoom.ForeColor = Color.Black;
                 btnAddRoom.Image = Properties.Resources.DarkReserve;
-
-                btnCheckOut.ForeColor = Color.Black;
                 btnCheckOut.Image = Properties.Resources.DarkCheckOut2;
-                btnCustomerInfo.ForeColor = Color.Black;
                 btnCustomerInfo.Image = Properties.Resources.DarkCustomer;
-                btnReserve.ForeColor = Color.Black;
                 btnReserve.Image = Properties.Resources.DarkRing;
-                btnEmployees.ForeColor = Color.Black;
                 pbArrow.BackgroundImage = Properties.Resources.DarkArrow;
                 btnEmployees.Image = Properties.Resources.DarkEmployee;
-                cbDarkMode.BackColor = Color.FromArgb(241, 241, 241);
+                cbDarkMode.BackColor = Color.FromArgb(231, 231, 231);
 
             }
         }
 
-        private void cbDarkMode_MouseHover(object sender, EventArgs e)
+        private void changeColours(Color colour)
         {
-            if (darkMode)
+            foreach (Control control in panelSideNav.Controls)
             {
-                cbDarkMode.BackColor = Color.FromArgb(26, 26, 26);
-            } else
-            {
-                cbDarkMode.BackColor = Color.FromArgb(241, 241, 241);
+                if (control is Button)
+                {
+                    control.ForeColor = colour;
+                }
             }
         }
     }
