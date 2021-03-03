@@ -11,6 +11,8 @@ namespace FiveStarHotel1
 {
     class Functions
     {
+        bool connectionOpened = false;
+        
         SqlConnection con = new SqlConnection("Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00");
 
         public DataSet getData(String query)
@@ -52,7 +54,6 @@ namespace FiveStarHotel1
 
         }
 
-        bool connectionOpened = false;
         public SqlDataReader getForCombo(String query)
         {
             if (connectionOpened)

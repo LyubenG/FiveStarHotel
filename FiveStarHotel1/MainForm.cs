@@ -17,9 +17,12 @@ namespace FiveStarHotel1
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
         [DllImport("User32.dll")]
+
         public static extern bool ReleaseCapture();
         [DllImport("User32.dll")]
+
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         public MainForm()
         {
             InitializeComponent();
@@ -32,6 +35,7 @@ namespace FiveStarHotel1
             homePage1.BringToFront();
             checkOut1.Visible = false;
         }
+
         private void btnNav_Clicked(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender; //Checking which button was clicked.
@@ -61,11 +65,11 @@ namespace FiveStarHotel1
                 case "Add Room":
                     addRoom1.BringToFront();
                     addRoom1.Visible = true;
-                    checkOut1.Visible = false; 
-                    homePage1.Visible = false; 
-                    
+                    checkOut1.Visible = false;
+                    homePage1.Visible = false;
+
                     break;
-                case "Home": 
+                case "Home":
                     homePage1.BringToFront();
                     homePage1.Visible = true;
                     checkOut1.Visible = false;
@@ -73,12 +77,12 @@ namespace FiveStarHotel1
                     break;
                 case "Reserve Room":
                     reserveRoom1.BringToFront();
-                    checkOut1.Visible = false; 
+                    checkOut1.Visible = false;
                     homePage1.Visible = false;
                     break;
-                case "Check Out": 
-                    checkOut1.BringToFront(); 
-                    checkOut1.Visible = true;                  
+                case "Check Out":
+                    checkOut1.BringToFront();
+                    checkOut1.Visible = true;
                     addRoom1.Visible = false;
                     break;
                 case "Employee":
@@ -106,11 +110,6 @@ namespace FiveStarHotel1
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
-        }
-
-        private void checkOut1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

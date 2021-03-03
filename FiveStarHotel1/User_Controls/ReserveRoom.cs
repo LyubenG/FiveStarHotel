@@ -18,7 +18,6 @@ namespace FiveStarHotel1.User_Controls
         string query;
         int roomId;
 
-
         public ReserveRoom()
         {
             InitializeComponent();
@@ -44,8 +43,7 @@ namespace FiveStarHotel1.User_Controls
 
         private void cbBedType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            query = String.Format("select roomNo from rooms where bed = '{0}' and roomType = '{1}' and booked = 'No'",
-                cbBedType.Text, cbRoomType.Text);
+            query = String.Format("select roomNo from rooms where bed = '{0}' and roomType = '{1}' and booked = 'No'", cbBedType.Text, cbRoomType.Text);
             setComboBox(query, cbRoomAvailable);
         }
 
@@ -54,7 +52,6 @@ namespace FiveStarHotel1.User_Controls
             cbBedType.SelectedIndex = -1;
         }
 
-        
         private void cbRoomAvailable_SelectedIndexChanged(object sender, EventArgs e)
         {
             query = "Select price, roomid from rooms where roomNo = '" + cbRoomAvailable.Text + "'";
@@ -77,25 +74,27 @@ namespace FiveStarHotel1.User_Controls
 
                 query = String.Format("insert into customer (cname, mobile, nationality, gender, dob, checkin, roomid)" +
                     " values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') update rooms set booked = 'Yes' where roomNo = '{7}'",
-                    name, mobilePhone, nationality, gender, dateOfBirth, checkInDate, roomId, cbRoomAvailable.Text);
+                   name, mobilePhone, nationality, gender, dateOfBirth, checkInDate, roomId, cbRoomAvailable.Text);
 
                 functions.setData(query, String.Format("Room Number {0} Has Been Succesfully Reserved By {1}!", cbRoomAvailable.Text, name));
+               
                 ClearSelectedData();
             }
             else
             {
-                MessageBox.Show("Please fill in all the fields with correct data!", "Invalid input!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please fill in all the fields with correct data!", "Invalid input!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
         private bool ValidateInput()
         {
             Regex reg = new Regex(@"[^0-9]"); //Regex that detects only numbers from 0 - 9.
-            if (tbName.Text == "" || tbNationality.Text == "" || tbPhoneNo.Text == ""
-                || cbGender.Text == "" || cbRoomAvailable.Text == ""
-                || cbBedType.Text == "" || cbRoomType.Text == "" 
-                || reg.IsMatch(tbPhoneNo.Text)) // Checking if any of the textfields are empty or if the phone number is invalid.
+
+
+            // Checking if any of the textfields are empty or if the phone number is invalid.
+
+            if (tbName.Text == "" || tbNationality.Text == "" || tbPhoneNo.Text == ""|| cbGender.Text == "" || cbRoomAvailable.Text == ""
+                || cbBedType.Text == "" || cbRoomType.Text == ""|| reg.IsMatch(tbPhoneNo.Text))  
             {
                 return false;
             }

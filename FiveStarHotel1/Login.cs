@@ -41,6 +41,7 @@ namespace FiveStarHotel1
             {
                 lblWrongInfo.Visible = true;
             }
+
             else
             {
                 MainForm mf = new MainForm();
@@ -48,6 +49,7 @@ namespace FiveStarHotel1
                 mf.Show();
             }
         }
+
         private bool CheckLoginInfo()
         {
 
@@ -59,7 +61,6 @@ namespace FiveStarHotel1
             {
                 return true;
             }
-
 
             while (reader.Read())
             {

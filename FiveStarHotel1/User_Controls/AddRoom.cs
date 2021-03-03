@@ -35,8 +35,7 @@ namespace FiveStarHotel1.User_Controls
                 if (!CheckIfRoomIsAlreadyAdded(roomNo)) // Checking if the employee has already been added.
                 {
 
-                    query = String.Format("insert into rooms (roomNo, roomType, bed, price) values ('{0}', '{1}', '{2}', '{3}')",
-                roomNo, roomType, bed, price);
+                    query = String.Format("insert into rooms (roomNo, roomType, bed, price) values ('{0}', '{1}', '{2}', '{3}')", roomNo, roomType, bed, price);
 
                     functions.setData(query, String.Format("Room Number {0} Has Been Added!", roomNo));
 
@@ -45,7 +44,7 @@ namespace FiveStarHotel1.User_Controls
                 else
                 {
                     MessageBox.Show("This room has already been added!");
-                    tbRoomNo.Text = null; 
+                    tbRoomNo.Text = null;
                 }
 
             }
@@ -84,13 +83,14 @@ namespace FiveStarHotel1.User_Controls
             if (roomToDelete.Trim() != "" && roomToDelete != null) //Checking if the user has selected a row.
             {
                 DialogResult result = MessageBox.Show($"Are you sure you want to delete room {roomToDelete}?", "Delete user?", MessageBoxButtons.YesNo);
+
                 if (result == DialogResult.Yes)
                 {
                     string query = $"delete from dbo.rooms where roomNo = '{roomToDelete}'";
-                   
+
                     functions.setData(query, $"Room {roomToDelete} has succesfully been removed!");
                     roomToDelete = "";
-                   
+
                     UpdateRoomData();
                 }
             }
@@ -107,6 +107,7 @@ namespace FiveStarHotel1.User_Controls
             {
                 DataGridViewRow row = dataRooms.Rows[i]; //Going through all the rows.
                 currentRoomNo = row.Cells[1].Value.ToString(); //Getting username of current row.
+
                 if (roomNo == currentRoomNo)
                 {
                     return true;
@@ -114,7 +115,7 @@ namespace FiveStarHotel1.User_Controls
             }
             return false;
         }
-        
+
 
         private void dataRooms_CellClick(object sender, DataGridViewCellEventArgs e)
         {

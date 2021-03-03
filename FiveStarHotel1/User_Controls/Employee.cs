@@ -65,8 +65,10 @@ namespace FiveStarHotel1.User_Controls
                 if (result == DialogResult.Yes)
                 {
                     string query = $"delete from dbo.employees where username = '{usernameToDelete}'";
+                   
                     functions.setData(query, $"User {usernameToDelete} has succesfully been removed!");
                     usernameToDelete = "";
+                   
                     UpdateEmployeeData();
                 }
             }
@@ -84,6 +86,7 @@ namespace FiveStarHotel1.User_Controls
             {
                 DataGridViewRow row = dataEmployees.Rows[i]; //Going through all the rows.
                 currentUsername = row.Cells[1].Value.ToString(); //Getting username of current row.
+               
                 if (username == currentUsername)
                 {
                     return true;
