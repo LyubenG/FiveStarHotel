@@ -65,7 +65,7 @@
             this.pnlBackground.Controls.Add(this.lblSearch);
             this.pnlBackground.Controls.Add(this.lblCustomerCheckOut);
             this.pnlBackground.Location = new System.Drawing.Point(0, 0);
-            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBackground.Name = "pnlBackground";
             this.pnlBackground.Size = new System.Drawing.Size(837, 534);
             this.pnlBackground.TabIndex = 3;
@@ -77,7 +77,7 @@
             this.pbTable.BackgroundImage = global::FiveStarHotel1.Properties.Resources.checkoutIconBig;
             this.pbTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbTable.Location = new System.Drawing.Point(67, 55);
-            this.pbTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbTable.Margin = new System.Windows.Forms.Padding(4);
             this.pbTable.Name = "pbTable";
             this.pbTable.Size = new System.Drawing.Size(35, 25);
             this.pbTable.TabIndex = 13;
@@ -108,7 +108,7 @@
             this.dataCustomers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataCustomers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataCustomers.Location = new System.Drawing.Point(57, 156);
-            this.dataCustomers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataCustomers.Margin = new System.Windows.Forms.Padding(4);
             this.dataCustomers.MultiSelect = false;
             this.dataCustomers.Name = "dataCustomers";
             this.dataCustomers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -162,7 +162,7 @@
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckOut.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCheckOut.Location = new System.Drawing.Point(645, 471);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(147, 59);
             this.btnCheckOut.TabIndex = 3;
@@ -174,7 +174,7 @@
             // 
             this.dpCheckOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dpCheckOutDate.Location = new System.Drawing.Point(447, 492);
-            this.dpCheckOutDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dpCheckOutDate.Margin = new System.Windows.Forms.Padding(4);
             this.dpCheckOutDate.Name = "dpCheckOutDate";
             this.dpCheckOutDate.Size = new System.Drawing.Size(165, 22);
             this.dpCheckOutDate.TabIndex = 7;
@@ -183,7 +183,7 @@
             // 
             this.tbRoomNo.Enabled = false;
             this.tbRoomNo.Location = new System.Drawing.Point(253, 492);
-            this.tbRoomNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbRoomNo.Margin = new System.Windows.Forms.Padding(4);
             this.tbRoomNo.Name = "tbRoomNo";
             this.tbRoomNo.Size = new System.Drawing.Size(160, 22);
             this.tbRoomNo.TabIndex = 6;
@@ -192,7 +192,7 @@
             // 
             this.tbName.Enabled = false;
             this.tbName.Location = new System.Drawing.Point(57, 492);
-            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(160, 22);
             this.tbName.TabIndex = 5;
@@ -200,7 +200,7 @@
             // tbSearch
             // 
             this.tbSearch.Location = new System.Drawing.Point(253, 124);
-            this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(312, 22);
             this.tbSearch.TabIndex = 1;
@@ -237,10 +237,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Controls.Add(this.pnlBackground);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CheckOut";
             this.Size = new System.Drawing.Size(839, 534);
-            this.Load += new System.EventHandler(this.CheckOut_Load);
             this.pnlBackground.ResumeLayout(false);
             this.pnlBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTable)).EndInit();

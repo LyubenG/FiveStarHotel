@@ -271,7 +271,7 @@
             this.checkOut1.Name = "checkOut1";
             this.checkOut1.Size = new System.Drawing.Size(629, 434);
             this.checkOut1.TabIndex = 3;
-            this.checkOut1.Load += new System.EventHandler(this.checkOut1_Load);
+            
             // 
             // reserveRoom1
             // 
