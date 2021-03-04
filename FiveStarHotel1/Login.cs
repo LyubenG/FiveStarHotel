@@ -16,6 +16,8 @@ namespace FiveStarHotel1
         Functions functions = new Functions();
         string username;
         string password;
+        string admin;
+
         public Login()
         {
             InitializeComponent();
@@ -37,20 +39,50 @@ namespace FiveStarHotel1
                 return;
             }
 
-            if (!CheckLoginInfo()) // If the credentials are wrong the wrong input label is shown.
+
+
+            if (!CheckLoginExists()) // If the credentials are wrong the wrong input label is shown.
             {
                 lblWrongInfo.Visible = true;
             }
 
             else // If the login credentials are right the application is being opened.
             {
-                MainForm mf = new MainForm();
+                GetAdminRights();
+                MainForm mainform = new MainForm();
                 this.Hide();
-                mf.Show();
+                mainform.Show();
+
             }
         }
 
-        private bool CheckLoginInfo()
+        public void GetAdminRights()
+        {
+
+            if (CheckLoginExists())
+            {
+                string query = $"select employeeType from employees where username = '{username}' and password= '{password}'";
+                SqlDataReader reader = functions.getForCombo(query);
+
+                LoginInfo logininfo = new LoginInfo();
+
+                while (reader.Read())
+                {
+
+                    if (reader.GetString(0) == "Admin")
+                    {
+                        logininfo.AdminRights(true);
+                    }
+                    else
+                    {
+                        logininfo.AdminRights(false);
+                    }
+                }
+                reader.Close();
+            }
+        }
+
+        private bool CheckLoginExists()
         {
             //Checking whether there is such user.
             string query = $"select username from employees where username = '{username}' and password= '{password}'";
@@ -58,24 +90,24 @@ namespace FiveStarHotel1
 
             if (username.Trim() == "Admin" && password.Trim() == "Admin")
             {
+
                 return true;
+
             }
 
             while (reader.Read())
             {
-                    for (int i = 0; i < reader.FieldCount; i++)
+                    if (username == reader.GetString(0))
                     {
-                        if (username == reader.GetString(i))
-                        {
-                            reader.Close();
-                            return true;
-                        }
-                        else
-                        {
-                            lblWrongInfo.Visible = true;
-                            return false;
-                        }
+                        reader.Close();
+                        return true;
                     }
+                    else
+                    {
+                        lblWrongInfo.Visible = true;
+                        return false;
+                    }
+            
             }
             reader.Close();
             return false;

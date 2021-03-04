@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FiveStarHotel1; 
 
 namespace FiveStarHotel1
 {
@@ -35,6 +36,19 @@ namespace FiveStarHotel1
             FormBorderStyle = FormBorderStyle.None;
             homePage1.BringToFront();
             checkOut1.Visible = false;
+
+            LoginInfo logininfo = new LoginInfo();
+
+            if (logininfo.HasAdminRights())
+            {
+                btnAddRoom.Visible = true;
+                btnEmployees.Visible = true;
+            }
+            else
+            {
+                btnAddRoom.Visible = false;
+                btnEmployees.Visible = false;
+            }
         }
 
         private void btnNav_Clicked(object sender, EventArgs e)
@@ -94,6 +108,7 @@ namespace FiveStarHotel1
                     homePage1.Visible = false;
                     addRoom1.Visible = false;
                     break;
+               
 
             }
         }
@@ -114,6 +129,7 @@ namespace FiveStarHotel1
             }
         }
 
+       
 
         private void cbDarkMode_CheckedChanged(object sender, EventArgs e)
         {
