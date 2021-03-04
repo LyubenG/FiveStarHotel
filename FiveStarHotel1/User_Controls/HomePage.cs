@@ -20,7 +20,7 @@ namespace FiveStarHotel1.User_Controls
 
         private void btnReserve_MouseHover(object sender, EventArgs e)
         {
-            btnReserve.BackgroundImage = Properties.Resources.ReserveButtonHover;
+            btnReserve.BackgroundImage = Properties.Resources.ReserveButtonHover; //Hover effect for the reservation button.
         }
 
         private void btnReserve_MouseLeave(object sender, EventArgs e)
@@ -31,16 +31,20 @@ namespace FiveStarHotel1.User_Controls
 
         private void HomePage_Load(object sender, EventArgs e)
         {
+            //Loading data whenever the page is shown or loaded.
             LoadData();
         }
 
         private void HomePage_VisibleChanged(object sender, EventArgs e)
         {
+            //Loading data whenever the page is shown or loaded.
+
             LoadData();
         }
 
         private void LoadData()
         {
+            //Checking how many rooms are taken and how many are free.
             int freerooms = functions.countData("No");
             lblCountRooms.Text = freerooms.ToString();
             int takenrooms = functions.countData("Yes");
@@ -49,7 +53,10 @@ namespace FiveStarHotel1.User_Controls
         }
 
         private void btnReserve_Click(object sender, EventArgs e)
-        {        
+        {
+            MainForm form = (MainForm)FindForm();
+            form.SwitchScene(form.btnReserve);
+            form.MoveArrow(form.btnReserve);
         }
     }
 }

@@ -50,7 +50,7 @@
             // 
             // pnlBackground
             // 
-            this.pnlBackground.BackgroundImage = global::FiveStarHotel1.Properties.Resources.ContentHolder2;
+            this.pnlBackground.BackgroundImage = global::FiveStarHotel1.Properties.Resources.ContentHolder21;
             this.pnlBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlBackground.Controls.Add(this.pbTable);
             this.pnlBackground.Controls.Add(this.dataCustomers);

@@ -364,7 +364,6 @@
         private System.Windows.Forms.PictureBox pbArrow;
         private System.Windows.Forms.Button btnAddRoom;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnReserve;
         private System.Windows.Forms.Button btnCustomerInfo;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Button btnEmployees;
@@ -375,5 +374,6 @@
         private User_Controls.CheckOut checkOut1;
         private User_Controls.Employee employee1;
         private System.Windows.Forms.CheckBox cbDarkMode;
+        public System.Windows.Forms.Button btnReserve;
     }
 }

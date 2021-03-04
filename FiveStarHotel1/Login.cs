@@ -23,26 +23,26 @@ namespace FiveStarHotel1
 
         private void Login_Load(object sender, EventArgs e)
         {
+            //Removing default windows top menu.
             FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
             username = tbUsername.Text;
             password = tbPass.Text;
-            if (username.Trim() == "" || password.Trim() == "")
+            if (username.Trim() == "" || password.Trim() == "") // Checking if the user has entered any data.
             {
                 MessageBox.Show("You must enter both username and password!", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!CheckLoginInfo())
+            if (!CheckLoginInfo()) // If the credentials are wrong the wrong input label is shown.
             {
                 lblWrongInfo.Visible = true;
             }
 
-            else
+            else // If the login credentials are right the application is being opened.
             {
                 MainForm mf = new MainForm();
                 this.Hide();
@@ -52,8 +52,7 @@ namespace FiveStarHotel1
 
         private bool CheckLoginInfo()
         {
-
-
+            //Checking whether there is such user.
             string query = $"select username from employees where username = '{username}' and password= '{password}'";
             SqlDataReader reader = functions.getForCombo(query);
 
@@ -64,8 +63,6 @@ namespace FiveStarHotel1
 
             while (reader.Read())
             {
-                if (username != "" && password != "")
-                {
                     for (int i = 0; i < reader.FieldCount; i++)
                     {
                         if (username == reader.GetString(i))
@@ -79,7 +76,6 @@ namespace FiveStarHotel1
                             return false;
                         }
                     }
-                }
             }
             reader.Close();
             return false;
@@ -87,26 +83,28 @@ namespace FiveStarHotel1
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //Closing application on click
         }
 
         private void pbEye_MouseHover(object sender, EventArgs e)
         {
-            tbPass.UseSystemPasswordChar = false;
+            tbPass.UseSystemPasswordChar = false; //Option to see password the user has written
         }
 
         private void pbEye_MouseLeave(object sender, EventArgs e)
         {
-            tbPass.UseSystemPasswordChar = true;
+            tbPass.UseSystemPasswordChar = true; //Option to see password the user has written
 
         }
 
         private void tbPass_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //If the user presses enter the login button is clicked automatically.
             if (e.KeyChar == (char)Keys.Enter)
             {
                 btnLogin.PerformClick();
             }
         }
+
     }
 }

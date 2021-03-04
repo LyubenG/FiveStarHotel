@@ -15,7 +15,7 @@ namespace FiveStarHotel1.User_Controls
         Functions functions = new Functions();
         string query;
         int id;
-
+     
         public CheckOut()
         {
             InitializeComponent();
@@ -85,7 +85,5 @@ namespace FiveStarHotel1.User_Controls
                 }
             }
         }
-
-
     }
 }

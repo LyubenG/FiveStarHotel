@@ -233,6 +233,16 @@ namespace FiveStarHotel1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DarkContentHolder {
+            get {
+                object obj = ResourceManager.GetObject("DarkContentHolder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DarkCustomer {
             get {
                 object obj = ResourceManager.GetObject("DarkCustomer", resourceCulture);

@@ -13,7 +13,7 @@ namespace FiveStarHotel1
 {
     public partial class MainForm : Form
     {
-        bool darkMode = true;
+        public bool darkMode = true;
         // Making the Top menu moveable.
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
@@ -59,7 +59,7 @@ namespace FiveStarHotel1
             MoveProgram(e);
         }
 
-        private void SwitchScene(Button clickedButton)
+        public void SwitchScene(Button clickedButton)
         {
             //Switching which user control is shown.
             switch (clickedButton.Text)
@@ -98,7 +98,7 @@ namespace FiveStarHotel1
             }
         }
 
-        private void MoveArrow(Button button)
+        public void MoveArrow(Button button)
         {
             Point btnLocation = button.Location;
             pbArrow.Location = new Point(161, btnLocation.Y);
@@ -171,7 +171,6 @@ namespace FiveStarHotel1
                 pbArrow.BackgroundImage = Properties.Resources.DarkArrow;
                 btnEmployees.Image = Properties.Resources.DarkEmployee;
                 cbDarkMode.BackColor = Color.FromArgb(231, 231, 231);
-
             }
         }
 
@@ -184,6 +183,14 @@ namespace FiveStarHotel1
                     control.ForeColor = colour;
                 }
             }
+        }
+        public bool getMode()
+        {
+            if (darkMode)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
