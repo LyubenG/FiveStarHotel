@@ -30,7 +30,7 @@ namespace FiveStarHotel1.User_Controls
         }
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            query = "Select customer.cid, customer.cname, customer.mobile, customer.nationality, customer.gender, customer.dob, customer.checkin, " +
+            query = "Select customer.cid, customer.cname, customer.checkin, " +
                 "rooms.roomNo, rooms.roomType, rooms.bed,rooms.price from customer inner join rooms on customer.roomid = rooms.roomid" +
                 " where cname like '" + tbSearch.Text + "%' and checkout = 'No'";
 
@@ -41,8 +41,8 @@ namespace FiveStarHotel1.User_Controls
         }
         public void CheckOutLoad()
         {
-            query = "Select customer.cid, customer.cname, customer.mobile, customer.nationality, " +
-                "customer.gender, customer.dob, customer.checkin, rooms.roomNo, rooms.roomType, rooms.bed, rooms.price" +
+            query = "Select customer.cid, customer.cname," +
+                "customer.checkin, rooms.roomNo, rooms.roomType, rooms.bed, rooms.price" +
                 " from customer inner join rooms on customer.roomid = rooms.roomid where checkout = 'No'";
 
             DataSet dataset = functions.getData(query);
@@ -61,7 +61,7 @@ namespace FiveStarHotel1.User_Controls
                     id = int.Parse(dataCustomers.Rows[e.RowIndex].Cells[0].Value.ToString());
 
                     tbName.Text = dataCustomers.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    tbRoomNo.Text = dataCustomers.Rows[e.RowIndex].Cells[7].Value.ToString();
+                    tbRoomNo.Text = dataCustomers.Rows[e.RowIndex].Cells[3].Value.ToString();
                 }
             }
         }

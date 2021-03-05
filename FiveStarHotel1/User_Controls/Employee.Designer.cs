@@ -243,7 +243,7 @@ namespace FiveStarHotel1.User_Controls
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlBackground);
             this.Name = "Employee";
-            this.Size = new System.Drawing.Size(629, 434);
+            this.Size = new System.Drawing.Size(628, 434);
             this.Load += new System.EventHandler(this.Employee_Load);
             this.VisibleChanged += new System.EventHandler(this.Employee_VisibleChanged);
             this.pnlBackground.ResumeLayout(false);

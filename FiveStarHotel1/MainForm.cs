@@ -83,6 +83,7 @@ namespace FiveStarHotel1
                 case "Add Room":
                     addRoom1.BringToFront();
                     addRoom1.Visible = true;
+                    customerInfo1.Visible = false;
                     checkOut1.Visible = false;
                     homePage1.Visible = false;
 
@@ -90,27 +91,38 @@ namespace FiveStarHotel1
                 case "Home":
                     homePage1.BringToFront();
                     homePage1.Visible = true;
+                    customerInfo1.Visible = false;
                     checkOut1.Visible = false;
                     addRoom1.Visible = false;
                     break;
                 case "Reserve Room":
                     reserveRoom1.BringToFront();
                     checkOut1.Visible = false;
+                    customerInfo1.Visible = false;
                     homePage1.Visible = false;
                     break;
                 case "Check Out":
                     checkOut1.BringToFront();
+                    customerInfo1.Visible = false;
                     checkOut1.Visible = true;
                     addRoom1.Visible = false;
                     break;
                 case "Employee":
                     employee1.BringToFront();
+                    customerInfo1.Visible = false;
                     employee1.Visible = true;
                     checkOut1.Visible = false;
                     homePage1.Visible = false;
                     addRoom1.Visible = false;
                     break;
-               
+                case "Customers Info":
+                    customerInfo1.BringToFront();
+                    customerInfo1.Visible = true;
+                    employee1.Visible = false;
+                    checkOut1.Visible = false;
+                    homePage1.Visible = false;
+                    addRoom1.Visible = false;
+                    break;
 
             }
         }
