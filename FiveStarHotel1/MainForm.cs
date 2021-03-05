@@ -19,10 +19,8 @@ namespace FiveStarHotel1
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
         [DllImport("User32.dll")]
-
         public static extern bool ReleaseCapture();
         [DllImport("User32.dll")]
-
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
         public MainForm()
@@ -40,7 +38,6 @@ namespace FiveStarHotel1
             homePage1.BringToFront();
             checkOut1.Visible = false;
 
-            
 
             if (HasAdminRights())
             {
@@ -51,7 +48,8 @@ namespace FiveStarHotel1
             {
                 btnAddRoom.Visible = false;
                 btnEmployees.Visible = false;
-                btnReserve.Location=new Point(0, 183);
+                btnReserve.Location=new Point(0, 149);
+                btnCheckOut.Location = new Point(0, 211);
             }
         }
 

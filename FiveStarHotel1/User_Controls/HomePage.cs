@@ -53,14 +53,11 @@ namespace FiveStarHotel1.User_Controls
         }
 
         private void btnReserve_Click(object sender, EventArgs e)
-        {
-
+        { 
+            //Redirecting user to reserve page.
             MainForm form = (MainForm)FindForm();
             form.SwitchScene(form.btnReserve);
             form.MoveArrow(form.btnReserve);
-
-            
-
         }
     }
 }

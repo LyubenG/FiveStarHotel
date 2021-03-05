@@ -61,7 +61,7 @@ namespace FiveStarHotel1.User_Controls
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (roomToDelete.Trim() != "" && roomToDelete != null) //Checking if the user has selected a row.
+            if (roomToDelete != null  && roomToDelete.Trim() != "") //Checking if the user has selected a row.
             {
                 DialogResult result = MessageBox.Show($"Are you sure you want to delete room {roomToDelete}?", "Delete user?", MessageBoxButtons.YesNo);
 

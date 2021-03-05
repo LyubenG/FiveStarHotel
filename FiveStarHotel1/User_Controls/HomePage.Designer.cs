@@ -254,8 +254,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlBackground;
         private System.Windows.Forms.Panel pnlStatistics;
         private System.Windows.Forms.PictureBox pbSeparator;
         private System.Windows.Forms.Label lblCountGuests;
@@ -270,5 +268,6 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnReserve;
         private System.Windows.Forms.Label lblWelcome;
+        public System.Windows.Forms.Panel pnlBackground;
     }
 }

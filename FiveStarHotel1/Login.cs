@@ -62,7 +62,6 @@ namespace FiveStarHotel1
                 SqlDataReader reader = functions.getForCombo(query);
 
                 MainForm logininfo = new MainForm();
-
                 while (reader.Read())
                 {
 
