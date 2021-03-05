@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -7,6 +8,8 @@ namespace FiveStarHotel1.User_Controls
     public partial class Employee : UserControl
     {
         Functions functions = new Functions();
+        List<string> employeeToEdit = new List<string>();
+        string employeeToDelete;
 
         public Employee()
         {
@@ -27,73 +30,104 @@ namespace FiveStarHotel1.User_Controls
         {
             if (ValidateInput())
             {
-                //Getting username, password and type.
-                string username = tbUsername.Text;
+
+                string username = tbUsername.Text; //Getting username, password and type.
                 string password = tbPassword.Text;
                 string employeeType = cbEmployeeType.Text;
 
                 if (!CheckIfEmployeeIsAlreadyAdded(username)) // Checking if the employee has already been added.
                 {
-                    string query = $"insert into employees (username, password, employeeType) " +
-                        $"values ('{username}', '{password}', '{employeeType}')"; // Sending query to the SQL DB.
-                   
-                    functions.setData(query, $"User {username} Has Been Added!");
+                    string query = $"insert into employees (username, password, employeeType) values ('{username}', '{password}', '{employeeType}')";
+                    string message = $"User {username} Has Been Added!";
+
+                    functions.SetData(query, message); // Sending query to the SQL DB.
 
                     UpdateEmployeeData(); // Updating the Table.
                     ClearInputData(); // Clearing textboxes.
                 }
+
                 else
                 {
                     MessageBox.Show("This employee has already been added!");
                     ClearInputData();
                 }
             }
+
             else
             {
                 MessageBox.Show("Please fill in all the fields!"); // If the textboxes are empty.
             }
         }
 
-        string usernameToDelete = "";
         private void btnRemove_Click(object sender, EventArgs e)
         {
 
-            if (usernameToDelete.Trim() != "" && usernameToDelete != null) //Checking if the user has selected a row.
+            if (employeeToDelete.Trim() != "" && employeeToDelete != null) //Checking if the user has selected a row.
             {
-                DialogResult result = MessageBox.Show($"Are you sure you want to delete user \"{usernameToDelete}\"?", "Delete user?", MessageBoxButtons.YesNo);
-                
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete user \"{employeeToDelete}\"?", "Delete user?", MessageBoxButtons.YesNo);
+
                 if (result == DialogResult.Yes)
                 {
-                    string query = $"delete from dbo.employees where username = '{usernameToDelete}'";
-                   
-                    functions.setData(query, $"User {usernameToDelete} has succesfully been removed!");
-                    usernameToDelete = "";
-                   
+                    string query = $"delete from dbo.employees where username = '{employeeToDelete}'";
+                    string message = $"User {employeeToDelete} has succesfully been removed!";
+
+                    functions.SetData(query, message);
+                    employeeToDelete = "";
+
                     UpdateEmployeeData();
                 }
             }
+
             else
             {
                 MessageBox.Show("You must select a employee to be removed!"); // If user hasn't selected a row.
             }
+        }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+            if (ValidateInput())
+            {
+                string username = tbUsername.Text; //Getting username, password and type.
+                string password = tbPassword.Text;
+                string employeeType = cbEmployeeType.Text;
+
+                if (username == employeeToEdit[1])
+                {
+                    string query = $"update employees set username = '{employeeToEdit[1]}', password = '{password}', employeeType ='{employeeType}' where username='{employeeToEdit[1]}'";
+                    string message = $"Employee {username} Has Been Changed!";
+
+                    functions.SetData(query, message);
+
+                    UpdateEmployeeData();
+                    ClearInputData();
+                }
+
+                else
+                {
+                    MessageBox.Show("Please do not change the Username, create new Employee instead!", "Invalid input!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
 
         private bool CheckIfEmployeeIsAlreadyAdded(string username)
         {
             string currentUsername;
+
             for (int i = 0; i < dataEmployees.RowCount; i++)
             {
                 DataGridViewRow row = dataEmployees.Rows[i]; //Going through all the rows.
                 currentUsername = row.Cells[1].Value.ToString(); //Getting username of current row.
-               
+
                 if (username == currentUsername)
                 {
                     return true;
                 }
             }
-            return false;
 
+            return false;
         }
 
         private void dataEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -103,16 +137,22 @@ namespace FiveStarHotel1.User_Controls
                 if (dataEmployees.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     DataGridViewRow row = dataEmployees.Rows[e.RowIndex];
-                    usernameToDelete = row.Cells[1].Value.ToString();
+                    employeeToDelete = row.Cells[1].Value.ToString();
+
+                    employeeToEdit.Clear();
+
+                    for (int p = 0; p < dataEmployees.ColumnCount; p++)
+                    {
+
+                        employeeToEdit.Add(row.Cells[p].Value.ToString()); //Getting username of current row.
+                    }
+
+                    tbUsername.Text = employeeToEdit[0];
+                    tbPassword.Text = employeeToEdit[1];
+                    cbEmployeeType.Text = employeeToEdit[2];
+
                 }
             }
-        }
-
-        private void ClearInputData()
-        {
-            tbPassword.Clear();
-            tbUsername.Clear();
-            cbEmployeeType.SelectedIndex = -1;
         }
 
         private bool ValidateInput()
@@ -121,6 +161,7 @@ namespace FiveStarHotel1.User_Controls
             {
                 return false;
             }
+
             else
             {
                 return true;
@@ -130,8 +171,15 @@ namespace FiveStarHotel1.User_Controls
         private void UpdateEmployeeData()
         {
             string query = "Select * from employees";
-            DataSet ds = functions.getData(query);
+            DataSet ds = functions.GetData(query);
             dataEmployees.DataSource = ds.Tables[0];
+        }
+
+        private void ClearInputData()
+        {
+            tbPassword.Clear();
+            tbUsername.Clear();
+            cbEmployeeType.SelectedIndex = -1;
         }
 
         private void pbEye_MouseHover(object sender, EventArgs e)
@@ -142,7 +190,6 @@ namespace FiveStarHotel1.User_Controls
         private void pbEye_MouseLeave(object sender, EventArgs e)
         {
             tbPassword.UseSystemPasswordChar = true;
-
         }
     }
 }

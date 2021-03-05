@@ -15,7 +15,6 @@ namespace FiveStarHotel1.User_Controls
     public partial class ReserveRoom : UserControl
     {
         Functions functions = new Functions();
-        string query;
         int roomId;
 
         public ReserveRoom()
@@ -25,8 +24,9 @@ namespace FiveStarHotel1.User_Controls
 
         private void setComboBox(String query, ComboBox combobox)
         {
-            combobox.Items.Clear(); // Clearing if there are any items from previous uses.
-            SqlDataReader reader = functions.getForCombo(query);
+            combobox.Items.Clear();   // Clearing if there are any items from previous uses.
+
+            SqlDataReader reader = functions.GetForCombo(query);
 
             while (reader.Read())
             {
@@ -38,12 +38,14 @@ namespace FiveStarHotel1.User_Controls
                     }
                 }
             }
+
             reader.Close();
         }
 
         private void cbBedType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            query = String.Format("select roomNo from rooms where bed = '{0}' and roomType = '{1}' and booked = 'No'", cbBedType.Text, cbRoomType.Text);
+            string query = String.Format("select roomNo from rooms where bed = '{0}' and roomType = '{1}' and booked = 'No'", cbBedType.Text, cbRoomType.Text);
+
             setComboBox(query, cbRoomAvailable);
         }
 
@@ -54,8 +56,8 @@ namespace FiveStarHotel1.User_Controls
 
         private void cbRoomAvailable_SelectedIndexChanged(object sender, EventArgs e)
         {
-            query = "Select price, roomid from rooms where roomNo = '" + cbRoomAvailable.Text + "'";
-            DataSet dataset = functions.getData(query);
+            string query = "Select price, roomid from rooms where roomNo = '" + cbRoomAvailable.Text + "'";
+            DataSet dataset = functions.GetData(query);
 
             tbPrice.Text = dataset.Tables[0].Rows[0][0] + "$";
             roomId = int.Parse(dataset.Tables[0].Rows[0][1].ToString());
@@ -72,14 +74,15 @@ namespace FiveStarHotel1.User_Controls
                 string dateOfBirth = dpDOB.Text;
                 string checkInDate = dpCheckIn.Text;
 
-                query = String.Format("insert into customer (cname, mobile, nationality, gender, dob, checkin, roomid)" +
-                    " values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') update rooms set booked = 'Yes' where roomNo = '{7}'",
-                   name, mobilePhone, nationality, gender, dateOfBirth, checkInDate, roomId, cbRoomAvailable.Text);
+                string query = String.Format("insert into customer (cname, mobile, nationality, gender, dob, checkin, roomid)" +
+                     " values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') update rooms set booked = 'Yes' where roomNo = '{7}'",
+                    name, mobilePhone, nationality, gender, dateOfBirth, checkInDate, roomId, cbRoomAvailable.Text);
 
-                functions.setData(query, String.Format("Room Number {0} Has Been Succesfully Reserved By {1}!", cbRoomAvailable.Text, name));
-               
+                functions.SetData(query, String.Format("Room Number {0} Has Been Succesfully Reserved By {1}!", cbRoomAvailable.Text, name));
+
                 ClearSelectedData();
             }
+
             else
             {
                 MessageBox.Show("Please fill in all the fields with correct data!", "Invalid input!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -90,20 +93,17 @@ namespace FiveStarHotel1.User_Controls
         {
             Regex reg = new Regex(@"[^0-9]"); //Regex that detects only numbers from 0 - 9.
 
-
-            // Checking if any of the textfields are empty or if the phone number is invalid.
-
-            if (tbName.Text == "" || tbNationality.Text == "" || tbPhoneNo.Text == ""|| cbGender.Text == "" || cbRoomAvailable.Text == ""
-                || cbBedType.Text == "" || cbRoomType.Text == ""|| reg.IsMatch(tbPhoneNo.Text))  
+            if (tbName.Text == "" || tbNationality.Text == "" || tbPhoneNo.Text == "" || cbGender.Text == "" || cbRoomAvailable.Text == ""
+                || cbBedType.Text == "" || cbRoomType.Text == "" || reg.IsMatch(tbPhoneNo.Text)) // Checking if any of the textfields are empty or if the phone number is invalid.
             {
                 return false;
             }
+
             return true;
         }
 
-        private void ClearSelectedData()
+        private void ClearSelectedData()  //Clearing all the data once a room is reserved.
         {
-            //Clearing all the data once a room is reserved.
             tbName.Clear();
             tbNationality.Clear();
             tbPhoneNo.Clear();

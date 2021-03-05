@@ -13,6 +13,7 @@ namespace FiveStarHotel1.User_Controls
     public partial class CustomerInfo : UserControl
     {
         Functions function = new Functions();
+
         public CustomerInfo()
         {
             InitializeComponent();
@@ -20,23 +21,22 @@ namespace FiveStarHotel1.User_Controls
 
         private void CustomerInfo_Load(object sender, EventArgs e)
         {
-            loadData();
-        }
-
-        string query;
-        private void loadData()
-        {
-            query = "Select customer.cname, " +
-              "customer.mobile, customer.nationality, customer.gender, customer.dob, rooms.roomNo" +
-              " from customer inner join rooms on customer.roomid = rooms.roomid where checkout = 'No'";
-            DataSet dataset = function.getData(query);
-
-            dataCustomers.DataSource = dataset.Tables[0];
+            LoadData();
         }
 
         private void CustomerInfo_VisibleChanged(object sender, EventArgs e)
         {
-            loadData();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            string query = "Select customer.cname, customer.mobile, customer.nationality, customer.gender, customer.dob, rooms.roomNo" +
+               " from customer inner join rooms on customer.roomid = rooms.roomid where checkout = 'No'";
+
+            DataSet dataset = function.GetData(query);
+
+            dataCustomers.DataSource = dataset.Tables[0];
         }
     }
 }

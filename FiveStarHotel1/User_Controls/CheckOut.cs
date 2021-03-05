@@ -15,7 +15,7 @@ namespace FiveStarHotel1.User_Controls
         Functions functions = new Functions();
         string query;
         int id;
-     
+
         public CheckOut()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace FiveStarHotel1.User_Controls
                 "rooms.roomNo, rooms.roomType, rooms.bed,rooms.price from customer inner join rooms on customer.roomid = rooms.roomid" +
                 " where cname like '" + tbSearch.Text + "%' and checkout = 'No'";
 
-            DataSet dataset = functions.getData(query);
+            DataSet dataset = functions.GetData(query);
 
             dataCustomers.DataSource = dataset.Tables[0];
             dataCustomers.Columns[0].Visible = false;
@@ -45,7 +45,7 @@ namespace FiveStarHotel1.User_Controls
                 "customer.checkin, rooms.roomNo, rooms.roomType, rooms.bed, rooms.price" +
                 " from customer inner join rooms on customer.roomid = rooms.roomid where checkout = 'No'";
 
-            DataSet dataset = functions.getData(query);
+            DataSet dataset = functions.GetData(query);
 
             dataCustomers.DataSource = dataset.Tables[0];
             dataCustomers.Columns[0].Visible = false;
@@ -79,7 +79,7 @@ namespace FiveStarHotel1.User_Controls
                     query = String.Format("update customer set checkout = 'Yes' where cid = '{1}' update rooms set booked = 'No' where roomNo = '{2}'" +
                         " delete from customer where cname = '{3}'", checkOutDate, id, tbRoomNo.Text, tbName.Text);
 
-                    functions.setData(query, String.Format("Customer {0} Has Successfuly Checked Out!", tbName.Text));
+                    functions.SetData(query, String.Format("Customer {0} Has Successfuly Checked Out!", tbName.Text));
 
                     CheckOutLoad();
                 }

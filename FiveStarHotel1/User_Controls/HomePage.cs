@@ -28,34 +28,30 @@ namespace FiveStarHotel1.User_Controls
             btnReserve.BackgroundImage = Properties.Resources.ReserveButton;
         }
 
-
-        private void HomePage_Load(object sender, EventArgs e)
+        private void HomePage_Load(object sender, EventArgs e) //Loading data whenever the page is shown or loaded.
         {
-            //Loading data whenever the page is shown or loaded.
             LoadData();
         }
 
-        private void HomePage_VisibleChanged(object sender, EventArgs e)
+        private void HomePage_VisibleChanged(object sender, EventArgs e)   //Loading data whenever the page is shown or loaded.
         {
-            //Loading data whenever the page is shown or loaded.
-
             LoadData();
         }
 
-        private void LoadData()
+        private void LoadData()  //Checking how many rooms are taken and how many are free.
         {
-            //Checking how many rooms are taken and how many are free.
-            int freerooms = functions.countData("No");
+            int freerooms = functions.CountData("No");
+            int takenrooms = functions.CountData("Yes");
+
             lblCountRooms.Text = freerooms.ToString();
-            int takenrooms = functions.countData("Yes");
             lblCountGuests.Text = takenrooms.ToString();
             lblCurrentDate.Text = DateTime.Today.ToLongDateString();
         }
 
-        private void btnReserve_Click(object sender, EventArgs e)
-        { 
-            //Redirecting user to reserve page.
+        private void btnReserve_Click(object sender, EventArgs e)  //Redirecting user to reserve page.
+        {
             MainForm form = (MainForm)FindForm();
+
             form.SwitchScene(form.btnReserve);
             form.MoveArrow(form.btnReserve);
         }

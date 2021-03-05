@@ -12,12 +12,11 @@ namespace FiveStarHotel1
     class Functions
     {
         bool connectionOpened = false;
-        
+
         SqlConnection con = new SqlConnection("Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00");
 
-        public DataSet getData(String query)
+        public DataSet etData(String query)  //Method used for getting data from DB.
         {
-            //Method used for getting data from DB.
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandText = query;
@@ -28,9 +27,8 @@ namespace FiveStarHotel1
             return ds;
         }
 
-        public void setData(String query, String message)
+        public void SetData(String query, String message) //Method used for setting data in the DB.
         {
-            //Method used for setting data in the DB.
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -38,12 +36,11 @@ namespace FiveStarHotel1
             cmd.ExecuteNonQuery();
             con.Close();
 
-            MessageBox.Show(String.Format("{0}", message), "Success");
+            MessageBox.Show($"{message}", "Success");
         }
 
-        public int countData(String dataInfo)
+        public int CountData(String dataInfo) //Method used for getting amount of taken rooms & free rooms.
         {
-            //Method used for getting amount of taken rooms & free rooms.
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
@@ -54,7 +51,7 @@ namespace FiveStarHotel1
 
         }
 
-        public SqlDataReader getForCombo(String query)
+        public SqlDataReader GetForCombo(String query)
         {
             if (connectionOpened)
             {

@@ -8,18 +8,20 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FiveStarHotel1; 
+using FiveStarHotel1;
 
 namespace FiveStarHotel1
 {
     public partial class MainForm : Form
     {
-        public bool darkMode = true;
-        // Making the Top menu moveable.
+        bool darkMode = true;
+        bool admin = false;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
+
         [DllImport("User32.dll")]
         public static extern bool ReleaseCapture();
+
         [DllImport("User32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
@@ -27,32 +29,6 @@ namespace FiveStarHotel1
         {
             InitializeComponent();
         }
-      
-       
-     
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            //Removing default top menu.
-            FormBorderStyle = FormBorderStyle.None;
-            homePage1.BringToFront();
-            checkOut1.Visible = false;
-
-
-            if (HasAdminRights())
-            {
-                btnAddRoom.Visible = true;
-                btnEmployees.Visible = true;
-            }
-            else
-            {
-                btnAddRoom.Visible = false;
-                btnEmployees.Visible = false;
-                btnReserve.Location=new Point(0, 149);
-                btnCheckOut.Location = new Point(0, 211);
-            }
-        }
-
         private void btnNav_Clicked(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender; //Checking which button was clicked.
@@ -75,9 +51,29 @@ namespace FiveStarHotel1
             MoveProgram(e);
         }
 
-        public void SwitchScene(Button clickedButton)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            //Switching which user control is shown.
+            FormBorderStyle = FormBorderStyle.None; //Removing default top menu.
+            homePage1.BringToFront();
+            checkOut1.Visible = false;
+
+            if (HasAdminRights())
+            {
+                btnAddRoom.Visible = true;
+                btnEmployees.Visible = true;
+            }
+
+            else
+            {
+                btnAddRoom.Visible = false;
+                btnEmployees.Visible = false;
+                btnReserve.Location = new Point(0, 149);
+                btnCheckOut.Location = new Point(0, 211);
+            }
+        }
+
+        public void SwitchScene(Button clickedButton) //Switching which user control is shown.
+        {
             switch (clickedButton.Text)
             {
                 case "Add Room":
@@ -126,49 +122,31 @@ namespace FiveStarHotel1
 
             }
         }
-
-        public void MoveArrow(Button button)
-        {
-            Point btnLocation = button.Location;
-            pbArrow.Location = new Point(161, btnLocation.Y);
-        }
-
-        private void MoveProgram(MouseEventArgs e)
-        {
-            //Addition to the moving function
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
-            }
-        }
-
-       
-
         private void cbDarkMode_CheckedChanged(object sender, EventArgs e)
         {
             if (cbDarkMode.Checked == true) // Checking if light mode is enabled
             {
                 cbDarkMode.BackgroundImage = Properties.Resources.switchLightMode2;
                 darkMode = false;
-                activateMode();
+                ActivateMode();
 
             }
+
             else
             {
                 cbDarkMode.BackgroundImage = Properties.Resources.swtichDarkMode;
                 darkMode = true;
-                activateMode();
+                ActivateMode();
             }
         }
 
-        private void activateMode()
+        private void ActivateMode()
         {
             if (darkMode)
             {
-                changeColours(Color.White); // Method used for changing all the label's colours.
-                //Changing colours and icons.
-                this.BackColor = Color.FromArgb(42, 46, 55);
+                ChangeColours(Color.White); // Method used for changing all the label's colours.
+
+                this.BackColor = Color.FromArgb(42, 46, 55);               //Changing colours and icons.
                 panelSideNav.BackColor = Color.FromArgb(26, 26, 26);
                 pnlTopNav.BackColor = Color.FromArgb(26, 26, 26);
                 pbLogo.BackgroundImage = Properties.Resources.Logo;
@@ -183,16 +161,16 @@ namespace FiveStarHotel1
                 cbDarkMode.BackColor = Color.FromArgb(26, 26, 26);
 
             }
+
             else
             {
-                changeColours(Color.Black);// Method used for changing all the label's colours.
-                //Changing colours and icons.
-                BackColor = Color.FromArgb(214, 214, 214);
+                ChangeColours(Color.Black); // Method used for changing all the label's colours.
+
+                BackColor = Color.FromArgb(214, 214, 214);                  //Changing colours and icons.
                 panelSideNav.BackColor = Color.White;
                 pnlTopNav.BackColor = Color.White;
                 pbLogo.BackgroundImage = Properties.Resources.LogoLightMode;
                 lblNameOfProgram.ForeColor = Color.Black;
-
                 btnHome.Image = Properties.Resources.DarkHome;
                 btnAddRoom.Image = Properties.Resources.DarkReserve;
                 btnCheckOut.Image = Properties.Resources.DarkCheckOut2;
@@ -204,7 +182,22 @@ namespace FiveStarHotel1
             }
         }
 
-        private void changeColours(Color colour)
+        public void MoveArrow(Button button)
+        {
+            Point btnLocation = button.Location;
+            pbArrow.Location = new Point(161, btnLocation.Y);
+        }
+
+        private void MoveProgram(MouseEventArgs e)  //Addition to the moving function
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
+        }
+
+        private void ChangeColours(Color colour)
         {
             foreach (Control control in panelSideNav.Controls)
             {
@@ -214,7 +207,8 @@ namespace FiveStarHotel1
                 }
             }
         }
-        public bool getMode()
+
+        public bool GetMode()
         {
             if (darkMode)
             {
@@ -222,8 +216,7 @@ namespace FiveStarHotel1
             }
             return false;
         }
-    
-        bool admin = false;
+
         public void AdminRights(bool isadmin)
         {
             if (isadmin)
