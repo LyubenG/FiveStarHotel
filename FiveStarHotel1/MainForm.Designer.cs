@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelSideNav = new System.Windows.Forms.Panel();
             this.pnlTopNav = new System.Windows.Forms.Panel();
             this.lblNameOfProgram = new System.Windows.Forms.Label();
@@ -43,12 +44,12 @@
             this.btnAddRoom = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.customerInfo1 = new FiveStarHotel1.User_Controls.CustomerInfo();
             this.employee1 = new FiveStarHotel1.User_Controls.Employee();
             this.checkOut1 = new FiveStarHotel1.User_Controls.CheckOut();
             this.reserveRoom1 = new FiveStarHotel1.User_Controls.ReserveRoom();
             this.addRoom1 = new FiveStarHotel1.User_Controls.AddRoom();
             this.homePage1 = new FiveStarHotel1.User_Controls.HomePage();
-            this.customerInfo1 = new FiveStarHotel1.User_Controls.CustomerInfo();
             this.panelSideNav.SuspendLayout();
             this.pnlTopNav.SuspendLayout();
             this.pnlContent.SuspendLayout();
@@ -286,6 +287,13 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
+            // customerInfo1
+            // 
+            this.customerInfo1.Location = new System.Drawing.Point(3, 6);
+            this.customerInfo1.Name = "customerInfo1";
+            this.customerInfo1.Size = new System.Drawing.Size(628, 434);
+            this.customerInfo1.TabIndex = 5;
+            // 
             // employee1
             // 
             this.employee1.BackColor = System.Drawing.Color.Transparent;
@@ -332,13 +340,6 @@
             this.homePage1.Size = new System.Drawing.Size(629, 434);
             this.homePage1.TabIndex = 0;
             // 
-            // customerInfo1
-            // 
-            this.customerInfo1.Location = new System.Drawing.Point(3, 6);
-            this.customerInfo1.Name = "customerInfo1";
-            this.customerInfo1.Size = new System.Drawing.Size(628, 434);
-            this.customerInfo1.TabIndex = 5;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +350,7 @@
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pbArrow);
             this.Controls.Add(this.panelSideNav);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FiveStarHotel";
