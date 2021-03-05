@@ -29,6 +29,9 @@ namespace FiveStarHotel1
         {
             InitializeComponent();
         }
+      
+       
+     
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -37,9 +40,9 @@ namespace FiveStarHotel1
             homePage1.BringToFront();
             checkOut1.Visible = false;
 
-            LoginInfo logininfo = new LoginInfo();
+            
 
-            if (logininfo.HasAdminRights())
+            if (HasAdminRights())
             {
                 btnAddRoom.Visible = true;
                 btnEmployees.Visible = true;
@@ -48,6 +51,7 @@ namespace FiveStarHotel1
             {
                 btnAddRoom.Visible = false;
                 btnEmployees.Visible = false;
+                btnReserve.Location=new Point(0, 183);
             }
         }
 
@@ -207,6 +211,19 @@ namespace FiveStarHotel1
                 return true;
             }
             return false;
+        }
+    
+        bool admin = false;
+        public void AdminRights(bool isadmin)
+        {
+            if (isadmin)
+            {
+                admin = true;
+            }
+        }
+        public bool HasAdminRights()
+        {
+            return admin;
         }
     }
 }

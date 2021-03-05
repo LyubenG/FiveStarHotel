@@ -40,12 +40,12 @@ namespace FiveStarHotel1.User_Controls
                     functions.setData(query, $"User {username} Has Been Added!");
 
                     UpdateEmployeeData(); // Updating the Table.
-                    ClearAllData(); // Clearing textboxes.
+                    ClearInputData(); // Clearing textboxes.
                 }
                 else
                 {
                     MessageBox.Show("This employee has already been added!");
-                    ClearAllData();
+                    ClearInputData();
                 }
             }
             else
@@ -108,7 +108,7 @@ namespace FiveStarHotel1.User_Controls
             }
         }
 
-        private void ClearAllData()
+        private void ClearInputData()
         {
             tbPassword.Clear();
             tbUsername.Clear();

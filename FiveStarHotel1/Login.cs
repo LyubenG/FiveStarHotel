@@ -16,7 +16,7 @@ namespace FiveStarHotel1
         Functions functions = new Functions();
         string username;
         string password;
-        string admin;
+        
 
         public Login()
         {
@@ -49,10 +49,7 @@ namespace FiveStarHotel1
             else // If the login credentials are right the application is being opened.
             {
                 GetAdminRights();
-                MainForm mainform = new MainForm();
                 this.Hide();
-                mainform.Show();
-
             }
         }
 
@@ -64,7 +61,7 @@ namespace FiveStarHotel1
                 string query = $"select employeeType from employees where username = '{username}' and password= '{password}'";
                 SqlDataReader reader = functions.getForCombo(query);
 
-                LoginInfo logininfo = new LoginInfo();
+                MainForm logininfo = new MainForm();
 
                 while (reader.Read())
                 {
@@ -79,6 +76,7 @@ namespace FiveStarHotel1
                     }
                 }
                 reader.Close();
+                logininfo.Show();
             }
         }
 
