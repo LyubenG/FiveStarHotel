@@ -15,7 +15,7 @@ namespace FiveStarHotel1
 
         SqlConnection con = new SqlConnection("Data Source=SQL5054.site4now.net;Initial Catalog=DB_A701F5_fivestarhotel;User Id=DB_A701F5_fivestarhotel_admin;Password=FiveStarHotel00");
 
-        public DataSet etData(String query)  //Method used for getting data from DB.
+        public DataSet GetData(String query)  //Method used for getting data from DB.
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;

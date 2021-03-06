@@ -57,7 +57,7 @@ namespace FiveStarHotel1
             homePage1.BringToFront();
             checkOut1.Visible = false;
 
-            if (HasAdminRights())
+            if (HasAdminRights()) // Checking if the user is admin or not.
             {
                 btnAddRoom.Visible = true;
                 btnEmployees.Visible = true;
@@ -129,9 +129,7 @@ namespace FiveStarHotel1
                 cbDarkMode.BackgroundImage = Properties.Resources.switchLightMode2;
                 darkMode = false;
                 ActivateMode();
-
             }
-
             else
             {
                 cbDarkMode.BackgroundImage = Properties.Resources.swtichDarkMode;
@@ -182,7 +180,7 @@ namespace FiveStarHotel1
             }
         }
 
-        public void MoveArrow(Button button)
+        public void MoveArrow(Button button) // Moving arrow that shows which page is shown
         {
             Point btnLocation = button.Location;
             pbArrow.Location = new Point(161, btnLocation.Y);
@@ -207,16 +205,6 @@ namespace FiveStarHotel1
                 }
             }
         }
-
-        public bool GetMode()
-        {
-            if (darkMode)
-            {
-                return true;
-            }
-            return false;
-        }
-
         public void AdminRights(bool isadmin)
         {
             if (isadmin)
@@ -224,6 +212,7 @@ namespace FiveStarHotel1
                 admin = true;
             }
         }
+
         public bool HasAdminRights()
         {
             return admin;

@@ -88,13 +88,11 @@ namespace FiveStarHotel1
                     {
                         logininfo.AdminRights(true);
                     }
-
                     else
                     {
                         logininfo.AdminRights(false);
                     }
                 }
-
                 reader.Close();
                 logininfo.Show();
             }
@@ -102,7 +100,6 @@ namespace FiveStarHotel1
 
         private bool CheckLoginExists() //Checking whether there is such user.
         {
-
             string query = $"select username from employees where username = '{username}' and password = '{password}'";
             SqlDataReader reader = functions.GetForCombo(query);
 
@@ -113,19 +110,17 @@ namespace FiveStarHotel1
 
             while (reader.Read())
             {
-                if (username == reader.GetString(0)) 
+                if (username == reader.GetString(0))
                 {
                     reader.Close();
                     return true;
                 }
-
                 else
                 {
                     lblWrongInfo.Visible = true;
                     return false;
                 }
             }
-
             reader.Close();
             return false;
         }

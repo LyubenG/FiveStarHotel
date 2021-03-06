@@ -34,7 +34,7 @@ namespace FiveStarHotel1.User_Controls
                 string roomNo = tbRoomNo.Text;
                 string roomType = cbRoomType.Text;
                 string bed = cbBedType.Text;
-                int price = int.Parse(tbPrice.Text);
+                Int64 price = Int64.Parse(tbPrice.Text);
 
                 if (!CheckIfRoomIsAlreadyAdded(roomNo)) // if room is new, it is being added to data base
                 {
