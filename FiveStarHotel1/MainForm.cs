@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using FiveStarHotel1;
+
 
 namespace FiveStarHotel1
 {
@@ -29,6 +23,7 @@ namespace FiveStarHotel1
         {
             InitializeComponent();
         }
+
         private void btnNav_Clicked(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender; //Checking which button was clicked.
@@ -82,8 +77,8 @@ namespace FiveStarHotel1
                     customerInfo1.Visible = false;
                     checkOut1.Visible = false;
                     homePage1.Visible = false;
-
                     break;
+
                 case "Home":
                     homePage1.BringToFront();
                     homePage1.Visible = true;
@@ -91,18 +86,21 @@ namespace FiveStarHotel1
                     checkOut1.Visible = false;
                     addRoom1.Visible = false;
                     break;
+
                 case "Reserve Room":
                     reserveRoom1.BringToFront();
                     checkOut1.Visible = false;
                     customerInfo1.Visible = false;
                     homePage1.Visible = false;
                     break;
+
                 case "Check Out":
                     checkOut1.BringToFront();
                     customerInfo1.Visible = false;
                     checkOut1.Visible = true;
                     addRoom1.Visible = false;
                     break;
+
                 case "Employee":
                     employee1.BringToFront();
                     customerInfo1.Visible = false;
@@ -111,6 +109,7 @@ namespace FiveStarHotel1
                     homePage1.Visible = false;
                     addRoom1.Visible = false;
                     break;
+
                 case "Customers Info":
                     customerInfo1.BringToFront();
                     customerInfo1.Visible = true;
@@ -122,6 +121,7 @@ namespace FiveStarHotel1
 
             }
         }
+
         private void cbDarkMode_CheckedChanged(object sender, EventArgs e)
         {
             if (cbDarkMode.Checked == true) // Checking if light mode is enabled
@@ -157,7 +157,6 @@ namespace FiveStarHotel1
                 btnEmployees.Image = Properties.Resources.EmployeesIcon;
                 pbArrow.BackgroundImage = Properties.Resources.Arrow;
                 cbDarkMode.BackColor = Color.FromArgb(26, 26, 26);
-
             }
 
             else
@@ -205,6 +204,7 @@ namespace FiveStarHotel1
                 }
             }
         }
+
         public void AdminRights(bool isadmin)
         {
             if (isadmin)

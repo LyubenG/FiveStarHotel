@@ -84,8 +84,9 @@
             this.pnlBackground.Controls.Add(this.tbPrice);
             this.pnlBackground.Controls.Add(this.lblReserveRoom);
             this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(628, 434);
+            this.pnlBackground.Size = new System.Drawing.Size(837, 534);
             this.pnlBackground.TabIndex = 2;
             // 
             // tbNationality
@@ -93,9 +94,11 @@
             this.tbNationality.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.tbNationality.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNationality.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbNationality.Location = new System.Drawing.Point(129, 225);
+            this.tbNationality.Location = new System.Drawing.Point(172, 277);
+            this.tbNationality.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNationality.MaxLength = 24;
             this.tbNationality.Name = "tbNationality";
-            this.tbNationality.Size = new System.Drawing.Size(128, 20);
+            this.tbNationality.Size = new System.Drawing.Size(170, 22);
             this.tbNationality.TabIndex = 3;
             this.tbNationality.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -104,10 +107,11 @@
             this.tbPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.tbPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPhoneNo.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbPhoneNo.Location = new System.Drawing.Point(129, 168);
+            this.tbPhoneNo.Location = new System.Drawing.Point(172, 207);
+            this.tbPhoneNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPhoneNo.MaxLength = 10;
             this.tbPhoneNo.Name = "tbPhoneNo";
-            this.tbPhoneNo.Size = new System.Drawing.Size(128, 20);
+            this.tbPhoneNo.Size = new System.Drawing.Size(170, 22);
             this.tbPhoneNo.TabIndex = 2;
             this.tbPhoneNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -115,20 +119,22 @@
             // 
             this.dpCheckIn.Checked = false;
             this.dpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpCheckIn.Location = new System.Drawing.Point(387, 109);
+            this.dpCheckIn.Location = new System.Drawing.Point(516, 134);
+            this.dpCheckIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dpCheckIn.MaxDate = new System.DateTime(2021, 12, 31, 0, 0, 0, 0);
             this.dpCheckIn.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dpCheckIn.Name = "dpCheckIn";
-            this.dpCheckIn.Size = new System.Drawing.Size(128, 20);
+            this.dpCheckIn.Size = new System.Drawing.Size(169, 22);
             this.dpCheckIn.TabIndex = 6;
             // 
             // lblCheckInDate
             // 
             this.lblCheckInDate.BackColor = System.Drawing.Color.Transparent;
             this.lblCheckInDate.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblCheckInDate.Location = new System.Drawing.Point(387, 84);
+            this.lblCheckInDate.Location = new System.Drawing.Point(516, 103);
+            this.lblCheckInDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCheckInDate.Name = "lblCheckInDate";
-            this.lblCheckInDate.Size = new System.Drawing.Size(128, 22);
+            this.lblCheckInDate.Size = new System.Drawing.Size(171, 27);
             this.lblCheckInDate.TabIndex = 23;
             this.lblCheckInDate.Text = "Check-in Date:";
             this.lblCheckInDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,11 +145,12 @@
             this.dpDOB.CalendarForeColor = System.Drawing.Color.Transparent;
             this.dpDOB.CalendarMonthBackground = System.Drawing.Color.Transparent;
             this.dpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpDOB.Location = new System.Drawing.Point(129, 329);
+            this.dpDOB.Location = new System.Drawing.Point(172, 405);
+            this.dpDOB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dpDOB.MaxDate = new System.DateTime(2021, 12, 31, 0, 0, 0, 0);
             this.dpDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dpDOB.Name = "dpDOB";
-            this.dpDOB.Size = new System.Drawing.Size(128, 20);
+            this.dpDOB.Size = new System.Drawing.Size(169, 22);
             this.dpDOB.TabIndex = 5;
             this.dpDOB.Value = new System.DateTime(2021, 2, 17, 20, 55, 58, 0);
             // 
@@ -151,9 +158,10 @@
             // 
             this.lblDOB.BackColor = System.Drawing.Color.Transparent;
             this.lblDOB.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDOB.Location = new System.Drawing.Point(129, 304);
+            this.lblDOB.Location = new System.Drawing.Point(172, 374);
+            this.lblDOB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(128, 22);
+            this.lblDOB.Size = new System.Drawing.Size(171, 27);
             this.lblDOB.TabIndex = 21;
             this.lblDOB.Text = "Date Of Birth:";
             this.lblDOB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,9 +173,10 @@
             this.cbRoomAvailable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbRoomAvailable.ForeColor = System.Drawing.SystemColors.Window;
             this.cbRoomAvailable.FormattingEnabled = true;
-            this.cbRoomAvailable.Location = new System.Drawing.Point(390, 280);
+            this.cbRoomAvailable.Location = new System.Drawing.Point(520, 345);
+            this.cbRoomAvailable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbRoomAvailable.Name = "cbRoomAvailable";
-            this.cbRoomAvailable.Size = new System.Drawing.Size(128, 21);
+            this.cbRoomAvailable.Size = new System.Drawing.Size(169, 24);
             this.cbRoomAvailable.TabIndex = 9;
             this.cbRoomAvailable.SelectedIndexChanged += new System.EventHandler(this.cbRoomAvailable_SelectedIndexChanged);
             // 
@@ -175,9 +184,10 @@
             // 
             this.lblGender.BackColor = System.Drawing.Color.Transparent;
             this.lblGender.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblGender.Location = new System.Drawing.Point(129, 255);
+            this.lblGender.Location = new System.Drawing.Point(172, 314);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(128, 22);
+            this.lblGender.Size = new System.Drawing.Size(171, 27);
             this.lblGender.TabIndex = 19;
             this.lblGender.Text = "Gender:";
             this.lblGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,18 +202,20 @@
             this.cbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cbGender.Location = new System.Drawing.Point(129, 280);
+            this.cbGender.Location = new System.Drawing.Point(172, 345);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(128, 21);
+            this.cbGender.Size = new System.Drawing.Size(169, 24);
             this.cbGender.TabIndex = 4;
             // 
             // lblNationality
             // 
             this.lblNationality.BackColor = System.Drawing.Color.Transparent;
             this.lblNationality.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblNationality.Location = new System.Drawing.Point(129, 200);
+            this.lblNationality.Location = new System.Drawing.Point(172, 246);
+            this.lblNationality.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNationality.Name = "lblNationality";
-            this.lblNationality.Size = new System.Drawing.Size(128, 22);
+            this.lblNationality.Size = new System.Drawing.Size(171, 27);
             this.lblNationality.TabIndex = 17;
             this.lblNationality.Text = "Nationality: ";
             this.lblNationality.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,9 +224,10 @@
             // 
             this.lblEnterPhone.BackColor = System.Drawing.Color.Transparent;
             this.lblEnterPhone.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEnterPhone.Location = new System.Drawing.Point(129, 142);
+            this.lblEnterPhone.Location = new System.Drawing.Point(172, 175);
+            this.lblEnterPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnterPhone.Name = "lblEnterPhone";
-            this.lblEnterPhone.Size = new System.Drawing.Size(128, 22);
+            this.lblEnterPhone.Size = new System.Drawing.Size(171, 27);
             this.lblEnterPhone.TabIndex = 15;
             this.lblEnterPhone.Text = "Phone Number: ";
             this.lblEnterPhone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,9 +236,10 @@
             // 
             this.lblEnterName.BackColor = System.Drawing.Color.Transparent;
             this.lblEnterName.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEnterName.Location = new System.Drawing.Point(129, 84);
+            this.lblEnterName.Location = new System.Drawing.Point(172, 103);
+            this.lblEnterName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnterName.Name = "lblEnterName";
-            this.lblEnterName.Size = new System.Drawing.Size(128, 22);
+            this.lblEnterName.Size = new System.Drawing.Size(171, 27);
             this.lblEnterName.TabIndex = 13;
             this.lblEnterName.Text = "Name: ";
             this.lblEnterName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -235,9 +249,11 @@
             this.tbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbName.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbName.Location = new System.Drawing.Point(129, 109);
+            this.tbName.Location = new System.Drawing.Point(172, 134);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbName.MaxLength = 40;
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(128, 20);
+            this.tbName.Size = new System.Drawing.Size(170, 22);
             this.tbName.TabIndex = 1;
             this.tbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -246,9 +262,10 @@
             this.pbTable.BackColor = System.Drawing.Color.Transparent;
             this.pbTable.BackgroundImage = global::FiveStarHotel1.Properties.Resources.ReserveRoom;
             this.pbTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbTable.Location = new System.Drawing.Point(50, 45);
+            this.pbTable.Location = new System.Drawing.Point(67, 55);
+            this.pbTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbTable.Name = "pbTable";
-            this.pbTable.Size = new System.Drawing.Size(26, 20);
+            this.pbTable.Size = new System.Drawing.Size(35, 25);
             this.pbTable.TabIndex = 11;
             this.pbTable.TabStop = false;
             // 
@@ -256,9 +273,10 @@
             // 
             this.lblPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblPrice.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblPrice.Location = new System.Drawing.Point(390, 304);
+            this.lblPrice.Location = new System.Drawing.Point(520, 374);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(128, 22);
+            this.lblPrice.Size = new System.Drawing.Size(171, 27);
             this.lblPrice.TabIndex = 10;
             this.lblPrice.Text = "Price:";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,9 +285,10 @@
             // 
             this.lblBedType.BackColor = System.Drawing.Color.Transparent;
             this.lblBedType.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblBedType.Location = new System.Drawing.Point(390, 199);
+            this.lblBedType.Location = new System.Drawing.Point(520, 245);
+            this.lblBedType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBedType.Name = "lblBedType";
-            this.lblBedType.Size = new System.Drawing.Size(128, 22);
+            this.lblBedType.Size = new System.Drawing.Size(171, 27);
             this.lblBedType.TabIndex = 9;
             this.lblBedType.Text = "Enter Bed Type:";
             this.lblBedType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,9 +297,10 @@
             // 
             this.lblRoomType.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomType.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblRoomType.Location = new System.Drawing.Point(390, 142);
+            this.lblRoomType.Location = new System.Drawing.Point(520, 175);
+            this.lblRoomType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(128, 22);
+            this.lblRoomType.Size = new System.Drawing.Size(171, 27);
             this.lblRoomType.TabIndex = 8;
             this.lblRoomType.Text = "Enter Room Type:";
             this.lblRoomType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,9 +309,10 @@
             // 
             this.lblRoomNo.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomNo.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblRoomNo.Location = new System.Drawing.Point(390, 255);
+            this.lblRoomNo.Location = new System.Drawing.Point(520, 314);
+            this.lblRoomNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomNo.Name = "lblRoomNo";
-            this.lblRoomNo.Size = new System.Drawing.Size(128, 22);
+            this.lblRoomNo.Size = new System.Drawing.Size(171, 27);
             this.lblRoomNo.TabIndex = 7;
             this.lblRoomNo.Text = "Room Number Available";
             this.lblRoomNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -304,9 +325,10 @@
             this.btnReserveRoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
             this.btnReserveRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReserveRoom.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnReserveRoom.Location = new System.Drawing.Point(246, 377);
+            this.btnReserveRoom.Location = new System.Drawing.Point(328, 464);
+            this.btnReserveRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReserveRoom.Name = "btnReserveRoom";
-            this.btnReserveRoom.Size = new System.Drawing.Size(145, 31);
+            this.btnReserveRoom.Size = new System.Drawing.Size(193, 38);
             this.btnReserveRoom.TabIndex = 11;
             this.btnReserveRoom.Text = "Reserve Room!";
             this.btnReserveRoom.UseVisualStyleBackColor = false;
@@ -323,9 +345,10 @@
             "Single",
             "Double",
             "Twin Beds"});
-            this.cbBedType.Location = new System.Drawing.Point(390, 224);
+            this.cbBedType.Location = new System.Drawing.Point(520, 276);
+            this.cbBedType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbBedType.Name = "cbBedType";
-            this.cbBedType.Size = new System.Drawing.Size(128, 21);
+            this.cbBedType.Size = new System.Drawing.Size(169, 24);
             this.cbBedType.TabIndex = 8;
             this.cbBedType.SelectedIndexChanged += new System.EventHandler(this.cbBedType_SelectedIndexChanged);
             // 
@@ -340,9 +363,10 @@
             "Single",
             "Double",
             "Apartament"});
-            this.cbRoomType.Location = new System.Drawing.Point(390, 167);
+            this.cbRoomType.Location = new System.Drawing.Point(520, 206);
+            this.cbRoomType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbRoomType.Name = "cbRoomType";
-            this.cbRoomType.Size = new System.Drawing.Size(128, 21);
+            this.cbRoomType.Size = new System.Drawing.Size(169, 24);
             this.cbRoomType.TabIndex = 7;
             this.cbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbRoomType_SelectedIndexChanged);
             // 
@@ -351,30 +375,34 @@
             this.tbPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.tbPrice.Enabled = false;
             this.tbPrice.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbPrice.Location = new System.Drawing.Point(390, 329);
+            this.tbPrice.Location = new System.Drawing.Point(520, 405);
+            this.tbPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(128, 20);
+            this.tbPrice.Size = new System.Drawing.Size(169, 22);
             this.tbPrice.TabIndex = 10;
+            this.tbPrice.Text = "7";
             // 
             // lblReserveRoom
             // 
             this.lblReserveRoom.BackColor = System.Drawing.Color.Transparent;
             this.lblReserveRoom.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblReserveRoom.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblReserveRoom.Location = new System.Drawing.Point(82, 45);
+            this.lblReserveRoom.Location = new System.Drawing.Point(109, 55);
+            this.lblReserveRoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReserveRoom.Name = "lblReserveRoom";
-            this.lblReserveRoom.Size = new System.Drawing.Size(130, 20);
+            this.lblReserveRoom.Size = new System.Drawing.Size(173, 25);
             this.lblReserveRoom.TabIndex = 0;
             this.lblReserveRoom.Text = "Reserve Room";
             // 
             // ReserveRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlBackground);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReserveRoom";
-            this.Size = new System.Drawing.Size(629, 434);
+            this.Size = new System.Drawing.Size(839, 534);
             this.pnlBackground.ResumeLayout(false);
             this.pnlBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTable)).EndInit();

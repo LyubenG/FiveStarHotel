@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FiveStarHotel1.User_Controls
@@ -20,14 +14,17 @@ namespace FiveStarHotel1.User_Controls
         {
             InitializeComponent();
         }
+
         private void pnlBackground_VisibleChanged(object sender, EventArgs e)
         {
             CheckOutLoad();
         }
+
         private void CheckOut_Load(object sender, EventArgs e)
         {
             CheckOutLoad();
         }
+
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
             query = "Select customer.cid, customer.cname, customer.checkin, " +
@@ -39,6 +36,7 @@ namespace FiveStarHotel1.User_Controls
             dataCustomers.DataSource = dataset.Tables[0];
             dataCustomers.Columns[0].Visible = false;
         }
+
         public void CheckOutLoad()
         {
             query = "Select customer.cid, customer.cname," +

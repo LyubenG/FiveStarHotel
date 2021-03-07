@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
@@ -22,7 +16,7 @@ namespace FiveStarHotel1.User_Controls
             InitializeComponent();
         }
 
-        private void setComboBox(String query, ComboBox combobox)
+        private void setComboBox(String query, ComboBox combobox) //gets the number of room which covers all of the criteria
         {
             combobox.Items.Clear();   // Clearing if there are any items from previous uses.
 
@@ -68,17 +62,17 @@ namespace FiveStarHotel1.User_Controls
             if (ValidateInput())
             {
                 string name = tbName.Text;
-                Int64 mobilePhone = Int64.Parse(tbPhoneNo.Text);
+                long mobilePhone = long.Parse(tbPhoneNo.Text);
                 string nationality = tbNationality.Text;
                 string gender = cbGender.Text;
                 string dateOfBirth = dpDOB.Text;
                 string checkInDate = dpCheckIn.Text;
 
-                string query = String.Format("insert into customer (cname, mobile, nationality, gender, dob, checkin, roomid)" +
-                     " values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') update rooms set booked = 'Yes' where roomNo = '{7}'",
-                    name, mobilePhone, nationality, gender, dateOfBirth, checkInDate, roomId, cbRoomAvailable.Text);
+                string query = $"insert into customer (cname, mobile, nationality, gender, dob, checkin, roomid) " +
+                    $"values ('{name}', '{mobilePhone}', '{nationality}', '{gender}', '{dateOfBirth}', '{checkInDate}', '{roomId}') update rooms set booked = 'Yes' where roomNo = '{cbRoomAvailable.Text}'";
+                string message = $"Room Number {cbRoomAvailable.Text} Has Been Succesfully Reserved By {name}!";
 
-                functions.SetData(query, String.Format("Room Number {0} Has Been Succesfully Reserved By {1}!", cbRoomAvailable.Text, name));
+                functions.SetData(query, message);
 
                 ClearSelectedData();
             }

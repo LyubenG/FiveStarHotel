@@ -69,8 +69,9 @@
             this.pnlBackground.Controls.Add(this.dataRooms);
             this.pnlBackground.Controls.Add(this.lblAddRooms);
             this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(629, 434);
+            this.pnlBackground.Size = new System.Drawing.Size(839, 534);
             this.pnlBackground.TabIndex = 1;
             // 
             // btnEditRoom
@@ -81,9 +82,10 @@
             this.btnEditRoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
             this.btnEditRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditRoom.ForeColor = System.Drawing.Color.LawnGreen;
-            this.btnEditRoom.Location = new System.Drawing.Point(476, 352);
+            this.btnEditRoom.Location = new System.Drawing.Point(635, 433);
+            this.btnEditRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditRoom.Name = "btnEditRoom";
-            this.btnEditRoom.Size = new System.Drawing.Size(116, 31);
+            this.btnEditRoom.Size = new System.Drawing.Size(155, 38);
             this.btnEditRoom.TabIndex = 12;
             this.btnEditRoom.Text = "Edit Room";
             this.btnEditRoom.UseVisualStyleBackColor = false;
@@ -97,9 +99,10 @@
             this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.ForeColor = System.Drawing.Color.Red;
-            this.btnRemove.Location = new System.Drawing.Point(476, 389);
+            this.btnRemove.Location = new System.Drawing.Point(635, 479);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(116, 31);
+            this.btnRemove.Size = new System.Drawing.Size(155, 38);
             this.btnRemove.TabIndex = 6;
             this.btnRemove.Text = "Remove Room";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -110,9 +113,10 @@
             this.pbTable.BackColor = System.Drawing.Color.Transparent;
             this.pbTable.BackgroundImage = global::FiveStarHotel1.Properties.Resources.AddRoomPic;
             this.pbTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbTable.Location = new System.Drawing.Point(50, 45);
+            this.pbTable.Location = new System.Drawing.Point(67, 55);
+            this.pbTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbTable.Name = "pbTable";
-            this.pbTable.Size = new System.Drawing.Size(26, 20);
+            this.pbTable.Size = new System.Drawing.Size(35, 25);
             this.pbTable.TabIndex = 11;
             this.pbTable.TabStop = false;
             // 
@@ -120,9 +124,10 @@
             // 
             this.lblPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblPrice.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblPrice.Location = new System.Drawing.Point(476, 265);
+            this.lblPrice.Location = new System.Drawing.Point(635, 326);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(114, 22);
+            this.lblPrice.Size = new System.Drawing.Size(152, 27);
             this.lblPrice.TabIndex = 10;
             this.lblPrice.Text = "Enter Price:";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,9 +136,10 @@
             // 
             this.lblBedType.BackColor = System.Drawing.Color.Transparent;
             this.lblBedType.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblBedType.Location = new System.Drawing.Point(479, 208);
+            this.lblBedType.Location = new System.Drawing.Point(639, 256);
+            this.lblBedType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBedType.Name = "lblBedType";
-            this.lblBedType.Size = new System.Drawing.Size(111, 22);
+            this.lblBedType.Size = new System.Drawing.Size(148, 27);
             this.lblBedType.TabIndex = 9;
             this.lblBedType.Text = "Enter Bed Type:";
             this.lblBedType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,9 +148,10 @@
             // 
             this.lblRoomType.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomType.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblRoomType.Location = new System.Drawing.Point(479, 151);
+            this.lblRoomType.Location = new System.Drawing.Point(639, 186);
+            this.lblRoomType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(111, 22);
+            this.lblRoomType.Size = new System.Drawing.Size(148, 27);
             this.lblRoomType.TabIndex = 8;
             this.lblRoomType.Text = "Enter Room Type:";
             this.lblRoomType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,9 +160,10 @@
             // 
             this.lblRoomNo.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomNo.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblRoomNo.Location = new System.Drawing.Point(479, 93);
+            this.lblRoomNo.Location = new System.Drawing.Point(639, 114);
+            this.lblRoomNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomNo.Name = "lblRoomNo";
-            this.lblRoomNo.Size = new System.Drawing.Size(111, 22);
+            this.lblRoomNo.Size = new System.Drawing.Size(148, 27);
             this.lblRoomNo.TabIndex = 7;
             this.lblRoomNo.Text = "Enter Room Number:";
             this.lblRoomNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,9 +176,10 @@
             this.btnAddRoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(12)))), ((int)(((byte)(23)))));
             this.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRoom.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAddRoom.Location = new System.Drawing.Point(476, 315);
+            this.btnAddRoom.Location = new System.Drawing.Point(635, 388);
+            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(116, 31);
+            this.btnAddRoom.Size = new System.Drawing.Size(155, 38);
             this.btnAddRoom.TabIndex = 5;
             this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.UseVisualStyleBackColor = false;
@@ -184,9 +193,10 @@
             "Single",
             "Double",
             "Twin Beds"});
-            this.cbBedType.Location = new System.Drawing.Point(479, 233);
+            this.cbBedType.Location = new System.Drawing.Point(639, 287);
+            this.cbBedType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbBedType.Name = "cbBedType";
-            this.cbBedType.Size = new System.Drawing.Size(111, 21);
+            this.cbBedType.Size = new System.Drawing.Size(147, 24);
             this.cbBedType.TabIndex = 3;
             // 
             // cbRoomType
@@ -197,25 +207,28 @@
             "Single",
             "Double",
             "Apartament"});
-            this.cbRoomType.Location = new System.Drawing.Point(479, 177);
+            this.cbRoomType.Location = new System.Drawing.Point(639, 218);
+            this.cbRoomType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbRoomType.Name = "cbRoomType";
-            this.cbRoomType.Size = new System.Drawing.Size(111, 21);
+            this.cbRoomType.Size = new System.Drawing.Size(147, 24);
             this.cbRoomType.TabIndex = 2;
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(476, 289);
+            this.tbPrice.Location = new System.Drawing.Point(635, 356);
+            this.tbPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPrice.MaxLength = 9;
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(114, 20);
+            this.tbPrice.Size = new System.Drawing.Size(151, 22);
             this.tbPrice.TabIndex = 4;
             // 
             // tbRoomNo
             // 
-            this.tbRoomNo.Location = new System.Drawing.Point(479, 117);
-            this.tbRoomNo.MaxLength = 4;
+            this.tbRoomNo.Location = new System.Drawing.Point(639, 144);
+            this.tbRoomNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbRoomNo.MaxLength = 5;
             this.tbRoomNo.Name = "tbRoomNo";
-            this.tbRoomNo.Size = new System.Drawing.Size(111, 20);
+            this.tbRoomNo.Size = new System.Drawing.Size(147, 22);
             this.tbRoomNo.TabIndex = 1;
             this.tbRoomNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -243,14 +256,15 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataRooms.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataRooms.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataRooms.Location = new System.Drawing.Point(43, 92);
+            this.dataRooms.Location = new System.Drawing.Point(57, 113);
+            this.dataRooms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataRooms.MultiSelect = false;
             this.dataRooms.Name = "dataRooms";
             this.dataRooms.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataRooms.RowHeadersWidth = 5;
             this.dataRooms.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataRooms.Size = new System.Drawing.Size(420, 326);
+            this.dataRooms.Size = new System.Drawing.Size(560, 401);
             this.dataRooms.TabIndex = 7;
             this.dataRooms.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataRooms_CellClick);
             // 
@@ -259,20 +273,22 @@
             this.lblAddRooms.BackColor = System.Drawing.Color.Transparent;
             this.lblAddRooms.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblAddRooms.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblAddRooms.Location = new System.Drawing.Point(82, 45);
+            this.lblAddRooms.Location = new System.Drawing.Point(109, 55);
+            this.lblAddRooms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddRooms.Name = "lblAddRooms";
-            this.lblAddRooms.Size = new System.Drawing.Size(93, 20);
+            this.lblAddRooms.Size = new System.Drawing.Size(124, 25);
             this.lblAddRooms.TabIndex = 0;
             this.lblAddRooms.Text = "Add Rooms";
             // 
             // AddRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlBackground);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddRoom";
-            this.Size = new System.Drawing.Size(629, 434);
+            this.Size = new System.Drawing.Size(839, 534);
             this.VisibleChanged += new System.EventHandler(this.AddRoom_VisibleChanged);
             this.pnlBackground.ResumeLayout(false);
             this.pnlBackground.PerformLayout();

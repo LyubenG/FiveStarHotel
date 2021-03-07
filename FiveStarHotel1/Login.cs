@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FiveStarHotel1
@@ -103,11 +96,6 @@ namespace FiveStarHotel1
             string query = $"select username from employees where username = '{username}' and password = '{password}'";
             SqlDataReader reader = functions.GetForCombo(query);
 
-            if (username.Trim() == "admin" && password.Trim() == "admin") //standart admin login  
-            {
-                return true;
-            }
-
             while (reader.Read())
             {
                 if (username == reader.GetString(0))
@@ -121,6 +109,7 @@ namespace FiveStarHotel1
                     return false;
                 }
             }
+          
             reader.Close();
             return false;
         }

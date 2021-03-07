@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
@@ -34,7 +29,7 @@ namespace FiveStarHotel1.User_Controls
                 string roomNo = tbRoomNo.Text;
                 string roomType = cbRoomType.Text;
                 string bed = cbBedType.Text;
-                Int64 price = Int64.Parse(tbPrice.Text);
+                long price = long.Parse(tbPrice.Text);
 
                 if (!CheckIfRoomIsAlreadyAdded(roomNo)) // if room is new, it is being added to data base
                 {

@@ -9,7 +9,7 @@ namespace FiveStarHotel1.User_Controls
     {
         Functions functions = new Functions();
         List<string> employeeToEdit = new List<string>();
-        string employeeToDelete;
+        string employeeToDelete = "";
 
         public Employee()
         {
@@ -31,7 +31,7 @@ namespace FiveStarHotel1.User_Controls
             if (ValidateInput())
             {
 
-                string username = tbUsername.Text; //Getting username, password and type.
+                string username = tbUsername.Text;
                 string password = tbPassword.Text;
                 string employeeType = cbEmployeeType.Text;
 
@@ -62,7 +62,7 @@ namespace FiveStarHotel1.User_Controls
         private void btnRemove_Click(object sender, EventArgs e)
         {
 
-            if (employeeToDelete.Trim() != "" && employeeToDelete != null) //Checking if the user has selected a row.
+            if (employeeToDelete.Trim() != "") //Checking if the user has selected a row.
             {
                 DialogResult result = MessageBox.Show($"Are you sure you want to delete user \"{employeeToDelete}\"?", "Delete user?", MessageBoxButtons.YesNo);
 
@@ -83,17 +83,16 @@ namespace FiveStarHotel1.User_Controls
                 MessageBox.Show("You must select a employee to be removed!"); // If user hasn't selected a row.
             }
         }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
 
             if (ValidateInput())
             {
-                string username = tbUsername.Text; //Getting username, password and type.
+                string username = tbUsername.Text;
                 string password = tbPassword.Text;
                 string employeeType = cbEmployeeType.Text;
 
-                if (username == employeeToEdit[1])
+                if (username == employeeToEdit[0])
                 {
                     string query = $"update employees set username = '{employeeToEdit[1]}', password = '{password}', employeeType ='{employeeType}' where username='{employeeToEdit[1]}'";
                     string message = $"Employee {username} Has Been Changed!";

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace FiveStarHotel1
@@ -44,7 +42,7 @@ namespace FiveStarHotel1
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
-            cmd.CommandText = String.Format("select COUNT(*) from rooms where booked = '{0}'", dataInfo);
+            cmd.CommandText = $"SELECT COUNT(*) from rooms WHERE booked = '{dataInfo}'";
             int count = (int)cmd.ExecuteScalar();
             con.Close();
             return count;
